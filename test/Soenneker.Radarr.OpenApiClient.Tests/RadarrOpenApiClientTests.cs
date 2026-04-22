@@ -1,16 +1,15 @@
-using Soenneker.Tests.FixturedUnit;
-using Xunit;
+using Soenneker.Tests.HostedUnit;
 
 namespace Soenneker.Radarr.OpenApiClient.Tests;
 
-[Collection("Collection")]
-public sealed class RadarrOpenApiClientTests : FixturedUnitTest
+[ClassDataSource<Host>(Shared = SharedType.PerTestSession)]
+public sealed class RadarrOpenApiClientTests : HostedUnitTest
 {
-    public RadarrOpenApiClientTests(Fixture fixture, ITestOutputHelper output) : base(fixture, output)
+    public RadarrOpenApiClientTests(Host host) : base(host)
     {
     }
 
-    [Fact]
+    [Test]
     public void Default()
     {
 
