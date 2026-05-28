@@ -4,7 +4,6 @@ using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.Radarr.OpenApiClient.Api.V3.Moviefile.Bulk;
-using Soenneker.Radarr.OpenApiClient.Api.V3.Moviefile.Editor;
 using Soenneker.Radarr.OpenApiClient.Api.V3.Moviefile.Item;
 using Soenneker.Radarr.OpenApiClient.Models;
 using System.Collections.Generic;
@@ -24,11 +23,6 @@ namespace Soenneker.Radarr.OpenApiClient.Api.V3.Moviefile
         public global::Soenneker.Radarr.OpenApiClient.Api.V3.Moviefile.Bulk.BulkRequestBuilder Bulk
         {
             get => new global::Soenneker.Radarr.OpenApiClient.Api.V3.Moviefile.Bulk.BulkRequestBuilder(PathParameters, RequestAdapter);
-        }
-        /// <summary>The editor property</summary>
-        public global::Soenneker.Radarr.OpenApiClient.Api.V3.Moviefile.Editor.EditorRequestBuilder Editor
-        {
-            get => new global::Soenneker.Radarr.OpenApiClient.Api.V3.Moviefile.Editor.EditorRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.Radarr.OpenApiClient.api.v3.moviefile.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
