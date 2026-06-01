@@ -13,7 +13,7 @@ namespace Soenneker.Radarr.OpenApiClient.Models
     #pragma warning restore CS1591
     {
         /// <summary>The certificationCountry property</summary>
-        public global::Soenneker.Radarr.OpenApiClient.Models.TMDbCountryCode? CertificationCountry { get; set; }
+        public global::Soenneker.Radarr.OpenApiClient.Models.TmDbCountryCode? CertificationCountry { get; set; }
         /// <summary>The id property</summary>
         public int? Id { get; set; }
         /// <summary>
@@ -34,7 +34,7 @@ namespace Soenneker.Radarr.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "certificationCountry", n => { CertificationCountry = n.GetEnumValue<global::Soenneker.Radarr.OpenApiClient.Models.TMDbCountryCode>(); } },
+                { "certificationCountry", n => { CertificationCountry = n.GetEnumValue<global::Soenneker.Radarr.OpenApiClient.Models.TmDbCountryCode>(); } },
                 { "id", n => { Id = n.GetIntValue(); } },
             };
         }
@@ -45,7 +45,7 @@ namespace Soenneker.Radarr.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Radarr.OpenApiClient.Models.TMDbCountryCode>("certificationCountry", CertificationCountry);
+            writer.WriteEnumValue<global::Soenneker.Radarr.OpenApiClient.Models.TmDbCountryCode>("certificationCountry", CertificationCountry);
             writer.WriteIntValue("id", Id);
         }
     }

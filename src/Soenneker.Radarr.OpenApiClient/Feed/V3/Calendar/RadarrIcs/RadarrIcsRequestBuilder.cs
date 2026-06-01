@@ -33,20 +33,20 @@ namespace Soenneker.Radarr.OpenApiClient.Feed.V3.Calendar.RadarrIcs
         public RadarrIcsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/feed/v3/calendar/radarr.ics{?futureDays*,pastDays*,releaseTypes*,tags*,unmonitored*}", rawUrl)
         {
         }
-        /// <returns>A <see cref="global::Soenneker.Radarr.OpenApiClient.Feed.V3.Calendar.RadarrIcs.IcsGetResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Radarr.OpenApiClient.Models.DefaultResponseResponseJson10"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Radarr.OpenApiClient.Feed.V3.Calendar.RadarrIcs.IcsGetResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Radarr.OpenApiClient.Feed.V3.Calendar.RadarrIcs.RadarrIcsRequestBuilder.RadarrIcsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Radarr.OpenApiClient.Models.DefaultResponseResponseJson10?> GetAsync(Action<RequestConfiguration<global::Soenneker.Radarr.OpenApiClient.Feed.V3.Calendar.RadarrIcs.RadarrIcsRequestBuilder.RadarrIcsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Radarr.OpenApiClient.Feed.V3.Calendar.RadarrIcs.IcsGetResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Radarr.OpenApiClient.Feed.V3.Calendar.RadarrIcs.RadarrIcsRequestBuilder.RadarrIcsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Radarr.OpenApiClient.Models.DefaultResponseResponseJson10> GetAsync(Action<RequestConfiguration<global::Soenneker.Radarr.OpenApiClient.Feed.V3.Calendar.RadarrIcs.RadarrIcsRequestBuilder.RadarrIcsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Radarr.OpenApiClient.Feed.V3.Calendar.RadarrIcs.IcsGetResponse>(requestInfo, global::Soenneker.Radarr.OpenApiClient.Feed.V3.Calendar.RadarrIcs.IcsGetResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Radarr.OpenApiClient.Models.DefaultResponseResponseJson10>(requestInfo, global::Soenneker.Radarr.OpenApiClient.Models.DefaultResponseResponseJson10.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

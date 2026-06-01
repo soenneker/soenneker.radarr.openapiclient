@@ -13,6 +13,7 @@ using Soenneker.Radarr.OpenApiClient.Feed;
 using Soenneker.Radarr.OpenApiClient.Item;
 using Soenneker.Radarr.OpenApiClient.Login;
 using Soenneker.Radarr.OpenApiClient.Logout;
+using Soenneker.Radarr.OpenApiClient.Models;
 using Soenneker.Radarr.OpenApiClient.Ping;
 using System.Collections.Generic;
 using System.IO;
@@ -88,20 +89,20 @@ namespace Soenneker.Radarr.OpenApiClient
             }
             PathParameters.TryAdd("baseurl", RequestAdapter.BaseUrl);
         }
-        /// <returns>A <see cref="global::Soenneker.Radarr.OpenApiClient.GetResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Radarr.OpenApiClient.Models.DefaultResponseResponseJson73"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Radarr.OpenApiClient.GetResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Radarr.OpenApiClient.Models.DefaultResponseResponseJson73?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Radarr.OpenApiClient.GetResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Radarr.OpenApiClient.Models.DefaultResponseResponseJson73> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Radarr.OpenApiClient.GetResponse>(requestInfo, global::Soenneker.Radarr.OpenApiClient.GetResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Radarr.OpenApiClient.Models.DefaultResponseResponseJson73>(requestInfo, global::Soenneker.Radarr.OpenApiClient.Models.DefaultResponseResponseJson73.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

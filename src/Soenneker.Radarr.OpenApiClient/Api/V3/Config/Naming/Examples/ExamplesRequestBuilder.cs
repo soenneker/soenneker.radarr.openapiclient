@@ -33,20 +33,20 @@ namespace Soenneker.Radarr.OpenApiClient.Api.V3.Config.Naming.Examples
         public ExamplesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/config/naming/examples{?colonReplacementFormat*,id*,movieFolderFormat*,renameMovies*,replaceIllegalCharacters*,resourceName*,standardMovieFormat*}", rawUrl)
         {
         }
-        /// <returns>A <see cref="global::Soenneker.Radarr.OpenApiClient.Api.V3.Config.Naming.Examples.ExamplesGetResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Radarr.OpenApiClient.Models.DefaultResponseResponseJson57"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Radarr.OpenApiClient.Api.V3.Config.Naming.Examples.ExamplesGetResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Radarr.OpenApiClient.Api.V3.Config.Naming.Examples.ExamplesRequestBuilder.ExamplesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Radarr.OpenApiClient.Models.DefaultResponseResponseJson57?> GetAsync(Action<RequestConfiguration<global::Soenneker.Radarr.OpenApiClient.Api.V3.Config.Naming.Examples.ExamplesRequestBuilder.ExamplesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Radarr.OpenApiClient.Api.V3.Config.Naming.Examples.ExamplesGetResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Radarr.OpenApiClient.Api.V3.Config.Naming.Examples.ExamplesRequestBuilder.ExamplesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Radarr.OpenApiClient.Models.DefaultResponseResponseJson57> GetAsync(Action<RequestConfiguration<global::Soenneker.Radarr.OpenApiClient.Api.V3.Config.Naming.Examples.ExamplesRequestBuilder.ExamplesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Radarr.OpenApiClient.Api.V3.Config.Naming.Examples.ExamplesGetResponse>(requestInfo, global::Soenneker.Radarr.OpenApiClient.Api.V3.Config.Naming.Examples.ExamplesGetResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Radarr.OpenApiClient.Models.DefaultResponseResponseJson57>(requestInfo, global::Soenneker.Radarr.OpenApiClient.Models.DefaultResponseResponseJson57.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
