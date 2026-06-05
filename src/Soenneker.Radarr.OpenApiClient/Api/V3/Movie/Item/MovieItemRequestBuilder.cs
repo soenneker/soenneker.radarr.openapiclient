@@ -28,7 +28,7 @@ namespace Soenneker.Radarr.OpenApiClient.Api.V3.Movie.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public MovieItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "", pathParameters)
+        public MovieItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/movie/{id}{?addImportExclusion*,deleteFiles*,moveFiles*}", pathParameters)
         {
         }
         /// <summary>
@@ -36,7 +36,7 @@ namespace Soenneker.Radarr.OpenApiClient.Api.V3.Movie.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public MovieItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "", rawUrl)
+        public MovieItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/movie/{id}{?addImportExclusion*,deleteFiles*,moveFiles*}", rawUrl)
         {
         }
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -96,7 +96,7 @@ namespace Soenneker.Radarr.OpenApiClient.Api.V3.Movie.Item
         public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<global::Soenneker.Radarr.OpenApiClient.Api.V3.Movie.Item.MovieItemRequestBuilder.MovieItemRequestBuilderDeleteQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.DELETE, "{+baseurl}/api/v3/movie/{id}{?addImportExclusion*,deleteFiles*}", PathParameters);
+            var requestInfo = new RequestInformation(Method.DELETE, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -112,7 +112,7 @@ namespace Soenneker.Radarr.OpenApiClient.Api.V3.Movie.Item
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/api/v3/movie/{id}", PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json, text/plain;q=0.9");
             return requestInfo;
@@ -130,7 +130,7 @@ namespace Soenneker.Radarr.OpenApiClient.Api.V3.Movie.Item
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.PUT, "{+baseurl}/api/v3/movie/{id}{?moveFiles*}", PathParameters);
+            var requestInfo = new RequestInformation(Method.PUT, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);
