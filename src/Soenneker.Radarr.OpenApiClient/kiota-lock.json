@@ -2,7 +2,7 @@
   "descriptionHash": "726065701F6E493A2FB6CBF059564CACEC6B5AAA725CE2797BBCF682E17EE293BC339804A4842645A64050E745F3F103924DC7E495681814F44CFC87E39FF1E0",
   "descriptionLocation": "../../fixed.json",
   "lockFileVersion": "1.0.0",
-  "kiotaVersion": "1.33.0",
+  "kiotaVersion": "1.34.0",
   "clientClassName": "RadarrOpenApiClient",
   "typeAccessModifier": "Public",
   "clientNamespaceName": "Soenneker.Radarr.OpenApiClient",
