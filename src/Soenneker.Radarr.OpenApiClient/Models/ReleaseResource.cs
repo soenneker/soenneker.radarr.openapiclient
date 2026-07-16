@@ -89,10 +89,10 @@ namespace Soenneker.Radarr.OpenApiClient.Models
         /// <summary>The indexerFlags property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? IndexerFlags { get; set; }
+        public global::Soenneker.Radarr.OpenApiClient.Models.ReleaseResourceIndexerFlags? IndexerFlags { get; set; }
 #nullable restore
 #else
-        public UntypedNode IndexerFlags { get; set; }
+        public global::Soenneker.Radarr.OpenApiClient.Models.ReleaseResourceIndexerFlags IndexerFlags { get; set; }
 #endif
         /// <summary>The indexerId property</summary>
         public int? IndexerId { get; set; }
@@ -248,7 +248,7 @@ namespace Soenneker.Radarr.OpenApiClient.Models
                 { "id", n => { Id = n.GetIntValue(); } },
                 { "imdbId", n => { ImdbId = n.GetIntValue(); } },
                 { "indexer", n => { Indexer = n.GetStringValue(); } },
-                { "indexerFlags", n => { IndexerFlags = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "indexerFlags", n => { IndexerFlags = n.GetObjectValue<global::Soenneker.Radarr.OpenApiClient.Models.ReleaseResourceIndexerFlags>(global::Soenneker.Radarr.OpenApiClient.Models.ReleaseResourceIndexerFlags.CreateFromDiscriminatorValue); } },
                 { "indexerId", n => { IndexerId = n.GetIntValue(); } },
                 { "infoHash", n => { InfoHash = n.GetStringValue(); } },
                 { "infoUrl", n => { InfoUrl = n.GetStringValue(); } },
@@ -301,7 +301,7 @@ namespace Soenneker.Radarr.OpenApiClient.Models
             writer.WriteIntValue("id", Id);
             writer.WriteIntValue("imdbId", ImdbId);
             writer.WriteStringValue("indexer", Indexer);
-            writer.WriteObjectValue<UntypedNode>("indexerFlags", IndexerFlags);
+            writer.WriteObjectValue<global::Soenneker.Radarr.OpenApiClient.Models.ReleaseResourceIndexerFlags>("indexerFlags", IndexerFlags);
             writer.WriteIntValue("indexerId", IndexerId);
             writer.WriteStringValue("infoHash", InfoHash);
             writer.WriteStringValue("infoUrl", InfoUrl);
