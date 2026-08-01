@@ -33,20 +33,20 @@ namespace Soenneker.Radarr.OpenApiClient.Api.V3.Mediacover.Item.Item
         public WithFilenameItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/mediacover/{movieId}/{filename}", rawUrl)
         {
         }
-        /// <returns>A <see cref="global::Soenneker.Radarr.OpenApiClient.Models.DefaultResponseResponseJson45"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Radarr.OpenApiClient.Models.GetApiV3MediacoverByMovieIdByFilename200Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Radarr.OpenApiClient.Models.DefaultResponseResponseJson45?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Radarr.OpenApiClient.Models.GetApiV3MediacoverByMovieIdByFilename200Response?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Radarr.OpenApiClient.Models.DefaultResponseResponseJson45> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Radarr.OpenApiClient.Models.GetApiV3MediacoverByMovieIdByFilename200Response> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Radarr.OpenApiClient.Models.DefaultResponseResponseJson45>(requestInfo, global::Soenneker.Radarr.OpenApiClient.Models.DefaultResponseResponseJson45.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Radarr.OpenApiClient.Models.GetApiV3MediacoverByMovieIdByFilename200Response>(requestInfo, global::Soenneker.Radarr.OpenApiClient.Models.GetApiV3MediacoverByMovieIdByFilename200Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

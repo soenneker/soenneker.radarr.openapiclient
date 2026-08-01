@@ -33,20 +33,20 @@ namespace Soenneker.Radarr.OpenApiClient.Api.V3.History.Failed.Item
         public FailedItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/history/failed/{id}", rawUrl)
         {
         }
-        /// <returns>A <see cref="global::Soenneker.Radarr.OpenApiClient.Models.DefaultResponseResponseJson27"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Radarr.OpenApiClient.Models.PostApiV3HistoryFailedById201Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Radarr.OpenApiClient.Models.DefaultResponseResponseJson27?> PostAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Radarr.OpenApiClient.Models.PostApiV3HistoryFailedById201Response?> PostAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Radarr.OpenApiClient.Models.DefaultResponseResponseJson27> PostAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Radarr.OpenApiClient.Models.PostApiV3HistoryFailedById201Response> PostAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToPostRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Radarr.OpenApiClient.Models.DefaultResponseResponseJson27>(requestInfo, global::Soenneker.Radarr.OpenApiClient.Models.DefaultResponseResponseJson27.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Radarr.OpenApiClient.Models.PostApiV3HistoryFailedById201Response>(requestInfo, global::Soenneker.Radarr.OpenApiClient.Models.PostApiV3HistoryFailedById201Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

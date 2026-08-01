@@ -71,17 +71,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Alttitle200ResponseResponsePlain"
+                  "$ref": "#/components/schemas/GetApiV3Alttitle200PlainResponseSchema"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Alttitle200ResponseResponseJson3"
+                  "$ref": "#/components/schemas/GetApiV3Alttitle200ResponseSchema2"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Alttitle200ResponseResponseJson4"
+                  "$ref": "#/components/schemas/GetApiV3Alttitle200ResponseSchema3"
                 }
               }
             }
@@ -191,7 +191,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponse"
+                  "$ref": "#/components/schemas/PostLogin201Response"
                 }
               }
             }
@@ -209,7 +209,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson"
+                  "$ref": "#/components/schemas/GetLogin200Response"
                 }
               }
             }
@@ -229,7 +229,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson2"
+                  "$ref": "#/components/schemas/GetLogout200Response"
                 }
               }
             }
@@ -286,7 +286,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Autotagging200ResponseResponseJson"
+                  "$ref": "#/components/schemas/GetApiV3Autotagging200ResponseSchema"
                 }
               }
             }
@@ -364,7 +364,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson3"
+                  "$ref": "#/components/schemas/DeleteApiV3AutotaggingById204Response"
                 }
               }
             }
@@ -423,7 +423,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson4"
+                  "$ref": "#/components/schemas/GetApiV3AutotaggingSchema200Response"
                 }
               }
             }
@@ -443,17 +443,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3SystemBackup200ResponseResponsePlain"
+                  "$ref": "#/components/schemas/GetApiV3SystemBackup200PlainResponseSchema"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3SystemBackup200ResponseResponseJson3"
+                  "$ref": "#/components/schemas/GetApiV3SystemBackup200ResponseSchema2"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3SystemBackup200ResponseResponseJson4"
+                  "$ref": "#/components/schemas/GetApiV3SystemBackup200ResponseSchema3"
                 }
               }
             }
@@ -484,7 +484,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson5"
+                  "$ref": "#/components/schemas/DeleteApiV3SystemBackupById204Response"
                 }
               }
             }
@@ -515,7 +515,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson6"
+                  "$ref": "#/components/schemas/PostApiV3SystemBackupRestoreById201Response"
                 }
               }
             }
@@ -535,7 +535,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson7"
+                  "$ref": "#/components/schemas/PostApiV3SystemBackupRestoreUpload201Response"
                 }
               }
             }
@@ -640,17 +640,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3BlocklistMovie200ResponseResponsePlain"
+                  "$ref": "#/components/schemas/GetApiV3BlocklistMovie200PlainResponseSchema"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3BlocklistMovie200ResponseResponseJson3"
+                  "$ref": "#/components/schemas/GetApiV3BlocklistMovie200ResponseSchema2"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3BlocklistMovie200ResponseResponseJson4"
+                  "$ref": "#/components/schemas/GetApiV3BlocklistMovie200ResponseSchema3"
                 }
               }
             }
@@ -681,7 +681,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson8"
+                  "$ref": "#/components/schemas/DeleteApiV3BlocklistById204Response"
                 }
               }
             }
@@ -715,7 +715,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson9"
+                  "$ref": "#/components/schemas/DeleteApiV3BlocklistBulk204Response"
                 }
               }
             }
@@ -769,7 +769,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Calendar200ResponseResponseJson"
+                  "$ref": "#/components/schemas/GetApiV3Calendar200ResponseSchema"
                 }
               }
             }
@@ -835,7 +835,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson10"
+                  "$ref": "#/components/schemas/GetFeedV3CalendarRadarrIcs200Response"
                 }
               }
             }
@@ -865,7 +865,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Collection200ResponseResponseJson"
+                  "$ref": "#/components/schemas/GetApiV3Collection200ResponseSchema"
                 }
               }
             }
@@ -892,7 +892,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson11"
+                  "$ref": "#/components/schemas/PutApiV3Collection200Response"
                 }
               }
             }
@@ -1027,17 +1027,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Command200ResponseResponsePlain"
+                  "$ref": "#/components/schemas/GetApiV3Command200PlainResponseSchema"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Command200ResponseResponseJson3"
+                  "$ref": "#/components/schemas/GetApiV3Command200ResponseSchema2"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Command200ResponseResponseJson4"
+                  "$ref": "#/components/schemas/GetApiV3Command200ResponseSchema3"
                 }
               }
             }
@@ -1068,7 +1068,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson12"
+                  "$ref": "#/components/schemas/DeleteApiV3CommandById204Response"
                 }
               }
             }
@@ -1145,7 +1145,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson13"
+                  "$ref": "#/components/schemas/GetApiV3Credit200Response"
                 }
               }
             }
@@ -1206,17 +1206,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Customfilter200ResponseResponsePlain"
+                  "$ref": "#/components/schemas/GetApiV3Customfilter200PlainResponseSchema"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Customfilter200ResponseResponseJson3"
+                  "$ref": "#/components/schemas/GetApiV3Customfilter200ResponseSchema2"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Customfilter200ResponseResponseJson4"
+                  "$ref": "#/components/schemas/GetApiV3Customfilter200ResponseSchema3"
                 }
               }
             }
@@ -1331,7 +1331,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson14"
+                  "$ref": "#/components/schemas/DeleteApiV3CustomfilterById204Response"
                 }
               }
             }
@@ -1390,7 +1390,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Customformat200ResponseResponseJson"
+                  "$ref": "#/components/schemas/GetApiV3Customformat200ResponseSchema"
                 }
               }
             }
@@ -1505,7 +1505,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson15"
+                  "$ref": "#/components/schemas/DeleteApiV3CustomformatById204Response"
                 }
               }
             }
@@ -1600,7 +1600,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson16"
+                  "$ref": "#/components/schemas/DeleteApiV3CustomformatBulk204Response"
                 }
               }
             }
@@ -1620,7 +1620,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson17"
+                  "$ref": "#/components/schemas/GetApiV3CustomformatSchema200Response"
                 }
               }
             }
@@ -1739,17 +1739,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Delayprofile200ResponseResponsePlain"
+                  "$ref": "#/components/schemas/GetApiV3Delayprofile200PlainResponseSchema"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Delayprofile200ResponseResponseJson3"
+                  "$ref": "#/components/schemas/GetApiV3Delayprofile200ResponseSchema2"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Delayprofile200ResponseResponseJson4"
+                  "$ref": "#/components/schemas/GetApiV3Delayprofile200ResponseSchema3"
                 }
               }
             }
@@ -1780,7 +1780,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson18"
+                  "$ref": "#/components/schemas/DeleteApiV3DelayprofileById204Response"
                 }
               }
             }
@@ -1905,17 +1905,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/PutApiV3DelayprofileReorderById200ResponseResponsePlain"
+                  "$ref": "#/components/schemas/PutApiV3DelayprofileReorderById200PlainResponseSchema"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PutApiV3DelayprofileReorderById200ResponseResponseJson3"
+                  "$ref": "#/components/schemas/PutApiV3DelayprofileReorderById200ResponseSchema2"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PutApiV3DelayprofileReorderById200ResponseResponseJson4"
+                  "$ref": "#/components/schemas/PutApiV3DelayprofileReorderById200ResponseSchema3"
                 }
               }
             }
@@ -1935,17 +1935,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Diskspace200ResponseResponsePlain"
+                  "$ref": "#/components/schemas/GetApiV3Diskspace200PlainResponseSchema"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Diskspace200ResponseResponseJson3"
+                  "$ref": "#/components/schemas/GetApiV3Diskspace200ResponseSchema2"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Diskspace200ResponseResponseJson4"
+                  "$ref": "#/components/schemas/GetApiV3Diskspace200ResponseSchema3"
                 }
               }
             }
@@ -1965,7 +1965,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Downloadclient200ResponseResponseJson"
+                  "$ref": "#/components/schemas/GetApiV3Downloadclient200ResponseSchema"
                 }
               }
             }
@@ -2079,7 +2079,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson19"
+                  "$ref": "#/components/schemas/DeleteApiV3DownloadclientById204Response"
                 }
               }
             }
@@ -2174,7 +2174,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson20"
+                  "$ref": "#/components/schemas/DeleteApiV3DownloadclientBulk204Response"
                 }
               }
             }
@@ -2194,7 +2194,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3DownloadclientSchema200ResponseResponseJson"
+                  "$ref": "#/components/schemas/GetApiV3DownloadclientSchema200ResponseSchema"
                 }
               }
             }
@@ -2233,7 +2233,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson21"
+                  "$ref": "#/components/schemas/PostApiV3DownloadclientTest201Response"
                 }
               }
             }
@@ -2253,7 +2253,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson22"
+                  "$ref": "#/components/schemas/PostApiV3DownloadclientTestall201Response"
                 }
               }
             }
@@ -2292,7 +2292,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson23"
+                  "$ref": "#/components/schemas/PostApiV3DownloadclientActionByName201Response"
                 }
               }
             }
@@ -2430,17 +2430,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Extrafile200ResponseResponsePlain"
+                  "$ref": "#/components/schemas/GetApiV3Extrafile200PlainResponseSchema"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Extrafile200ResponseResponseJson3"
+                  "$ref": "#/components/schemas/GetApiV3Extrafile200ResponseSchema2"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Extrafile200ResponseResponseJson4"
+                  "$ref": "#/components/schemas/GetApiV3Extrafile200ResponseSchema3"
                 }
               }
             }
@@ -2485,7 +2485,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson24"
+                  "$ref": "#/components/schemas/GetApiV3Filesystem200Response"
                 }
               }
             }
@@ -2514,7 +2514,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson25"
+                  "$ref": "#/components/schemas/GetApiV3FilesystemType200Response"
                 }
               }
             }
@@ -2543,7 +2543,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson26"
+                  "$ref": "#/components/schemas/GetApiV3FilesystemMediafiles200Response"
                 }
               }
             }
@@ -2563,17 +2563,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Health200ResponseResponsePlain"
+                  "$ref": "#/components/schemas/GetApiV3Health200PlainResponseSchema"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Health200ResponseResponseJson3"
+                  "$ref": "#/components/schemas/GetApiV3Health200ResponseSchema2"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Health200ResponseResponseJson4"
+                  "$ref": "#/components/schemas/GetApiV3Health200ResponseSchema3"
                 }
               }
             }
@@ -2730,7 +2730,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3HistorySince200ResponseResponseJson"
+                  "$ref": "#/components/schemas/GetApiV3HistorySince200ResponseSchema"
                 }
               }
             }
@@ -2775,7 +2775,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3HistoryMovie200ResponseResponseJson"
+                  "$ref": "#/components/schemas/GetApiV3HistoryMovie200ResponseSchema"
                 }
               }
             }
@@ -2806,7 +2806,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson27"
+                  "$ref": "#/components/schemas/PostApiV3HistoryFailedById201Response"
                 }
               }
             }
@@ -2949,7 +2949,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Importlist200ResponseResponseJson"
+                  "$ref": "#/components/schemas/GetApiV3Importlist200ResponseSchema"
                 }
               }
             }
@@ -3063,7 +3063,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson28"
+                  "$ref": "#/components/schemas/DeleteApiV3ImportlistById204Response"
                 }
               }
             }
@@ -3158,7 +3158,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson29"
+                  "$ref": "#/components/schemas/DeleteApiV3ImportlistBulk204Response"
                 }
               }
             }
@@ -3178,7 +3178,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3ImportlistSchema200ResponseResponseJson"
+                  "$ref": "#/components/schemas/GetApiV3ImportlistSchema200ResponseSchema"
                 }
               }
             }
@@ -3217,7 +3217,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson30"
+                  "$ref": "#/components/schemas/PostApiV3ImportlistTest201Response"
                 }
               }
             }
@@ -3237,7 +3237,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson31"
+                  "$ref": "#/components/schemas/PostApiV3ImportlistTestall201Response"
                 }
               }
             }
@@ -3276,7 +3276,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson32"
+                  "$ref": "#/components/schemas/PostApiV3ImportlistActionByName201Response"
                 }
               }
             }
@@ -3555,7 +3555,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson33"
+                  "$ref": "#/components/schemas/DeleteApiV3ExclusionsById204Response"
                 }
               }
             }
@@ -3628,7 +3628,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson34"
+                  "$ref": "#/components/schemas/PostApiV3ExclusionsBulk201Response"
                 }
               }
             }
@@ -3660,7 +3660,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson35"
+                  "$ref": "#/components/schemas/DeleteApiV3ExclusionsBulk204Response"
                 }
               }
             }
@@ -3706,7 +3706,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson36"
+                  "$ref": "#/components/schemas/GetApiV3ImportlistMovie200Response"
                 }
               }
             }
@@ -3738,7 +3738,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson37"
+                  "$ref": "#/components/schemas/PostApiV3ImportlistMovie201Response"
                 }
               }
             }
@@ -3758,7 +3758,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Indexer200ResponseResponseJson"
+                  "$ref": "#/components/schemas/GetApiV3Indexer200ResponseSchema"
                 }
               }
             }
@@ -3872,7 +3872,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson38"
+                  "$ref": "#/components/schemas/DeleteApiV3IndexerById204Response"
                 }
               }
             }
@@ -3967,7 +3967,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson39"
+                  "$ref": "#/components/schemas/DeleteApiV3IndexerBulk204Response"
                 }
               }
             }
@@ -3987,7 +3987,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3IndexerSchema200ResponseResponseJson"
+                  "$ref": "#/components/schemas/GetApiV3IndexerSchema200ResponseSchema"
                 }
               }
             }
@@ -4026,7 +4026,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson40"
+                  "$ref": "#/components/schemas/PostApiV3IndexerTest201Response"
                 }
               }
             }
@@ -4046,7 +4046,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson41"
+                  "$ref": "#/components/schemas/PostApiV3IndexerTestall201Response"
                 }
               }
             }
@@ -4085,7 +4085,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson42"
+                  "$ref": "#/components/schemas/PostApiV3IndexerActionByName201Response"
                 }
               }
             }
@@ -4213,17 +4213,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Indexerflag200ResponseResponsePlain"
+                  "$ref": "#/components/schemas/GetApiV3Indexerflag200PlainResponseSchema"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Indexerflag200ResponseResponseJson3"
+                  "$ref": "#/components/schemas/GetApiV3Indexerflag200ResponseSchema2"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Indexerflag200ResponseResponseJson4"
+                  "$ref": "#/components/schemas/GetApiV3Indexerflag200ResponseSchema3"
                 }
               }
             }
@@ -4243,17 +4243,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Language200ResponseResponsePlain"
+                  "$ref": "#/components/schemas/GetApiV3Language200PlainResponseSchema"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Language200ResponseResponseJson3"
+                  "$ref": "#/components/schemas/GetApiV3Language200ResponseSchema2"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Language200ResponseResponseJson4"
+                  "$ref": "#/components/schemas/GetApiV3Language200ResponseSchema3"
                 }
               }
             }
@@ -4314,17 +4314,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Localization200ResponseResponsePlain"
+                  "$ref": "#/components/schemas/GetApiV3Localization200PlainResponseSchema"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Localization200ResponseResponseJson3"
+                  "$ref": "#/components/schemas/GetApiV3Localization200ResponseSchema2"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Localization200ResponseResponseJson4"
+                  "$ref": "#/components/schemas/GetApiV3Localization200ResponseSchema3"
                 }
               }
             }
@@ -4425,17 +4425,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3LogFile200ResponseResponsePlain"
+                  "$ref": "#/components/schemas/GetApiV3LogFile200PlainResponseSchema"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3LogFile200ResponseResponseJson3"
+                  "$ref": "#/components/schemas/GetApiV3LogFile200ResponseSchema2"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3LogFile200ResponseResponseJson4"
+                  "$ref": "#/components/schemas/GetApiV3LogFile200ResponseSchema3"
                 }
               }
             }
@@ -4466,7 +4466,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson43"
+                  "$ref": "#/components/schemas/GetApiV3LogFileByFilename200Response"
                 }
               }
             }
@@ -4518,7 +4518,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Manualimport200ResponseResponseJson"
+                  "$ref": "#/components/schemas/GetApiV3Manualimport200ResponseSchema"
                 }
               }
             }
@@ -4545,7 +4545,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson44"
+                  "$ref": "#/components/schemas/PostApiV3Manualimport201Response"
                 }
               }
             }
@@ -4585,7 +4585,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson45"
+                  "$ref": "#/components/schemas/GetApiV3MediacoverByMovieIdByFilename200Response"
                 }
               }
             }
@@ -4713,7 +4713,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Metadata200ResponseResponseJson"
+                  "$ref": "#/components/schemas/GetApiV3Metadata200ResponseSchema"
                 }
               }
             }
@@ -4827,7 +4827,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson46"
+                  "$ref": "#/components/schemas/DeleteApiV3MetadataById204Response"
                 }
               }
             }
@@ -4886,7 +4886,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3MetadataSchema200ResponseResponseJson"
+                  "$ref": "#/components/schemas/GetApiV3MetadataSchema200ResponseSchema"
                 }
               }
             }
@@ -4925,7 +4925,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson47"
+                  "$ref": "#/components/schemas/PostApiV3MetadataTest201Response"
                 }
               }
             }
@@ -4945,7 +4945,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson48"
+                  "$ref": "#/components/schemas/PostApiV3MetadataTestall201Response"
                 }
               }
             }
@@ -4984,7 +4984,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson49"
+                  "$ref": "#/components/schemas/PostApiV3MetadataActionByName201Response"
                 }
               }
             }
@@ -5200,17 +5200,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Movie200ResponseResponsePlain"
+                  "$ref": "#/components/schemas/GetApiV3Movie200PlainResponseSchema"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Movie200ResponseResponseJson3"
+                  "$ref": "#/components/schemas/GetApiV3Movie200ResponseSchema2"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Movie200ResponseResponseJson4"
+                  "$ref": "#/components/schemas/GetApiV3Movie200ResponseSchema3"
                 }
               }
             }
@@ -5329,7 +5329,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson50"
+                  "$ref": "#/components/schemas/DeleteApiV3MovieById204Response"
                 }
               }
             }
@@ -5402,7 +5402,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson51"
+                  "$ref": "#/components/schemas/PutApiV3MovieEditor200Response"
                 }
               }
             }
@@ -5434,7 +5434,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson52"
+                  "$ref": "#/components/schemas/DeleteApiV3MovieEditor204Response"
                 }
               }
             }
@@ -5478,7 +5478,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Moviefile200ResponseResponseJson"
+                  "$ref": "#/components/schemas/GetApiV3Moviefile200ResponseSchema"
                 }
               }
             }
@@ -5556,7 +5556,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson53"
+                  "$ref": "#/components/schemas/DeleteApiV3MoviefileById204Response"
                 }
               }
             }
@@ -5624,7 +5624,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson54"
+                  "$ref": "#/components/schemas/DeleteApiV3MoviefileBulk204Response"
                 }
               }
             }
@@ -5651,7 +5651,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson55"
+                  "$ref": "#/components/schemas/PutApiV3MoviefileBulk200Response"
                 }
               }
             }
@@ -5682,7 +5682,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson56"
+                  "$ref": "#/components/schemas/GetApiV3MovieByIdFolder200Response"
                 }
               }
             }
@@ -5711,7 +5711,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PostApiV3MovieImport200ResponseResponseJson"
+                  "$ref": "#/components/schemas/PostApiV3MovieImport200ResponseSchema"
                 }
               }
             }
@@ -5799,7 +5799,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3MovieLookup200ResponseResponseJson"
+                  "$ref": "#/components/schemas/GetApiV3MovieLookup200ResponseSchema"
                 }
               }
             }
@@ -5994,7 +5994,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson57"
+                  "$ref": "#/components/schemas/GetApiV3ConfigNamingExamples200Response"
                 }
               }
             }
@@ -6014,7 +6014,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Notification200ResponseResponseJson"
+                  "$ref": "#/components/schemas/GetApiV3Notification200ResponseSchema"
                 }
               }
             }
@@ -6128,7 +6128,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson58"
+                  "$ref": "#/components/schemas/DeleteApiV3NotificationById204Response"
                 }
               }
             }
@@ -6187,7 +6187,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3NotificationSchema200ResponseResponseJson"
+                  "$ref": "#/components/schemas/GetApiV3NotificationSchema200ResponseSchema"
                 }
               }
             }
@@ -6226,7 +6226,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson59"
+                  "$ref": "#/components/schemas/PostApiV3NotificationTest201Response"
                 }
               }
             }
@@ -6246,7 +6246,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson60"
+                  "$ref": "#/components/schemas/PostApiV3NotificationTestall201Response"
                 }
               }
             }
@@ -6285,7 +6285,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson61"
+                  "$ref": "#/components/schemas/PostApiV3NotificationActionByName201Response"
                 }
               }
             }
@@ -6475,17 +6475,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Qualitydefinition200ResponseResponsePlain"
+                  "$ref": "#/components/schemas/GetApiV3Qualitydefinition200PlainResponseSchema"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Qualitydefinition200ResponseResponseJson3"
+                  "$ref": "#/components/schemas/GetApiV3Qualitydefinition200ResponseSchema2"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Qualitydefinition200ResponseResponseJson4"
+                  "$ref": "#/components/schemas/GetApiV3Qualitydefinition200ResponseSchema3"
                 }
               }
             }
@@ -6519,7 +6519,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson62"
+                  "$ref": "#/components/schemas/PutApiV3QualitydefinitionUpdate200Response"
                 }
               }
             }
@@ -6606,17 +6606,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Qualityprofile200ResponseResponsePlain"
+                  "$ref": "#/components/schemas/GetApiV3Qualityprofile200PlainResponseSchema"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Qualityprofile200ResponseResponseJson3"
+                  "$ref": "#/components/schemas/GetApiV3Qualityprofile200ResponseSchema2"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Qualityprofile200ResponseResponseJson4"
+                  "$ref": "#/components/schemas/GetApiV3Qualityprofile200ResponseSchema3"
                 }
               }
             }
@@ -6647,7 +6647,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson63"
+                  "$ref": "#/components/schemas/DeleteApiV3QualityprofileById204Response"
                 }
               }
             }
@@ -6826,7 +6826,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson64"
+                  "$ref": "#/components/schemas/DeleteApiV3QueueById204Response"
                 }
               }
             }
@@ -6894,7 +6894,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson65"
+                  "$ref": "#/components/schemas/DeleteApiV3QueueBulk204Response"
                 }
               }
             }
@@ -7045,7 +7045,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson66"
+                  "$ref": "#/components/schemas/PostApiV3QueueGrabById201Response"
                 }
               }
             }
@@ -7074,7 +7074,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson67"
+                  "$ref": "#/components/schemas/PostApiV3QueueGrabBulk201Response"
                 }
               }
             }
@@ -7112,17 +7112,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3QueueDetails200ResponseResponsePlain"
+                  "$ref": "#/components/schemas/GetApiV3QueueDetails200PlainResponseSchema"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3QueueDetails200ResponseResponseJson3"
+                  "$ref": "#/components/schemas/GetApiV3QueueDetails200ResponseSchema2"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3QueueDetails200ResponseResponseJson4"
+                  "$ref": "#/components/schemas/GetApiV3QueueDetails200ResponseSchema3"
                 }
               }
             }
@@ -7181,7 +7181,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson68"
+                  "$ref": "#/components/schemas/PostApiV3Release201Response"
                 }
               }
             }
@@ -7209,7 +7209,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Release200ResponseResponseJson"
+                  "$ref": "#/components/schemas/GetApiV3Release200ResponseSchema"
                 }
               }
             }
@@ -7271,17 +7271,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Releaseprofile200ResponseResponsePlain"
+                  "$ref": "#/components/schemas/GetApiV3Releaseprofile200PlainResponseSchema"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Releaseprofile200ResponseResponseJson3"
+                  "$ref": "#/components/schemas/GetApiV3Releaseprofile200ResponseSchema2"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Releaseprofile200ResponseResponseJson4"
+                  "$ref": "#/components/schemas/GetApiV3Releaseprofile200ResponseSchema3"
                 }
               }
             }
@@ -7312,7 +7312,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson69"
+                  "$ref": "#/components/schemas/DeleteApiV3ReleaseprofileById204Response"
                 }
               }
             }
@@ -7432,17 +7432,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/PostApiV3ReleasePush200ResponseResponsePlain"
+                  "$ref": "#/components/schemas/PostApiV3ReleasePush200PlainResponseSchema"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PostApiV3ReleasePush200ResponseResponseJson3"
+                  "$ref": "#/components/schemas/PostApiV3ReleasePush200ResponseSchema2"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PostApiV3ReleasePush200ResponseResponseJson4"
+                  "$ref": "#/components/schemas/PostApiV3ReleasePush200ResponseSchema3"
                 }
               }
             }
@@ -7499,17 +7499,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Remotepathmapping200ResponseResponsePlain"
+                  "$ref": "#/components/schemas/GetApiV3Remotepathmapping200PlainResponseSchema"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Remotepathmapping200ResponseResponseJson3"
+                  "$ref": "#/components/schemas/GetApiV3Remotepathmapping200ResponseSchema2"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Remotepathmapping200ResponseResponseJson4"
+                  "$ref": "#/components/schemas/GetApiV3Remotepathmapping200ResponseSchema3"
                 }
               }
             }
@@ -7540,7 +7540,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson70"
+                  "$ref": "#/components/schemas/DeleteApiV3RemotepathmappingById204Response"
                 }
               }
             }
@@ -7664,17 +7664,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Rename200ResponseResponsePlain"
+                  "$ref": "#/components/schemas/GetApiV3Rename200PlainResponseSchema"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Rename200ResponseResponseJson3"
+                  "$ref": "#/components/schemas/GetApiV3Rename200ResponseSchema2"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Rename200ResponseResponseJson4"
+                  "$ref": "#/components/schemas/GetApiV3Rename200ResponseSchema3"
                 }
               }
             }
@@ -7731,17 +7731,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Rootfolder200ResponseResponsePlain"
+                  "$ref": "#/components/schemas/GetApiV3Rootfolder200PlainResponseSchema"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Rootfolder200ResponseResponseJson3"
+                  "$ref": "#/components/schemas/GetApiV3Rootfolder200ResponseSchema2"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Rootfolder200ResponseResponseJson4"
+                  "$ref": "#/components/schemas/GetApiV3Rootfolder200ResponseSchema3"
                 }
               }
             }
@@ -7772,7 +7772,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson71"
+                  "$ref": "#/components/schemas/DeleteApiV3RootfolderById204Response"
                 }
               }
             }
@@ -7842,7 +7842,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson72"
+                  "$ref": "#/components/schemas/GetContentByPath200Response"
                 }
               }
             }
@@ -7872,7 +7872,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson73"
+                  "$ref": "#/components/schemas/GetRoot200Response"
                 }
               }
             }
@@ -7903,7 +7903,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson74"
+                  "$ref": "#/components/schemas/GetByPath200Response"
                 }
               }
             }
@@ -7953,7 +7953,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson75"
+                  "$ref": "#/components/schemas/GetApiV3SystemRoutes200Response"
                 }
               }
             }
@@ -7973,7 +7973,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson76"
+                  "$ref": "#/components/schemas/GetApiV3SystemRoutesDuplicate200Response"
                 }
               }
             }
@@ -7993,7 +7993,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson77"
+                  "$ref": "#/components/schemas/PostApiV3SystemShutdown201Response"
                 }
               }
             }
@@ -8013,7 +8013,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson78"
+                  "$ref": "#/components/schemas/PostApiV3SystemRestart201Response"
                 }
               }
             }
@@ -8033,17 +8033,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Tag200ResponseResponsePlain"
+                  "$ref": "#/components/schemas/GetApiV3Tag200PlainResponseSchema"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Tag200ResponseResponseJson3"
+                  "$ref": "#/components/schemas/GetApiV3Tag200ResponseSchema2"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Tag200ResponseResponseJson4"
+                  "$ref": "#/components/schemas/GetApiV3Tag200ResponseSchema3"
                 }
               }
             }
@@ -8158,7 +8158,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson79"
+                  "$ref": "#/components/schemas/DeleteApiV3TagById204Response"
                 }
               }
             }
@@ -8217,17 +8217,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3TagDetail200ResponseResponsePlain"
+                  "$ref": "#/components/schemas/GetApiV3TagDetail200PlainResponseSchema"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3TagDetail200ResponseResponseJson3"
+                  "$ref": "#/components/schemas/GetApiV3TagDetail200ResponseSchema2"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3TagDetail200ResponseResponseJson4"
+                  "$ref": "#/components/schemas/GetApiV3TagDetail200ResponseSchema3"
                 }
               }
             }
@@ -8288,17 +8288,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3SystemTask200ResponseResponsePlain"
+                  "$ref": "#/components/schemas/GetApiV3SystemTask200PlainResponseSchema"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3SystemTask200ResponseResponseJson3"
+                  "$ref": "#/components/schemas/GetApiV3SystemTask200ResponseSchema2"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3SystemTask200ResponseResponseJson4"
+                  "$ref": "#/components/schemas/GetApiV3SystemTask200ResponseSchema3"
                 }
               }
             }
@@ -8467,17 +8467,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Update200ResponseResponsePlain"
+                  "$ref": "#/components/schemas/GetApiV3Update200PlainResponseSchema"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Update200ResponseResponseJson3"
+                  "$ref": "#/components/schemas/GetApiV3Update200ResponseSchema2"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Update200ResponseResponseJson4"
+                  "$ref": "#/components/schemas/GetApiV3Update200ResponseSchema3"
                 }
               }
             }
@@ -8497,17 +8497,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3LogFileUpdate200ResponseResponsePlain"
+                  "$ref": "#/components/schemas/GetApiV3LogFileUpdate200PlainResponseSchema"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3LogFileUpdate200ResponseResponseJson3"
+                  "$ref": "#/components/schemas/GetApiV3LogFileUpdate200ResponseSchema2"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3LogFileUpdate200ResponseResponseJson4"
+                  "$ref": "#/components/schemas/GetApiV3LogFileUpdate200ResponseSchema3"
                 }
               }
             }
@@ -8538,7 +8538,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DefaultResponseResponseJson80"
+                  "$ref": "#/components/schemas/GetApiV3LogFileUpdateByFilename200Response"
                 }
               }
             }
@@ -14220,19 +14220,19 @@
         },
         "nullable": true
       },
+      "GetApiV3Alttitle200PlainResponse": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/AlternativeTitleResource"
+        }
+      },
       "GetApiV3Alttitle200Response": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/AlternativeTitleResource"
         }
       },
-      "GetApiV3Alttitle200ResponseResponseJson": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/AlternativeTitleResource"
-        }
-      },
-      "GetApiV3Alttitle200ResponseResponseJson2": {
+      "GetApiV3Alttitle200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/AlternativeTitleResource"
@@ -14258,22 +14258,28 @@
           "$ref": "#/components/schemas/AutoTaggingResource"
         }
       },
+      "GetApiV3SystemBackup200PlainResponse": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/BackupResource"
+        }
+      },
       "GetApiV3SystemBackup200Response": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/BackupResource"
         }
       },
-      "GetApiV3SystemBackup200ResponseResponseJson": {
+      "GetApiV3SystemBackup200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/BackupResource"
         }
       },
-      "GetApiV3SystemBackup200ResponseResponseJson2": {
+      "GetApiV3BlocklistMovie200PlainResponse": {
         "type": "array",
         "items": {
-          "$ref": "#/components/schemas/BackupResource"
+          "$ref": "#/components/schemas/BlocklistResource"
         }
       },
       "GetApiV3BlocklistMovie200Response": {
@@ -14282,13 +14288,7 @@
           "$ref": "#/components/schemas/BlocklistResource"
         }
       },
-      "GetApiV3BlocklistMovie200ResponseResponseJson": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/BlocklistResource"
-        }
-      },
-      "GetApiV3BlocklistMovie200ResponseResponseJson2": {
+      "GetApiV3BlocklistMovie200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/BlocklistResource"
@@ -14306,22 +14306,28 @@
           "$ref": "#/components/schemas/CollectionResource"
         }
       },
+      "GetApiV3Command200PlainResponse": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/CommandResource"
+        }
+      },
       "GetApiV3Command200Response": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/CommandResource"
         }
       },
-      "GetApiV3Command200ResponseResponseJson": {
+      "GetApiV3Command200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/CommandResource"
         }
       },
-      "GetApiV3Command200ResponseResponseJson2": {
+      "GetApiV3Customfilter200PlainResponse": {
         "type": "array",
         "items": {
-          "$ref": "#/components/schemas/CommandResource"
+          "$ref": "#/components/schemas/CustomFilterResource"
         }
       },
       "GetApiV3Customfilter200Response": {
@@ -14330,13 +14336,7 @@
           "$ref": "#/components/schemas/CustomFilterResource"
         }
       },
-      "GetApiV3Customfilter200ResponseResponseJson": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/CustomFilterResource"
-        }
-      },
-      "GetApiV3Customfilter200ResponseResponseJson2": {
+      "GetApiV3Customfilter200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/CustomFilterResource"
@@ -14348,19 +14348,25 @@
           "$ref": "#/components/schemas/CustomFormatResource"
         }
       },
+      "GetApiV3Delayprofile200PlainResponse": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/DelayProfileResource"
+        }
+      },
       "GetApiV3Delayprofile200Response": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/DelayProfileResource"
         }
       },
-      "GetApiV3Delayprofile200ResponseResponseJson": {
+      "GetApiV3Delayprofile200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/DelayProfileResource"
         }
       },
-      "GetApiV3Delayprofile200ResponseResponseJson2": {
+      "PutApiV3DelayprofileReorderById200PlainResponse": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/DelayProfileResource"
@@ -14372,16 +14378,16 @@
           "$ref": "#/components/schemas/DelayProfileResource"
         }
       },
-      "PutApiV3DelayprofileReorderById200ResponseResponseJson": {
+      "PutApiV3DelayprofileReorderById200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/DelayProfileResource"
         }
       },
-      "PutApiV3DelayprofileReorderById200ResponseResponseJson2": {
+      "GetApiV3Diskspace200PlainResponse": {
         "type": "array",
         "items": {
-          "$ref": "#/components/schemas/DelayProfileResource"
+          "$ref": "#/components/schemas/DiskSpaceResource"
         }
       },
       "GetApiV3Diskspace200Response": {
@@ -14390,13 +14396,7 @@
           "$ref": "#/components/schemas/DiskSpaceResource"
         }
       },
-      "GetApiV3Diskspace200ResponseResponseJson": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/DiskSpaceResource"
-        }
-      },
-      "GetApiV3Diskspace200ResponseResponseJson2": {
+      "GetApiV3Diskspace200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/DiskSpaceResource"
@@ -14414,22 +14414,28 @@
           "$ref": "#/components/schemas/DownloadClientResource"
         }
       },
+      "GetApiV3Extrafile200PlainResponse": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ExtraFileResource"
+        }
+      },
       "GetApiV3Extrafile200Response": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/ExtraFileResource"
         }
       },
-      "GetApiV3Extrafile200ResponseResponseJson": {
+      "GetApiV3Extrafile200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/ExtraFileResource"
         }
       },
-      "GetApiV3Extrafile200ResponseResponseJson2": {
+      "GetApiV3Health200PlainResponse": {
         "type": "array",
         "items": {
-          "$ref": "#/components/schemas/ExtraFileResource"
+          "$ref": "#/components/schemas/HealthResource"
         }
       },
       "GetApiV3Health200Response": {
@@ -14438,13 +14444,7 @@
           "$ref": "#/components/schemas/HealthResource"
         }
       },
-      "GetApiV3Health200ResponseResponseJson": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/HealthResource"
-        }
-      },
-      "GetApiV3Health200ResponseResponseJson2": {
+      "GetApiV3Health200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/HealthResource"
@@ -14486,22 +14486,28 @@
           "$ref": "#/components/schemas/IndexerResource"
         }
       },
+      "GetApiV3Indexerflag200PlainResponse": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/IndexerFlagResource"
+        }
+      },
       "GetApiV3Indexerflag200Response": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/IndexerFlagResource"
         }
       },
-      "GetApiV3Indexerflag200ResponseResponseJson": {
+      "GetApiV3Indexerflag200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/IndexerFlagResource"
         }
       },
-      "GetApiV3Indexerflag200ResponseResponseJson2": {
+      "GetApiV3Language200PlainResponse": {
         "type": "array",
         "items": {
-          "$ref": "#/components/schemas/IndexerFlagResource"
+          "$ref": "#/components/schemas/LanguageResource"
         }
       },
       "GetApiV3Language200Response": {
@@ -14510,26 +14516,26 @@
           "$ref": "#/components/schemas/LanguageResource"
         }
       },
-      "GetApiV3Language200ResponseResponseJson": {
+      "GetApiV3Language200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/LanguageResource"
         }
       },
-      "GetApiV3Language200ResponseResponseJson2": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/LanguageResource"
-        }
+      "GetApiV3Localization200PlainResponse": {
+        "type": "string"
       },
       "GetApiV3Localization200Response": {
         "type": "string"
       },
-      "GetApiV3Localization200ResponseResponseJson": {
+      "GetApiV3Localization200ResponseSchema": {
         "type": "string"
       },
-      "GetApiV3Localization200ResponseResponseJson2": {
-        "type": "string"
+      "GetApiV3LogFile200PlainResponse": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/LogFileResource"
+        }
       },
       "GetApiV3LogFile200Response": {
         "type": "array",
@@ -14537,13 +14543,7 @@
           "$ref": "#/components/schemas/LogFileResource"
         }
       },
-      "GetApiV3LogFile200ResponseResponseJson": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/LogFileResource"
-        }
-      },
-      "GetApiV3LogFile200ResponseResponseJson2": {
+      "GetApiV3LogFile200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/LogFileResource"
@@ -14573,19 +14573,19 @@
           "$ref": "#/components/schemas/MetadataResource"
         }
       },
+      "GetApiV3Movie200PlainResponse": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/MovieResource"
+        }
+      },
       "GetApiV3Movie200Response": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/MovieResource"
         }
       },
-      "GetApiV3Movie200ResponseResponseJson": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/MovieResource"
-        }
-      },
-      "GetApiV3Movie200ResponseResponseJson2": {
+      "GetApiV3Movie200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/MovieResource"
@@ -14633,22 +14633,28 @@
           "$ref": "#/components/schemas/NotificationResource"
         }
       },
+      "GetApiV3Qualitydefinition200PlainResponse": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/QualityDefinitionResource"
+        }
+      },
       "GetApiV3Qualitydefinition200Response": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/QualityDefinitionResource"
         }
       },
-      "GetApiV3Qualitydefinition200ResponseResponseJson": {
+      "GetApiV3Qualitydefinition200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/QualityDefinitionResource"
         }
       },
-      "GetApiV3Qualitydefinition200ResponseResponseJson2": {
+      "GetApiV3Qualityprofile200PlainResponse": {
         "type": "array",
         "items": {
-          "$ref": "#/components/schemas/QualityDefinitionResource"
+          "$ref": "#/components/schemas/QualityProfileResource"
         }
       },
       "GetApiV3Qualityprofile200Response": {
@@ -14657,16 +14663,16 @@
           "$ref": "#/components/schemas/QualityProfileResource"
         }
       },
-      "GetApiV3Qualityprofile200ResponseResponseJson": {
+      "GetApiV3Qualityprofile200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/QualityProfileResource"
         }
       },
-      "GetApiV3Qualityprofile200ResponseResponseJson2": {
+      "GetApiV3QueueDetails200PlainResponse": {
         "type": "array",
         "items": {
-          "$ref": "#/components/schemas/QualityProfileResource"
+          "$ref": "#/components/schemas/QueueResource"
         }
       },
       "GetApiV3QueueDetails200Response": {
@@ -14675,13 +14681,7 @@
           "$ref": "#/components/schemas/QueueResource"
         }
       },
-      "GetApiV3QueueDetails200ResponseResponseJson": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/QueueResource"
-        }
-      },
-      "GetApiV3QueueDetails200ResponseResponseJson2": {
+      "GetApiV3QueueDetails200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/QueueResource"
@@ -14693,22 +14693,28 @@
           "$ref": "#/components/schemas/ReleaseResource"
         }
       },
+      "GetApiV3Releaseprofile200PlainResponse": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ReleaseProfileResource"
+        }
+      },
       "GetApiV3Releaseprofile200Response": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/ReleaseProfileResource"
         }
       },
-      "GetApiV3Releaseprofile200ResponseResponseJson": {
+      "GetApiV3Releaseprofile200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/ReleaseProfileResource"
         }
       },
-      "GetApiV3Releaseprofile200ResponseResponseJson2": {
+      "PostApiV3ReleasePush200PlainResponse": {
         "type": "array",
         "items": {
-          "$ref": "#/components/schemas/ReleaseProfileResource"
+          "$ref": "#/components/schemas/ReleaseResource"
         }
       },
       "PostApiV3ReleasePush200Response": {
@@ -14717,16 +14723,16 @@
           "$ref": "#/components/schemas/ReleaseResource"
         }
       },
-      "PostApiV3ReleasePush200ResponseResponseJson": {
+      "PostApiV3ReleasePush200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/ReleaseResource"
         }
       },
-      "PostApiV3ReleasePush200ResponseResponseJson2": {
+      "GetApiV3Remotepathmapping200PlainResponse": {
         "type": "array",
         "items": {
-          "$ref": "#/components/schemas/ReleaseResource"
+          "$ref": "#/components/schemas/RemotePathMappingResource"
         }
       },
       "GetApiV3Remotepathmapping200Response": {
@@ -14735,16 +14741,16 @@
           "$ref": "#/components/schemas/RemotePathMappingResource"
         }
       },
-      "GetApiV3Remotepathmapping200ResponseResponseJson": {
+      "GetApiV3Remotepathmapping200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/RemotePathMappingResource"
         }
       },
-      "GetApiV3Remotepathmapping200ResponseResponseJson2": {
+      "GetApiV3Rename200PlainResponse": {
         "type": "array",
         "items": {
-          "$ref": "#/components/schemas/RemotePathMappingResource"
+          "$ref": "#/components/schemas/RenameMovieResource"
         }
       },
       "GetApiV3Rename200Response": {
@@ -14753,16 +14759,16 @@
           "$ref": "#/components/schemas/RenameMovieResource"
         }
       },
-      "GetApiV3Rename200ResponseResponseJson": {
+      "GetApiV3Rename200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/RenameMovieResource"
         }
       },
-      "GetApiV3Rename200ResponseResponseJson2": {
+      "GetApiV3Rootfolder200PlainResponse": {
         "type": "array",
         "items": {
-          "$ref": "#/components/schemas/RenameMovieResource"
+          "$ref": "#/components/schemas/RootFolderResource"
         }
       },
       "GetApiV3Rootfolder200Response": {
@@ -14771,16 +14777,16 @@
           "$ref": "#/components/schemas/RootFolderResource"
         }
       },
-      "GetApiV3Rootfolder200ResponseResponseJson": {
+      "GetApiV3Rootfolder200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/RootFolderResource"
         }
       },
-      "GetApiV3Rootfolder200ResponseResponseJson2": {
+      "GetApiV3Tag200PlainResponse": {
         "type": "array",
         "items": {
-          "$ref": "#/components/schemas/RootFolderResource"
+          "$ref": "#/components/schemas/TagResource"
         }
       },
       "GetApiV3Tag200Response": {
@@ -14789,16 +14795,16 @@
           "$ref": "#/components/schemas/TagResource"
         }
       },
-      "GetApiV3Tag200ResponseResponseJson": {
+      "GetApiV3Tag200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/TagResource"
         }
       },
-      "GetApiV3Tag200ResponseResponseJson2": {
+      "GetApiV3TagDetail200PlainResponse": {
         "type": "array",
         "items": {
-          "$ref": "#/components/schemas/TagResource"
+          "$ref": "#/components/schemas/TagDetailsResource"
         }
       },
       "GetApiV3TagDetail200Response": {
@@ -14807,16 +14813,16 @@
           "$ref": "#/components/schemas/TagDetailsResource"
         }
       },
-      "GetApiV3TagDetail200ResponseResponseJson": {
+      "GetApiV3TagDetail200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/TagDetailsResource"
         }
       },
-      "GetApiV3TagDetail200ResponseResponseJson2": {
+      "GetApiV3SystemTask200PlainResponse": {
         "type": "array",
         "items": {
-          "$ref": "#/components/schemas/TagDetailsResource"
+          "$ref": "#/components/schemas/TaskResource"
         }
       },
       "GetApiV3SystemTask200Response": {
@@ -14825,16 +14831,16 @@
           "$ref": "#/components/schemas/TaskResource"
         }
       },
-      "GetApiV3SystemTask200ResponseResponseJson": {
+      "GetApiV3SystemTask200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/TaskResource"
         }
       },
-      "GetApiV3SystemTask200ResponseResponseJson2": {
+      "GetApiV3Update200PlainResponse": {
         "type": "array",
         "items": {
-          "$ref": "#/components/schemas/TaskResource"
+          "$ref": "#/components/schemas/UpdateResource"
         }
       },
       "GetApiV3Update200Response": {
@@ -14843,16 +14849,16 @@
           "$ref": "#/components/schemas/UpdateResource"
         }
       },
-      "GetApiV3Update200ResponseResponseJson": {
+      "GetApiV3Update200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/UpdateResource"
         }
       },
-      "GetApiV3Update200ResponseResponseJson2": {
+      "GetApiV3LogFileUpdate200PlainResponse": {
         "type": "array",
         "items": {
-          "$ref": "#/components/schemas/UpdateResource"
+          "$ref": "#/components/schemas/LogFileResource"
         }
       },
       "GetApiV3LogFileUpdate200Response": {
@@ -14861,13 +14867,7 @@
           "$ref": "#/components/schemas/LogFileResource"
         }
       },
-      "GetApiV3LogFileUpdate200ResponseResponseJson": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/LogFileResource"
-        }
-      },
-      "GetApiV3LogFileUpdate200ResponseResponseJson2": {
+      "GetApiV3LogFileUpdate200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/LogFileResource"
@@ -14877,412 +14877,412 @@
         "type": "object",
         "description": "Placeholder schema for path example refs"
       },
-      "GetApiV3Alttitle200ResponseResponsePlain": {
+      "GetApiV3Alttitle200PlainResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/AlternativeTitleResource"
         }
       },
-      "GetApiV3Alttitle200ResponseResponseJson3": {
+      "GetApiV3Alttitle200ResponseSchema2": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/AlternativeTitleResource"
         }
       },
-      "GetApiV3Alttitle200ResponseResponseJson4": {
+      "GetApiV3Alttitle200ResponseSchema3": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/AlternativeTitleResource"
         }
       },
-      "DefaultResponse": {
+      "PostLogin201Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson": {
+      "GetLogin200Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson2": {
+      "GetLogout200Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "GetApiV3Autotagging200ResponseResponseJson": {
+      "GetApiV3Autotagging200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/AutoTaggingResource"
         }
       },
-      "DefaultResponseResponseJson3": {
+      "DeleteApiV3AutotaggingById204Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson4": {
+      "GetApiV3AutotaggingSchema200Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "GetApiV3SystemBackup200ResponseResponsePlain": {
+      "GetApiV3SystemBackup200PlainResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/BackupResource"
         }
       },
-      "GetApiV3SystemBackup200ResponseResponseJson3": {
+      "GetApiV3SystemBackup200ResponseSchema2": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/BackupResource"
         }
       },
-      "GetApiV3SystemBackup200ResponseResponseJson4": {
+      "GetApiV3SystemBackup200ResponseSchema3": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/BackupResource"
         }
       },
-      "DefaultResponseResponseJson5": {
+      "DeleteApiV3SystemBackupById204Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson6": {
+      "PostApiV3SystemBackupRestoreById201Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson7": {
+      "PostApiV3SystemBackupRestoreUpload201Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "GetApiV3BlocklistMovie200ResponseResponsePlain": {
+      "GetApiV3BlocklistMovie200PlainResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/BlocklistResource"
         }
       },
-      "GetApiV3BlocklistMovie200ResponseResponseJson3": {
+      "GetApiV3BlocklistMovie200ResponseSchema2": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/BlocklistResource"
         }
       },
-      "GetApiV3BlocklistMovie200ResponseResponseJson4": {
+      "GetApiV3BlocklistMovie200ResponseSchema3": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/BlocklistResource"
         }
       },
-      "DefaultResponseResponseJson8": {
+      "DeleteApiV3BlocklistById204Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson9": {
+      "DeleteApiV3BlocklistBulk204Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "GetApiV3Calendar200ResponseResponseJson": {
+      "GetApiV3Calendar200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/MovieResource"
         }
       },
-      "DefaultResponseResponseJson10": {
+      "GetFeedV3CalendarRadarrIcs200Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "GetApiV3Collection200ResponseResponseJson": {
+      "GetApiV3Collection200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/CollectionResource"
         }
       },
-      "DefaultResponseResponseJson11": {
+      "PutApiV3Collection200Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "GetApiV3Command200ResponseResponsePlain": {
+      "GetApiV3Command200PlainResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/CommandResource"
         }
       },
-      "GetApiV3Command200ResponseResponseJson3": {
+      "GetApiV3Command200ResponseSchema2": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/CommandResource"
         }
       },
-      "GetApiV3Command200ResponseResponseJson4": {
+      "GetApiV3Command200ResponseSchema3": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/CommandResource"
         }
       },
-      "DefaultResponseResponseJson12": {
+      "DeleteApiV3CommandById204Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson13": {
+      "GetApiV3Credit200Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "GetApiV3Customfilter200ResponseResponsePlain": {
+      "GetApiV3Customfilter200PlainResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/CustomFilterResource"
         }
       },
-      "GetApiV3Customfilter200ResponseResponseJson3": {
+      "GetApiV3Customfilter200ResponseSchema2": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/CustomFilterResource"
         }
       },
-      "GetApiV3Customfilter200ResponseResponseJson4": {
+      "GetApiV3Customfilter200ResponseSchema3": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/CustomFilterResource"
         }
       },
-      "DefaultResponseResponseJson14": {
+      "DeleteApiV3CustomfilterById204Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "GetApiV3Customformat200ResponseResponseJson": {
+      "GetApiV3Customformat200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/CustomFormatResource"
         }
       },
-      "DefaultResponseResponseJson15": {
+      "DeleteApiV3CustomformatById204Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson16": {
+      "DeleteApiV3CustomformatBulk204Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson17": {
+      "GetApiV3CustomformatSchema200Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "GetApiV3Delayprofile200ResponseResponsePlain": {
+      "GetApiV3Delayprofile200PlainResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/DelayProfileResource"
         }
       },
-      "GetApiV3Delayprofile200ResponseResponseJson3": {
+      "GetApiV3Delayprofile200ResponseSchema2": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/DelayProfileResource"
         }
       },
-      "GetApiV3Delayprofile200ResponseResponseJson4": {
+      "GetApiV3Delayprofile200ResponseSchema3": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/DelayProfileResource"
         }
       },
-      "DefaultResponseResponseJson18": {
+      "DeleteApiV3DelayprofileById204Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "PutApiV3DelayprofileReorderById200ResponseResponsePlain": {
+      "PutApiV3DelayprofileReorderById200PlainResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/DelayProfileResource"
         }
       },
-      "PutApiV3DelayprofileReorderById200ResponseResponseJson3": {
+      "PutApiV3DelayprofileReorderById200ResponseSchema2": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/DelayProfileResource"
         }
       },
-      "PutApiV3DelayprofileReorderById200ResponseResponseJson4": {
+      "PutApiV3DelayprofileReorderById200ResponseSchema3": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/DelayProfileResource"
         }
       },
-      "GetApiV3Diskspace200ResponseResponsePlain": {
+      "GetApiV3Diskspace200PlainResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/DiskSpaceResource"
         }
       },
-      "GetApiV3Diskspace200ResponseResponseJson3": {
+      "GetApiV3Diskspace200ResponseSchema2": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/DiskSpaceResource"
         }
       },
-      "GetApiV3Diskspace200ResponseResponseJson4": {
+      "GetApiV3Diskspace200ResponseSchema3": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/DiskSpaceResource"
         }
       },
-      "GetApiV3Downloadclient200ResponseResponseJson": {
+      "GetApiV3Downloadclient200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/DownloadClientResource"
         }
       },
-      "DefaultResponseResponseJson19": {
+      "DeleteApiV3DownloadclientById204Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson20": {
+      "DeleteApiV3DownloadclientBulk204Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "GetApiV3DownloadclientSchema200ResponseResponseJson": {
+      "GetApiV3DownloadclientSchema200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/DownloadClientResource"
         }
       },
-      "DefaultResponseResponseJson21": {
+      "PostApiV3DownloadclientTest201Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson22": {
+      "PostApiV3DownloadclientTestall201Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson23": {
+      "PostApiV3DownloadclientActionByName201Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "GetApiV3Extrafile200ResponseResponsePlain": {
+      "GetApiV3Extrafile200PlainResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/ExtraFileResource"
         }
       },
-      "GetApiV3Extrafile200ResponseResponseJson3": {
+      "GetApiV3Extrafile200ResponseSchema2": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/ExtraFileResource"
         }
       },
-      "GetApiV3Extrafile200ResponseResponseJson4": {
+      "GetApiV3Extrafile200ResponseSchema3": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/ExtraFileResource"
         }
       },
-      "DefaultResponseResponseJson24": {
+      "GetApiV3Filesystem200Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson25": {
+      "GetApiV3FilesystemType200Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson26": {
+      "GetApiV3FilesystemMediafiles200Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "GetApiV3Health200ResponseResponsePlain": {
+      "GetApiV3Health200PlainResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/HealthResource"
         }
       },
-      "GetApiV3Health200ResponseResponseJson3": {
+      "GetApiV3Health200ResponseSchema2": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/HealthResource"
         }
       },
-      "GetApiV3Health200ResponseResponseJson4": {
+      "GetApiV3Health200ResponseSchema3": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/HealthResource"
         }
       },
-      "GetApiV3HistorySince200ResponseResponseJson": {
+      "GetApiV3HistorySince200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/HistoryResource"
         }
       },
-      "GetApiV3HistoryMovie200ResponseResponseJson": {
+      "GetApiV3HistoryMovie200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/HistoryResource"
         }
       },
-      "DefaultResponseResponseJson27": {
+      "PostApiV3HistoryFailedById201Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "GetApiV3Importlist200ResponseResponseJson": {
+      "GetApiV3Importlist200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/ImportListResource"
         }
       },
-      "DefaultResponseResponseJson28": {
+      "DeleteApiV3ImportlistById204Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson29": {
+      "DeleteApiV3ImportlistBulk204Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "GetApiV3ImportlistSchema200ResponseResponseJson": {
+      "GetApiV3ImportlistSchema200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/ImportListResource"
         }
       },
-      "DefaultResponseResponseJson30": {
+      "PostApiV3ImportlistTest201Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson31": {
+      "PostApiV3ImportlistTestall201Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson32": {
+      "PostApiV3ImportlistActionByName201Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson33": {
+      "DeleteApiV3ExclusionsById204Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
@@ -15299,17 +15299,17 @@
           "$ref": "#/components/schemas/ImportListExclusionResource"
         }
       },
-      "DefaultResponseResponseJson34": {
+      "PostApiV3ExclusionsBulk201Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson35": {
+      "DeleteApiV3ExclusionsBulk204Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson36": {
+      "GetApiV3ImportlistMovie200Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
@@ -15326,117 +15326,117 @@
           "$ref": "#/components/schemas/MovieResource"
         }
       },
-      "DefaultResponseResponseJson37": {
+      "PostApiV3ImportlistMovie201Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "GetApiV3Indexer200ResponseResponseJson": {
+      "GetApiV3Indexer200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/IndexerResource"
         }
       },
-      "DefaultResponseResponseJson38": {
+      "DeleteApiV3IndexerById204Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson39": {
+      "DeleteApiV3IndexerBulk204Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "GetApiV3IndexerSchema200ResponseResponseJson": {
+      "GetApiV3IndexerSchema200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/IndexerResource"
         }
       },
-      "DefaultResponseResponseJson40": {
+      "PostApiV3IndexerTest201Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson41": {
+      "PostApiV3IndexerTestall201Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson42": {
+      "PostApiV3IndexerActionByName201Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "GetApiV3Indexerflag200ResponseResponsePlain": {
+      "GetApiV3Indexerflag200PlainResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/IndexerFlagResource"
         }
       },
-      "GetApiV3Indexerflag200ResponseResponseJson3": {
+      "GetApiV3Indexerflag200ResponseSchema2": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/IndexerFlagResource"
         }
       },
-      "GetApiV3Indexerflag200ResponseResponseJson4": {
+      "GetApiV3Indexerflag200ResponseSchema3": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/IndexerFlagResource"
         }
       },
-      "GetApiV3Language200ResponseResponsePlain": {
+      "GetApiV3Language200PlainResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/LanguageResource"
         }
       },
-      "GetApiV3Language200ResponseResponseJson3": {
+      "GetApiV3Language200ResponseSchema2": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/LanguageResource"
         }
       },
-      "GetApiV3Language200ResponseResponseJson4": {
+      "GetApiV3Language200ResponseSchema3": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/LanguageResource"
         }
       },
-      "GetApiV3Localization200ResponseResponsePlain": {
+      "GetApiV3Localization200PlainResponseSchema": {
         "type": "string"
       },
-      "GetApiV3Localization200ResponseResponseJson3": {
+      "GetApiV3Localization200ResponseSchema2": {
         "type": "string"
       },
-      "GetApiV3Localization200ResponseResponseJson4": {
+      "GetApiV3Localization200ResponseSchema3": {
         "type": "string"
       },
-      "GetApiV3LogFile200ResponseResponsePlain": {
+      "GetApiV3LogFile200PlainResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/LogFileResource"
         }
       },
-      "GetApiV3LogFile200ResponseResponseJson3": {
+      "GetApiV3LogFile200ResponseSchema2": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/LogFileResource"
         }
       },
-      "GetApiV3LogFile200ResponseResponseJson4": {
+      "GetApiV3LogFile200ResponseSchema3": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/LogFileResource"
         }
       },
-      "DefaultResponseResponseJson43": {
+      "GetApiV3LogFileByFilename200Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "GetApiV3Manualimport200ResponseResponseJson": {
+      "GetApiV3Manualimport200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/ManualImportResource"
@@ -15448,93 +15448,93 @@
           "$ref": "#/components/schemas/ManualImportReprocessResource"
         }
       },
-      "DefaultResponseResponseJson44": {
+      "PostApiV3Manualimport201Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson45": {
+      "GetApiV3MediacoverByMovieIdByFilename200Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "GetApiV3Metadata200ResponseResponseJson": {
+      "GetApiV3Metadata200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/MetadataResource"
         }
       },
-      "DefaultResponseResponseJson46": {
+      "DeleteApiV3MetadataById204Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "GetApiV3MetadataSchema200ResponseResponseJson": {
+      "GetApiV3MetadataSchema200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/MetadataResource"
         }
       },
-      "DefaultResponseResponseJson47": {
+      "PostApiV3MetadataTest201Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson48": {
+      "PostApiV3MetadataTestall201Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson49": {
+      "PostApiV3MetadataActionByName201Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "GetApiV3Movie200ResponseResponsePlain": {
+      "GetApiV3Movie200PlainResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/MovieResource"
         }
       },
-      "GetApiV3Movie200ResponseResponseJson3": {
+      "GetApiV3Movie200ResponseSchema2": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/MovieResource"
         }
       },
-      "GetApiV3Movie200ResponseResponseJson4": {
+      "GetApiV3Movie200ResponseSchema3": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/MovieResource"
         }
       },
-      "DefaultResponseResponseJson50": {
+      "DeleteApiV3MovieById204Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson51": {
+      "PutApiV3MovieEditor200Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson52": {
+      "DeleteApiV3MovieEditor204Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "GetApiV3Moviefile200ResponseResponseJson": {
+      "GetApiV3Moviefile200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/MovieFileResource"
         }
       },
-      "DefaultResponseResponseJson53": {
+      "DeleteApiV3MoviefileById204Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson54": {
+      "DeleteApiV3MoviefileBulk204Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
@@ -15545,12 +15545,12 @@
           "$ref": "#/components/schemas/MovieFileResource"
         }
       },
-      "DefaultResponseResponseJson55": {
+      "PutApiV3MoviefileBulk200Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson56": {
+      "GetApiV3MovieByIdFolder200Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
@@ -15561,68 +15561,68 @@
           "$ref": "#/components/schemas/MovieResource"
         }
       },
-      "PostApiV3MovieImport200ResponseResponseJson": {
+      "PostApiV3MovieImport200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/MovieResource"
         }
       },
-      "GetApiV3MovieLookup200ResponseResponseJson": {
+      "GetApiV3MovieLookup200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/MovieResource"
         }
       },
-      "DefaultResponseResponseJson57": {
+      "GetApiV3ConfigNamingExamples200Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "GetApiV3Notification200ResponseResponseJson": {
+      "GetApiV3Notification200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/NotificationResource"
         }
       },
-      "DefaultResponseResponseJson58": {
+      "DeleteApiV3NotificationById204Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "GetApiV3NotificationSchema200ResponseResponseJson": {
+      "GetApiV3NotificationSchema200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/NotificationResource"
         }
       },
-      "DefaultResponseResponseJson59": {
+      "PostApiV3NotificationTest201Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson60": {
+      "PostApiV3NotificationTestall201Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson61": {
+      "PostApiV3NotificationActionByName201Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "GetApiV3Qualitydefinition200ResponseResponsePlain": {
+      "GetApiV3Qualitydefinition200PlainResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/QualityDefinitionResource"
         }
       },
-      "GetApiV3Qualitydefinition200ResponseResponseJson3": {
+      "GetApiV3Qualitydefinition200ResponseSchema2": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/QualityDefinitionResource"
         }
       },
-      "GetApiV3Qualitydefinition200ResponseResponseJson4": {
+      "GetApiV3Qualitydefinition200ResponseSchema3": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/QualityDefinitionResource"
@@ -15640,319 +15640,319 @@
           "$ref": "#/components/schemas/QualityDefinitionResource"
         }
       },
-      "DefaultResponseResponseJson62": {
+      "PutApiV3QualitydefinitionUpdate200Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "GetApiV3Qualityprofile200ResponseResponsePlain": {
+      "GetApiV3Qualityprofile200PlainResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/QualityProfileResource"
         }
       },
-      "GetApiV3Qualityprofile200ResponseResponseJson3": {
+      "GetApiV3Qualityprofile200ResponseSchema2": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/QualityProfileResource"
         }
       },
-      "GetApiV3Qualityprofile200ResponseResponseJson4": {
+      "GetApiV3Qualityprofile200ResponseSchema3": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/QualityProfileResource"
         }
       },
-      "DefaultResponseResponseJson63": {
+      "DeleteApiV3QualityprofileById204Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson64": {
+      "DeleteApiV3QueueById204Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson65": {
+      "DeleteApiV3QueueBulk204Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson66": {
+      "PostApiV3QueueGrabById201Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson67": {
+      "PostApiV3QueueGrabBulk201Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "GetApiV3QueueDetails200ResponseResponsePlain": {
+      "GetApiV3QueueDetails200PlainResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/QueueResource"
         }
       },
-      "GetApiV3QueueDetails200ResponseResponseJson3": {
+      "GetApiV3QueueDetails200ResponseSchema2": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/QueueResource"
         }
       },
-      "GetApiV3QueueDetails200ResponseResponseJson4": {
+      "GetApiV3QueueDetails200ResponseSchema3": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/QueueResource"
         }
       },
-      "DefaultResponseResponseJson68": {
+      "PostApiV3Release201Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "GetApiV3Release200ResponseResponseJson": {
+      "GetApiV3Release200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/ReleaseResource"
         }
       },
-      "GetApiV3Releaseprofile200ResponseResponsePlain": {
+      "GetApiV3Releaseprofile200PlainResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/ReleaseProfileResource"
         }
       },
-      "GetApiV3Releaseprofile200ResponseResponseJson3": {
+      "GetApiV3Releaseprofile200ResponseSchema2": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/ReleaseProfileResource"
         }
       },
-      "GetApiV3Releaseprofile200ResponseResponseJson4": {
+      "GetApiV3Releaseprofile200ResponseSchema3": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/ReleaseProfileResource"
         }
       },
-      "DefaultResponseResponseJson69": {
+      "DeleteApiV3ReleaseprofileById204Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "PostApiV3ReleasePush200ResponseResponsePlain": {
+      "PostApiV3ReleasePush200PlainResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/ReleaseResource"
         }
       },
-      "PostApiV3ReleasePush200ResponseResponseJson3": {
+      "PostApiV3ReleasePush200ResponseSchema2": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/ReleaseResource"
         }
       },
-      "PostApiV3ReleasePush200ResponseResponseJson4": {
+      "PostApiV3ReleasePush200ResponseSchema3": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/ReleaseResource"
         }
       },
-      "GetApiV3Remotepathmapping200ResponseResponsePlain": {
+      "GetApiV3Remotepathmapping200PlainResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/RemotePathMappingResource"
         }
       },
-      "GetApiV3Remotepathmapping200ResponseResponseJson3": {
+      "GetApiV3Remotepathmapping200ResponseSchema2": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/RemotePathMappingResource"
         }
       },
-      "GetApiV3Remotepathmapping200ResponseResponseJson4": {
+      "GetApiV3Remotepathmapping200ResponseSchema3": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/RemotePathMappingResource"
         }
       },
-      "DefaultResponseResponseJson70": {
+      "DeleteApiV3RemotepathmappingById204Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "GetApiV3Rename200ResponseResponsePlain": {
+      "GetApiV3Rename200PlainResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/RenameMovieResource"
         }
       },
-      "GetApiV3Rename200ResponseResponseJson3": {
+      "GetApiV3Rename200ResponseSchema2": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/RenameMovieResource"
         }
       },
-      "GetApiV3Rename200ResponseResponseJson4": {
+      "GetApiV3Rename200ResponseSchema3": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/RenameMovieResource"
         }
       },
-      "GetApiV3Rootfolder200ResponseResponsePlain": {
+      "GetApiV3Rootfolder200PlainResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/RootFolderResource"
         }
       },
-      "GetApiV3Rootfolder200ResponseResponseJson3": {
+      "GetApiV3Rootfolder200ResponseSchema2": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/RootFolderResource"
         }
       },
-      "GetApiV3Rootfolder200ResponseResponseJson4": {
+      "GetApiV3Rootfolder200ResponseSchema3": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/RootFolderResource"
         }
       },
-      "DefaultResponseResponseJson71": {
+      "DeleteApiV3RootfolderById204Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson72": {
+      "GetContentByPath200Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson73": {
+      "GetRoot200Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson74": {
+      "GetByPath200Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson75": {
+      "GetApiV3SystemRoutes200Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson76": {
+      "GetApiV3SystemRoutesDuplicate200Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson77": {
+      "PostApiV3SystemShutdown201Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "DefaultResponseResponseJson78": {
+      "PostApiV3SystemRestart201Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "GetApiV3Tag200ResponseResponsePlain": {
+      "GetApiV3Tag200PlainResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/TagResource"
         }
       },
-      "GetApiV3Tag200ResponseResponseJson3": {
+      "GetApiV3Tag200ResponseSchema2": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/TagResource"
         }
       },
-      "GetApiV3Tag200ResponseResponseJson4": {
+      "GetApiV3Tag200ResponseSchema3": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/TagResource"
         }
       },
-      "DefaultResponseResponseJson79": {
+      "DeleteApiV3TagById204Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
       },
-      "GetApiV3TagDetail200ResponseResponsePlain": {
+      "GetApiV3TagDetail200PlainResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/TagDetailsResource"
         }
       },
-      "GetApiV3TagDetail200ResponseResponseJson3": {
+      "GetApiV3TagDetail200ResponseSchema2": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/TagDetailsResource"
         }
       },
-      "GetApiV3TagDetail200ResponseResponseJson4": {
+      "GetApiV3TagDetail200ResponseSchema3": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/TagDetailsResource"
         }
       },
-      "GetApiV3SystemTask200ResponseResponsePlain": {
+      "GetApiV3SystemTask200PlainResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/TaskResource"
         }
       },
-      "GetApiV3SystemTask200ResponseResponseJson3": {
+      "GetApiV3SystemTask200ResponseSchema2": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/TaskResource"
         }
       },
-      "GetApiV3SystemTask200ResponseResponseJson4": {
+      "GetApiV3SystemTask200ResponseSchema3": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/TaskResource"
         }
       },
-      "GetApiV3Update200ResponseResponsePlain": {
+      "GetApiV3Update200PlainResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/UpdateResource"
         }
       },
-      "GetApiV3Update200ResponseResponseJson3": {
+      "GetApiV3Update200ResponseSchema2": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/UpdateResource"
         }
       },
-      "GetApiV3Update200ResponseResponseJson4": {
+      "GetApiV3Update200ResponseSchema3": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/UpdateResource"
         }
       },
-      "GetApiV3LogFileUpdate200ResponseResponsePlain": {
+      "GetApiV3LogFileUpdate200PlainResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/LogFileResource"
         }
       },
-      "GetApiV3LogFileUpdate200ResponseResponseJson3": {
+      "GetApiV3LogFileUpdate200ResponseSchema2": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/LogFileResource"
         }
       },
-      "GetApiV3LogFileUpdate200ResponseResponseJson4": {
+      "GetApiV3LogFileUpdate200ResponseSchema3": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/LogFileResource"
         }
       },
-      "DefaultResponseResponseJson80": {
+      "GetApiV3LogFileUpdateByFilename200Response": {
         "title": "DefaultResponse",
         "type": "object",
         "description": "Default response schema"
