@@ -10208,7 +10208,7 @@
             "$ref": "#/components/schemas/MovieHistoryEventType"
           },
           "data": {
-            "$ref": "#/components/schemas/HistoryResourceData"
+            "$ref": "#/components/schemas/HistoryResourceDataProperty"
           },
           "movie": {
             "$ref": "#/components/schemas/MovieResource"
@@ -15965,6 +15965,13 @@
       },
       "FieldValue": {
         "type": "object"
+      },
+      "HistoryResourceDataProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string",
+          "nullable": true
+        }
       },
       "ReleaseProfileResourceRequired": {
         "type": "object"
