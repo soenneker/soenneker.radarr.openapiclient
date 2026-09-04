@@ -7387,16 +7387,6 @@
           "StaticResource"
         ],
         "operationId": "GetRoot",
-        "parameters": [
-          {
-            "name": "path",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
         "responses": {
           "200": {
             "description": "OK"

@@ -150,18 +150,24 @@ namespace Soenneker.Radarr.OpenApiClient.Api.V3.Movie.Item
         public partial class MovieItemRequestBuilderDeleteQueryParameters 
         #pragma warning restore CS1591
         {
+            #pragma warning disable CS1591
             [QueryParameter("addImportExclusion")]
             public bool? AddImportExclusion { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("deleteFiles")]
             public bool? DeleteFiles { get; set; }
+            #pragma warning restore CS1591
         }
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         #pragma warning disable CS1591
         public partial class MovieItemRequestBuilderPutQueryParameters 
         #pragma warning restore CS1591
         {
+            #pragma warning disable CS1591
             [QueryParameter("moveFiles")]
             public bool? MoveFiles { get; set; }
+            #pragma warning restore CS1591
         }
     }
 }

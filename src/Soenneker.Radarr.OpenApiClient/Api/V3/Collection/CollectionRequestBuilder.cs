@@ -127,8 +127,10 @@ namespace Soenneker.Radarr.OpenApiClient.Api.V3.Collection
         public partial class CollectionRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
+            #pragma warning disable CS1591
             [QueryParameter("tmdbId")]
             public int? TmdbId { get; set; }
+            #pragma warning restore CS1591
         }
     }
 }

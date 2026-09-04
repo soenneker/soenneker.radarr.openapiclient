@@ -115,62 +115,94 @@ namespace Soenneker.Radarr.OpenApiClient.Api.V3.Queue
         public partial class QueueRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
+            #pragma warning disable CS1591
             [QueryParameter("includeMovie")]
             public bool? IncludeMovie { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("includeUnknownMovieItems")]
             public bool? IncludeUnknownMovieItems { get; set; }
+            #pragma warning restore CS1591
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             [QueryParameter("languages")]
             public int?[]? Languages { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             [QueryParameter("languages")]
             public int?[] Languages { get; set; }
+            #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             [QueryParameter("movieIds")]
             public int?[]? MovieIds { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             [QueryParameter("movieIds")]
             public int?[] MovieIds { get; set; }
+            #pragma warning restore CS1591
 #endif
+            #pragma warning disable CS1591
             [QueryParameter("page")]
             public int? Page { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("pageSize")]
             public int? PageSize { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("protocol")]
             public global::Soenneker.Radarr.OpenApiClient.Models.DownloadProtocol? Protocol { get; set; }
+            #pragma warning restore CS1591
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             [QueryParameter("quality")]
             public int?[]? Quality { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             [QueryParameter("quality")]
             public int?[] Quality { get; set; }
+            #pragma warning restore CS1591
 #endif
+            #pragma warning disable CS1591
             [QueryParameter("sortDirection")]
             public global::Soenneker.Radarr.OpenApiClient.Models.SortDirection? SortDirection { get; set; }
+            #pragma warning restore CS1591
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             [QueryParameter("sortKey")]
             public string? SortKey { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             [QueryParameter("sortKey")]
             public string SortKey { get; set; }
+            #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             [QueryParameter("status")]
             public global::Soenneker.Radarr.OpenApiClient.Models.QueueStatus[]? Status { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             [QueryParameter("status")]
             public global::Soenneker.Radarr.OpenApiClient.Models.QueueStatus[] Status { get; set; }
+            #pragma warning restore CS1591
 #endif
         }
     }

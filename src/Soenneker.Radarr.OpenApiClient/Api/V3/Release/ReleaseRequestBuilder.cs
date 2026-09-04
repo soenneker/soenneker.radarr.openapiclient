@@ -120,8 +120,10 @@ namespace Soenneker.Radarr.OpenApiClient.Api.V3.Release
         public partial class ReleaseRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
+            #pragma warning disable CS1591
             [QueryParameter("movieId")]
             public int? MovieId { get; set; }
+            #pragma warning restore CS1591
         }
     }
 }

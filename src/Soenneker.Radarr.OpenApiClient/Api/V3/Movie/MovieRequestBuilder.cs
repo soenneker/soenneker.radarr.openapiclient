@@ -146,12 +146,18 @@ namespace Soenneker.Radarr.OpenApiClient.Api.V3.Movie
         public partial class MovieRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
+            #pragma warning disable CS1591
             [QueryParameter("excludeLocalCovers")]
             public bool? ExcludeLocalCovers { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("languageId")]
             public int? LanguageId { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("tmdbId")]
             public int? TmdbId { get; set; }
+            #pragma warning restore CS1591
         }
     }
 }

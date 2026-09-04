@@ -112,12 +112,18 @@ namespace Soenneker.Radarr.OpenApiClient.Api.V3.Importlist.Movie
         public partial class MovieRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
+            #pragma warning disable CS1591
             [QueryParameter("includePopular")]
             public bool? IncludePopular { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("includeRecommendations")]
             public bool? IncludeRecommendations { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("includeTrending")]
             public bool? IncludeTrending { get; set; }
+            #pragma warning restore CS1591
         }
     }
 }

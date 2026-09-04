@@ -79,10 +79,14 @@ namespace Soenneker.Radarr.OpenApiClient.Api.V3.Queue.Details
         public partial class DetailsRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
+            #pragma warning disable CS1591
             [QueryParameter("includeMovie")]
             public bool? IncludeMovie { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("movieId")]
             public int? MovieId { get; set; }
+            #pragma warning restore CS1591
         }
     }
 }

@@ -77,30 +77,44 @@ namespace Soenneker.Radarr.OpenApiClient.Feed.V3.Calendar.RadarrIcs
         public partial class RadarrIcsRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
+            #pragma warning disable CS1591
             [QueryParameter("futureDays")]
             public int? FutureDays { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("pastDays")]
             public int? PastDays { get; set; }
+            #pragma warning restore CS1591
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             [QueryParameter("releaseTypes")]
             public global::Soenneker.Radarr.OpenApiClient.Models.CalendarReleaseType[]? ReleaseTypes { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             [QueryParameter("releaseTypes")]
             public global::Soenneker.Radarr.OpenApiClient.Models.CalendarReleaseType[] ReleaseTypes { get; set; }
+            #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             [QueryParameter("tags")]
             public string? Tags { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             [QueryParameter("tags")]
             public string Tags { get; set; }
+            #pragma warning restore CS1591
 #endif
+            #pragma warning disable CS1591
             [QueryParameter("unmonitored")]
             public bool? Unmonitored { get; set; }
+            #pragma warning restore CS1591
         }
     }
 }

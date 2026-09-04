@@ -89,10 +89,14 @@ namespace Soenneker.Radarr.OpenApiClient.Api.V3.Credit
         public partial class CreditRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
+            #pragma warning disable CS1591
             [QueryParameter("movieId")]
             public int? MovieId { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("movieMetadataId")]
             public int? MovieMetadataId { get; set; }
+            #pragma warning restore CS1591
         }
     }
 }

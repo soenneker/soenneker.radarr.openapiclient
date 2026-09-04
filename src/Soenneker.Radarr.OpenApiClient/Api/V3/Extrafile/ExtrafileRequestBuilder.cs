@@ -79,8 +79,10 @@ namespace Soenneker.Radarr.OpenApiClient.Api.V3.Extrafile
         public partial class ExtrafileRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
+            #pragma warning disable CS1591
             [QueryParameter("movieId")]
             public int? MovieId { get; set; }
+            #pragma warning restore CS1591
         }
     }
 }

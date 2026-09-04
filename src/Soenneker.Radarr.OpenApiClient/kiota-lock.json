@@ -1,8 +1,8 @@
 {
-  "descriptionHash": "9A5A89CE14EB902C89C878465930CFB17EAC6D6CD3718E6AF5487D7C9DD613DE6325FBDF74306955A861D7462203C25527F8D5AEC70C56C3F10B4C472392F454",
+  "descriptionHash": "99A65A276F9CDE9306A4556BB5B3053044B89C43DAB0F29CD8417C9D7FDFE7B4A0E7640A1B592A93BA1A24126328B600609AB63A30C073B650490267EF877535",
   "descriptionLocation": "../../fixed.json",
   "lockFileVersion": "1.0.0",
-  "kiotaVersion": "1.34.1",
+  "kiotaVersion": "1.35.0",
   "clientClassName": "RadarrOpenApiClient",
   "typeAccessModifier": "Public",
   "clientNamespaceName": "Soenneker.Radarr.OpenApiClient",

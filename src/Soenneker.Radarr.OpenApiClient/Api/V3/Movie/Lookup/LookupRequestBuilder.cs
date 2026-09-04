@@ -93,12 +93,16 @@ namespace Soenneker.Radarr.OpenApiClient.Api.V3.Movie.Lookup
         {
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             [QueryParameter("term")]
             public string? Term { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             [QueryParameter("term")]
             public string Term { get; set; }
+            #pragma warning restore CS1591
 #endif
         }
     }

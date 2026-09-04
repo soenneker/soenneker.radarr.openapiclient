@@ -79,12 +79,18 @@ namespace Soenneker.Radarr.OpenApiClient.Api.V3.History.Movie
         public partial class MovieRequestBuilderGetQueryParameters 
         #pragma warning restore CS1591
         {
+            #pragma warning disable CS1591
             [QueryParameter("eventType")]
             public global::Soenneker.Radarr.OpenApiClient.Models.MovieHistoryEventType? EventType { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("includeMovie")]
             public bool? IncludeMovie { get; set; }
+            #pragma warning restore CS1591
+            #pragma warning disable CS1591
             [QueryParameter("movieId")]
             public int? MovieId { get; set; }
+            #pragma warning restore CS1591
         }
     }
 }
