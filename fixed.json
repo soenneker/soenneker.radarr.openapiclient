@@ -18,21 +18,7 @@
           "enum": [
             "http",
             "https"
-          ],
-          "x-ms-enum": {
-            "name": "GeneratedEnum",
-            "modelAsString": false,
-            "values": [
-              {
-                "value": "http",
-                "name": "Http"
-              },
-              {
-                "value": "https",
-                "name": "Https"
-              }
-            ]
-          }
+          ]
         },
         "hostpath": {
           "default": "localhost:7878"
@@ -640,6 +626,11 @@
               }
             },
             "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BlocklistBulkResource"
+              }
+            },
+            "application/*\u002Bjson": {
               "schema": {
                 "$ref": "#/components/schemas/BlocklistBulkResource"
               }
@@ -2675,6 +2666,11 @@
               "schema": {
                 "$ref": "#/components/schemas/HostConfigResource"
               }
+            },
+            "application/*\u002Bjson": {
+              "schema": {
+                "$ref": "#/components/schemas/HostConfigResource"
+              }
             }
           }
         },
@@ -3400,6 +3396,11 @@
               "schema": {
                 "$ref": "#/components/schemas/PostApiV3ExclusionsBulkRequestRequestBody"
               }
+            },
+            "application/*\u002Bjson": {
+              "schema": {
+                "$ref": "#/components/schemas/PostApiV3ExclusionsBulkMediaRequestRequestBody"
+              }
             }
           }
         },
@@ -3422,6 +3423,11 @@
               }
             },
             "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ImportListExclusionBulkResource"
+              }
+            },
+            "application/*\u002Bjson": {
               "schema": {
                 "$ref": "#/components/schemas/ImportListExclusionBulkResource"
               }
@@ -3488,6 +3494,11 @@
             "text/json": {
               "schema": {
                 "$ref": "#/components/schemas/PostApiV3ImportlistMovieRequestRequestBody"
+              }
+            },
+            "application/*\u002Bjson": {
+              "schema": {
+                "$ref": "#/components/schemas/PostApiV3ImportlistMovieMediaRequestRequestBody"
               }
             }
           }
@@ -5055,6 +5066,11 @@
               "schema": {
                 "$ref": "#/components/schemas/MovieEditorResource"
               }
+            },
+            "application/*\u002Bjson": {
+              "schema": {
+                "$ref": "#/components/schemas/MovieEditorResource"
+              }
             }
           }
         },
@@ -5077,6 +5093,11 @@
               }
             },
             "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MovieEditorResource"
+              }
+            },
+            "application/*\u002Bjson": {
               "schema": {
                 "$ref": "#/components/schemas/MovieEditorResource"
               }
@@ -5504,6 +5525,11 @@
               }
             },
             "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NamingConfigResource"
+              }
+            },
+            "application/*\u002Bjson": {
               "schema": {
                 "$ref": "#/components/schemas/NamingConfigResource"
               }
@@ -6005,6 +6031,11 @@
               "schema": {
                 "$ref": "#/components/schemas/QualityDefinitionResource"
               }
+            },
+            "application/*\u002Bjson": {
+              "schema": {
+                "$ref": "#/components/schemas/QualityDefinitionResource"
+              }
             }
           }
         },
@@ -6117,6 +6148,11 @@
             "text/json": {
               "schema": {
                 "$ref": "#/components/schemas/PutApiV3QualitydefinitionUpdateRequestRequestBody"
+              }
+            },
+            "application/*\u002Bjson": {
+              "schema": {
+                "$ref": "#/components/schemas/PutApiV3QualitydefinitionUpdateMediaRequestRequestBody"
               }
             }
           }
@@ -6472,6 +6508,11 @@
               "schema": {
                 "$ref": "#/components/schemas/QueueBulkResource"
               }
+            },
+            "application/*\u002Bjson": {
+              "schema": {
+                "$ref": "#/components/schemas/QueueBulkResource"
+              }
             }
           }
         },
@@ -6793,6 +6834,11 @@
               "schema": {
                 "$ref": "#/components/schemas/ReleaseProfileResource"
               }
+            },
+            "application/*\u002Bjson": {
+              "schema": {
+                "$ref": "#/components/schemas/ReleaseProfileResource"
+              }
             }
           }
         },
@@ -6894,6 +6940,11 @@
               }
             },
             "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReleaseProfileResource"
+              }
+            },
+            "application/*\u002Bjson": {
               "schema": {
                 "$ref": "#/components/schemas/ReleaseProfileResource"
               }
@@ -7115,6 +7166,11 @@
               }
             },
             "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RemotePathMappingResource"
+              }
+            },
+            "application/*\u002Bjson": {
               "schema": {
                 "$ref": "#/components/schemas/RemotePathMappingResource"
               }
@@ -14606,6 +14662,12 @@
           "$ref": "#/components/schemas/ImportListExclusionResource"
         }
       },
+      "PostApiV3ExclusionsBulkMediaRequestRequestBody": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ImportListExclusionResource"
+        }
+      },
       "PostApiV3ImportlistMovieRequest": {
         "type": "array",
         "items": {
@@ -14613,6 +14675,12 @@
         }
       },
       "PostApiV3ImportlistMovieRequestRequestBody": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/MovieResource"
+        }
+      },
+      "PostApiV3ImportlistMovieMediaRequestRequestBody": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/MovieResource"
@@ -14802,6 +14870,12 @@
         }
       },
       "PutApiV3QualitydefinitionUpdateRequestRequestBody": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/QualityDefinitionResource"
+        }
+      },
+      "PutApiV3QualitydefinitionUpdateMediaRequestRequestBody": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/QualityDefinitionResource"
