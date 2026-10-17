@@ -74,6 +74,14 @@ namespace Soenneker.Radarr.OpenApiClient.Models
 #else
         public string Guid { get; set; }
 #endif
+        /// <summary>The history property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Radarr.OpenApiClient.Models.ReleaseHistoryResource? History { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Radarr.OpenApiClient.Models.ReleaseHistoryResource History { get; set; }
+#endif
         /// <summary>The id property</summary>
         public int? Id { get; set; }
         /// <summary>The imdbId property</summary>
@@ -245,6 +253,7 @@ namespace Soenneker.Radarr.OpenApiClient.Models
                 { "downloadUrl", n => { DownloadUrl = n.GetStringValue(); } },
                 { "edition", n => { Edition = n.GetStringValue(); } },
                 { "guid", n => { Guid = n.GetStringValue(); } },
+                { "history", n => { History = n.GetObjectValue<global::Soenneker.Radarr.OpenApiClient.Models.ReleaseHistoryResource>(global::Soenneker.Radarr.OpenApiClient.Models.ReleaseHistoryResource.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetIntValue(); } },
                 { "imdbId", n => { ImdbId = n.GetIntValue(); } },
                 { "indexer", n => { Indexer = n.GetStringValue(); } },
@@ -298,6 +307,7 @@ namespace Soenneker.Radarr.OpenApiClient.Models
             writer.WriteStringValue("downloadUrl", DownloadUrl);
             writer.WriteStringValue("edition", Edition);
             writer.WriteStringValue("guid", Guid);
+            writer.WriteObjectValue<global::Soenneker.Radarr.OpenApiClient.Models.ReleaseHistoryResource>("history", History);
             writer.WriteIntValue("id", Id);
             writer.WriteIntValue("imdbId", ImdbId);
             writer.WriteStringValue("indexer", Indexer);

@@ -14,6 +14,14 @@ namespace Soenneker.Radarr.OpenApiClient.Models
     {
         /// <summary>The movieFileCount property</summary>
         public int? MovieFileCount { get; set; }
+        /// <summary>The movieFileQualities property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.Radarr.OpenApiClient.Models.Quality>? MovieFileQualities { get; set; }
+#nullable restore
+#else
+        public List<global::Soenneker.Radarr.OpenApiClient.Models.Quality> MovieFileQualities { get; set; }
+#endif
         /// <summary>The releaseGroups property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -43,6 +51,7 @@ namespace Soenneker.Radarr.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "movieFileCount", n => { MovieFileCount = n.GetIntValue(); } },
+                { "movieFileQualities", n => { MovieFileQualities = n.GetCollectionOfObjectValues<global::Soenneker.Radarr.OpenApiClient.Models.Quality>(global::Soenneker.Radarr.OpenApiClient.Models.Quality.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "releaseGroups", n => { ReleaseGroups = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "sizeOnDisk", n => { SizeOnDisk = n.GetLongValue(); } },
             };
@@ -55,6 +64,7 @@ namespace Soenneker.Radarr.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("movieFileCount", MovieFileCount);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Radarr.OpenApiClient.Models.Quality>("movieFileQualities", MovieFileQualities);
             writer.WriteCollectionOfPrimitiveValues<string>("releaseGroups", ReleaseGroups);
             writer.WriteLongValue("sizeOnDisk", SizeOnDisk);
         }

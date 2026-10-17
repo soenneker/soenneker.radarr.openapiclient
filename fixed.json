@@ -55,19 +55,9 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Alttitle200PlainResponseSchema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Alttitle200ResponseSchema2"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Alttitle200ResponseSchema3"
+                  "$ref": "#/components/schemas/GetApiV3Alttitle200ResponseSchema"
                 }
               }
             }
@@ -96,22 +86,15 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/AlternativeTitleResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/AlternativeTitleResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/AlternativeTitleResource"
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       }
@@ -172,8 +155,18 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "OK"
+          "302": {
+            "description": "Found"
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
           }
         }
       },
@@ -196,8 +189,8 @@
         ],
         "operationId": "GetLogout",
         "responses": {
-          "200": {
-            "description": "OK"
+          "302": {
+            "description": "Found"
           }
         }
       }
@@ -218,25 +211,18 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "OK",
+          "201": {
+            "description": "Created",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/AutoTaggingResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/AutoTaggingResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/AutoTaggingResource"
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       },
@@ -285,25 +271,18 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "OK",
+          "202": {
+            "description": "Accepted",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/AutoTaggingResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/AutoTaggingResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/AutoTaggingResource"
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       },
@@ -349,22 +328,15 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/AutoTaggingResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/AutoTaggingResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/AutoTaggingResource"
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       }
@@ -377,7 +349,14 @@
         "operationId": "GetApiV3AutotaggingSchema",
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetApiV3AutotaggingSchema200ResponseSchema"
+                }
+              }
+            }
           }
         }
       }
@@ -392,19 +371,9 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetApiV3SystemBackup200PlainResponseSchema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3SystemBackup200ResponseSchema2"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetApiV3SystemBackup200ResponseSchema3"
+                  "$ref": "#/components/schemas/GetApiV3SystemBackup200ResponseSchema"
                 }
               }
             }
@@ -431,7 +400,17 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeleteApiV3SystemBackupById200ResponseSchema"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       }
@@ -455,7 +434,17 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BackupRestoreResource"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       }
@@ -468,7 +457,24 @@
         "operationId": "PostApiV3SystemBackupRestoreUpload",
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BackupRestoreResource"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BackupRestoreErrorResource"
+                }
+              }
+            }
           }
         }
       }
@@ -568,19 +574,9 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetApiV3BlocklistMovie200PlainResponseSchema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3BlocklistMovie200ResponseSchema2"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetApiV3BlocklistMovie200ResponseSchema3"
+                  "$ref": "#/components/schemas/GetApiV3BlocklistMovie200ResponseSchema"
                 }
               }
             }
@@ -624,22 +620,19 @@
               "schema": {
                 "$ref": "#/components/schemas/BlocklistBulkResource"
               }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/BlocklistBulkResource"
-              }
-            },
-            "application/*\u002Bjson": {
-              "schema": {
-                "$ref": "#/components/schemas/BlocklistBulkResource"
-              }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeleteApiV3BlocklistBulk200ResponseSchema"
+                }
+              }
+            }
           }
         }
       }
@@ -751,8 +744,8 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "OK"
+          "204": {
+            "description": "No Content"
           }
         }
       }
@@ -802,7 +795,14 @@
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PutApiV3Collection200ResponseSchema"
+                }
+              }
+            }
           }
         }
       }
@@ -833,25 +833,18 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "OK",
+          "202": {
+            "description": "Accepted",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/CollectionResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/CollectionResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/CollectionResource"
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       },
@@ -875,22 +868,15 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/CollectionResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/CollectionResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/CollectionResource"
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       }
@@ -911,8 +897,8 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "OK",
+          "201": {
+            "description": "Created",
             "content": {
               "application/json": {
                 "schema": {
@@ -920,6 +906,9 @@
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       },
@@ -932,19 +921,9 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Command200PlainResponseSchema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Command200ResponseSchema2"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Command200ResponseSchema3"
+                  "$ref": "#/components/schemas/GetApiV3Command200ResponseSchema"
                 }
               }
             }
@@ -995,22 +974,15 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/CommandResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/CommandResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/CommandResource"
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       }
@@ -1041,7 +1013,14 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetApiV3Credit200ResponseSchema"
+                }
+              }
+            }
           }
         }
       }
@@ -1067,22 +1046,15 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/CreditResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/CreditResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/CreditResource"
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       }
@@ -1097,19 +1069,9 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Customfilter200PlainResponseSchema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Customfilter200ResponseSchema2"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Customfilter200ResponseSchema3"
+                  "$ref": "#/components/schemas/GetApiV3Customfilter200ResponseSchema"
                 }
               }
             }
@@ -1131,25 +1093,18 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "OK",
+          "201": {
+            "description": "Created",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/CustomFilterResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/CustomFilterResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/CustomFilterResource"
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       }
@@ -1180,25 +1135,18 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "OK",
+          "202": {
+            "description": "Accepted",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/CustomFilterResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/CustomFilterResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/CustomFilterResource"
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       },
@@ -1244,22 +1192,15 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/CustomFilterResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/CustomFilterResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/CustomFilterResource"
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       }
@@ -1298,25 +1239,18 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "OK",
+          "201": {
+            "description": "Created",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/CustomFormatResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/CustomFormatResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/CustomFormatResource"
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       }
@@ -1347,25 +1281,18 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "OK",
+          "202": {
+            "description": "Accepted",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/CustomFormatResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/CustomFormatResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/CustomFormatResource"
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       },
@@ -1411,22 +1338,15 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/CustomFormatResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/CustomFormatResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/CustomFormatResource"
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       }
@@ -1452,10 +1372,13 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CustomFormatResource"
+                  "$ref": "#/components/schemas/PutApiV3CustomformatBulk200ResponseSchema"
                 }
               }
             }
+          },
+          "400": {
+            "description": "Bad Request"
           }
         }
       },
@@ -1475,7 +1398,14 @@
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeleteApiV3CustomformatBulk200ResponseSchema"
+                }
+              }
+            }
           }
         }
       }
@@ -1488,7 +1418,14 @@
         "operationId": "GetApiV3CustomformatSchema",
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetApiV3CustomformatSchema200ResponseSchema"
+                }
+              }
+            }
           }
         }
       }
@@ -1571,25 +1508,18 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "OK",
+          "201": {
+            "description": "Created",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/DelayProfileResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/DelayProfileResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/DelayProfileResource"
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       },
@@ -1602,19 +1532,9 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Delayprofile200PlainResponseSchema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Delayprofile200ResponseSchema2"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Delayprofile200ResponseSchema3"
+                  "$ref": "#/components/schemas/GetApiV3Delayprofile200ResponseSchema"
                 }
               }
             }
@@ -1670,25 +1590,18 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "OK",
+          "202": {
+            "description": "Accepted",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/DelayProfileResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/DelayProfileResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/DelayProfileResource"
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       },
@@ -1712,22 +1625,15 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/DelayProfileResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/DelayProfileResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/DelayProfileResource"
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       }
@@ -1761,19 +1667,9 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/PutApiV3DelayprofileReorderById200PlainResponseSchema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PutApiV3DelayprofileReorderById200ResponseSchema2"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/PutApiV3DelayprofileReorderById200ResponseSchema3"
+                  "$ref": "#/components/schemas/PutApiV3DelayprofileReorderById200ResponseSchema"
                 }
               }
             }
@@ -1791,19 +1687,9 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Diskspace200PlainResponseSchema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Diskspace200ResponseSchema2"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Diskspace200ResponseSchema3"
+                  "$ref": "#/components/schemas/GetApiV3Diskspace200ResponseSchema"
                 }
               }
             }
@@ -1855,8 +1741,8 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "OK",
+          "201": {
+            "description": "Created",
             "content": {
               "application/json": {
                 "schema": {
@@ -1864,6 +1750,9 @@
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       }
@@ -1903,8 +1792,8 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "OK",
+          "202": {
+            "description": "Accepted",
             "content": {
               "application/json": {
                 "schema": {
@@ -1912,6 +1801,9 @@
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       },
@@ -1933,7 +1825,14 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeleteApiV3DownloadclientById200ResponseSchema"
+                }
+              }
+            }
           }
         }
       },
@@ -1957,22 +1856,15 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/DownloadClientResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/DownloadClientResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/DownloadClientResource"
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       }
@@ -1998,10 +1890,13 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DownloadClientResource"
+                  "$ref": "#/components/schemas/PutApiV3DownloadclientBulk200ResponseSchema"
                 }
               }
             }
+          },
+          "400": {
+            "description": "Bad Request"
           }
         }
       },
@@ -2021,7 +1916,14 @@
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeleteApiV3DownloadclientBulk200ResponseSchema"
+                }
+              }
+            }
           }
         }
       }
@@ -2072,8 +1974,8 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "OK"
+          "204": {
+            "description": "No Content"
           }
         }
       }
@@ -2086,7 +1988,24 @@
         "operationId": "PostApiV3DownloadclientTestall",
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostApiV3DownloadclientTestall200ResponseSchema"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostApiV3DownloadclientTestall400ResponseSchema"
+                }
+              }
+            }
           }
         }
       }
@@ -2117,8 +2036,8 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "OK"
+          "400": {
+            "description": "Bad Request"
           }
         }
       }
@@ -2169,25 +2088,18 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "OK",
+          "202": {
+            "description": "Accepted",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/DownloadClientConfigResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/DownloadClientConfigResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/DownloadClientConfigResource"
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       },
@@ -2211,22 +2123,15 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/DownloadClientConfigResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/DownloadClientConfigResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/DownloadClientConfigResource"
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       }
@@ -2251,19 +2156,9 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Extrafile200PlainResponseSchema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Extrafile200ResponseSchema2"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Extrafile200ResponseSchema3"
+                  "$ref": "#/components/schemas/GetApiV3Extrafile200ResponseSchema"
                 }
               }
             }
@@ -2304,7 +2199,14 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileSystemResult"
+                }
+              }
+            }
           }
         }
       }
@@ -2326,7 +2228,14 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileSystemTypeResource"
+                }
+              }
+            }
           }
         }
       }
@@ -2348,7 +2257,14 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetApiV3FilesystemMediafiles200ResponseSchema"
+                }
+              }
+            }
           }
         }
       }
@@ -2363,19 +2279,9 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Health200PlainResponseSchema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Health200ResponseSchema2"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Health200ResponseSchema3"
+                  "$ref": "#/components/schemas/GetApiV3Health200ResponseSchema"
                 }
               }
             }
@@ -2604,7 +2510,14 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostApiV3HistoryFailedById200ResponseSchema"
+                }
+              }
+            }
           }
         }
       }
@@ -2619,17 +2532,7 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/HostConfigResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/HostConfigResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/HostConfigResource"
                 }
@@ -2661,39 +2564,22 @@
               "schema": {
                 "$ref": "#/components/schemas/HostConfigResource"
               }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/HostConfigResource"
-              }
-            },
-            "application/*\u002Bjson": {
-              "schema": {
-                "$ref": "#/components/schemas/HostConfigResource"
-              }
             }
           }
         },
         "responses": {
-          "200": {
-            "description": "OK",
+          "202": {
+            "description": "Accepted",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/HostConfigResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/HostConfigResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/HostConfigResource"
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       },
@@ -2717,22 +2603,15 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/HostConfigResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/HostConfigResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/HostConfigResource"
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       }
@@ -2781,8 +2660,8 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "OK",
+          "201": {
+            "description": "Created",
             "content": {
               "application/json": {
                 "schema": {
@@ -2790,6 +2669,9 @@
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       }
@@ -2829,8 +2711,8 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "OK",
+          "202": {
+            "description": "Accepted",
             "content": {
               "application/json": {
                 "schema": {
@@ -2838,6 +2720,9 @@
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       },
@@ -2859,7 +2744,14 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeleteApiV3ImportlistById200ResponseSchema"
+                }
+              }
+            }
           }
         }
       },
@@ -2883,22 +2775,15 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ImportListResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ImportListResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ImportListResource"
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       }
@@ -2924,10 +2809,13 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ImportListResource"
+                  "$ref": "#/components/schemas/PutApiV3ImportlistBulk200ResponseSchema"
                 }
               }
             }
+          },
+          "400": {
+            "description": "Bad Request"
           }
         }
       },
@@ -2947,7 +2835,14 @@
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeleteApiV3ImportlistBulk200ResponseSchema"
+                }
+              }
+            }
           }
         }
       }
@@ -2998,8 +2893,8 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "OK"
+          "204": {
+            "description": "No Content"
           }
         }
       }
@@ -3012,7 +2907,24 @@
         "operationId": "PostApiV3ImportlistTestall",
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostApiV3ImportlistTestall200ResponseSchema"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostApiV3ImportlistTestall400ResponseSchema"
+                }
+              }
+            }
           }
         }
       }
@@ -3043,8 +2955,8 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "OK"
+          "400": {
+            "description": "Bad Request"
           }
         }
       }
@@ -3095,25 +3007,18 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "OK",
+          "202": {
+            "description": "Accepted",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ImportListConfigResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ImportListConfigResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ImportListConfigResource"
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       },
@@ -3137,22 +3042,15 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ImportListConfigResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ImportListConfigResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ImportListConfigResource"
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       }
@@ -3192,25 +3090,18 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "OK",
+          "201": {
+            "description": "Created",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ImportListExclusionResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ImportListExclusionResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ImportListExclusionResource"
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       }
@@ -3295,25 +3186,18 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "OK",
+          "202": {
+            "description": "Accepted",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ImportListExclusionResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ImportListExclusionResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ImportListExclusionResource"
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       },
@@ -3359,22 +3243,15 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ImportListExclusionResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ImportListExclusionResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ImportListExclusionResource"
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       }
@@ -3389,24 +3266,21 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/PostApiV3ExclusionsBulkRequest"
-              }
-            },
-            "text/json": {
-              "schema": {
                 "$ref": "#/components/schemas/PostApiV3ExclusionsBulkRequestRequestBody"
-              }
-            },
-            "application/*\u002Bjson": {
-              "schema": {
-                "$ref": "#/components/schemas/PostApiV3ExclusionsBulkMediaRequestRequestBody"
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostApiV3ExclusionsBulk200ResponseSchema"
+                }
+              }
+            }
           }
         }
       },
@@ -3421,22 +3295,19 @@
               "schema": {
                 "$ref": "#/components/schemas/ImportListExclusionBulkResource"
               }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/ImportListExclusionBulkResource"
-              }
-            },
-            "application/*\u002Bjson": {
-              "schema": {
-                "$ref": "#/components/schemas/ImportListExclusionBulkResource"
-              }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeleteApiV3ExclusionsBulk200ResponseSchema"
+                }
+              }
+            }
           }
         }
       }
@@ -3475,7 +3346,14 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetApiV3ImportlistMovie200ResponseSchema"
+                }
+              }
+            }
           }
         }
       },
@@ -3488,24 +3366,21 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/PostApiV3ImportlistMovieRequest"
-              }
-            },
-            "text/json": {
-              "schema": {
                 "$ref": "#/components/schemas/PostApiV3ImportlistMovieRequestRequestBody"
-              }
-            },
-            "application/*\u002Bjson": {
-              "schema": {
-                "$ref": "#/components/schemas/PostApiV3ImportlistMovieMediaRequestRequestBody"
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostApiV3ImportlistMovie200ResponseSchema"
+                }
+              }
+            }
           }
         }
       }
@@ -3554,8 +3429,8 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "OK",
+          "201": {
+            "description": "Created",
             "content": {
               "application/json": {
                 "schema": {
@@ -3563,6 +3438,9 @@
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       }
@@ -3602,8 +3480,8 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "OK",
+          "202": {
+            "description": "Accepted",
             "content": {
               "application/json": {
                 "schema": {
@@ -3611,6 +3489,9 @@
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       },
@@ -3632,7 +3513,14 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeleteApiV3IndexerById200ResponseSchema"
+                }
+              }
+            }
           }
         }
       },
@@ -3656,22 +3544,15 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/IndexerResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/IndexerResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/IndexerResource"
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       }
@@ -3697,10 +3578,13 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/IndexerResource"
+                  "$ref": "#/components/schemas/PutApiV3IndexerBulk200ResponseSchema"
                 }
               }
             }
+          },
+          "400": {
+            "description": "Bad Request"
           }
         }
       },
@@ -3720,7 +3604,14 @@
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeleteApiV3IndexerBulk200ResponseSchema"
+                }
+              }
+            }
           }
         }
       }
@@ -3771,8 +3662,8 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "OK"
+          "204": {
+            "description": "No Content"
           }
         }
       }
@@ -3785,7 +3676,24 @@
         "operationId": "PostApiV3IndexerTestall",
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostApiV3IndexerTestall200ResponseSchema"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostApiV3IndexerTestall400ResponseSchema"
+                }
+              }
+            }
           }
         }
       }
@@ -3816,8 +3724,8 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "OK"
+          "400": {
+            "description": "Bad Request"
           }
         }
       }
@@ -3868,25 +3776,18 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "OK",
+          "202": {
+            "description": "Accepted",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/IndexerConfigResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/IndexerConfigResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/IndexerConfigResource"
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       },
@@ -3910,22 +3811,15 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/IndexerConfigResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/IndexerConfigResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/IndexerConfigResource"
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       }
@@ -3940,19 +3834,9 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Indexerflag200PlainResponseSchema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Indexerflag200ResponseSchema2"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Indexerflag200ResponseSchema3"
+                  "$ref": "#/components/schemas/GetApiV3Indexerflag200ResponseSchema"
                 }
               }
             }
@@ -3970,19 +3854,9 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Language200PlainResponseSchema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Language200ResponseSchema2"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Language200ResponseSchema3"
+                  "$ref": "#/components/schemas/GetApiV3Language200ResponseSchema"
                 }
               }
             }
@@ -4011,22 +3885,15 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/LanguageResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LanguageResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/LanguageResource"
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       }
@@ -4039,24 +3906,7 @@
         "operationId": "GetApiV3Localization",
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Localization200PlainResponseSchema"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Localization200ResponseSchema2"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Localization200ResponseSchema3"
-                }
-              }
-            }
+            "description": "OK"
           }
         }
       }
@@ -4152,19 +4002,9 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetApiV3LogFile200PlainResponseSchema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3LogFile200ResponseSchema2"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetApiV3LogFile200ResponseSchema3"
+                  "$ref": "#/components/schemas/GetApiV3LogFile200ResponseSchema"
                 }
               }
             }
@@ -4190,8 +4030,18 @@
           }
         ],
         "responses": {
+          "404": {
+            "description": "Not Found"
+          },
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetApiV3LogFileByFilename200PlainResponseSchema"
+                }
+              }
+            }
           }
         }
       }
@@ -4263,7 +4113,17 @@
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostApiV3Manualimport200ResponseSchema"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request"
           }
         }
       }
@@ -4295,8 +4155,8 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "OK"
+          "404": {
+            "description": "Not Found"
           }
         }
       }
@@ -4347,25 +4207,18 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "OK",
+          "202": {
+            "description": "Accepted",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/MediaManagementConfigResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/MediaManagementConfigResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/MediaManagementConfigResource"
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       },
@@ -4389,22 +4242,15 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/MediaManagementConfigResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/MediaManagementConfigResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/MediaManagementConfigResource"
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       }
@@ -4453,8 +4299,8 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "OK",
+          "201": {
+            "description": "Created",
             "content": {
               "application/json": {
                 "schema": {
@@ -4462,6 +4308,9 @@
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       }
@@ -4501,8 +4350,8 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "OK",
+          "202": {
+            "description": "Accepted",
             "content": {
               "application/json": {
                 "schema": {
@@ -4510,6 +4359,9 @@
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       },
@@ -4531,7 +4383,14 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeleteApiV3MetadataById200ResponseSchema"
+                }
+              }
+            }
           }
         }
       },
@@ -4555,22 +4414,15 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/MetadataResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/MetadataResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/MetadataResource"
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       }
@@ -4621,8 +4473,8 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "OK"
+          "204": {
+            "description": "No Content"
           }
         }
       }
@@ -4635,7 +4487,24 @@
         "operationId": "PostApiV3MetadataTestall",
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostApiV3MetadataTestall200ResponseSchema"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostApiV3MetadataTestall400ResponseSchema"
+                }
+              }
+            }
           }
         }
       }
@@ -4666,8 +4535,8 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "OK"
+          "400": {
+            "description": "Bad Request"
           }
         }
       }
@@ -4718,25 +4587,18 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "OK",
+          "202": {
+            "description": "Accepted",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/MetadataConfigResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/MetadataConfigResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/MetadataConfigResource"
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       },
@@ -4760,22 +4622,15 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/MetadataConfigResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/MetadataConfigResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/MetadataConfigResource"
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       }
@@ -4878,19 +4733,9 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Movie200PlainResponseSchema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Movie200ResponseSchema2"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Movie200ResponseSchema3"
+                  "$ref": "#/components/schemas/GetApiV3Movie200ResponseSchema"
                 }
               }
             }
@@ -4912,8 +4757,8 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "OK",
+          "201": {
+            "description": "Created",
             "content": {
               "application/json": {
                 "schema": {
@@ -4921,6 +4766,9 @@
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       }
@@ -4959,8 +4807,8 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "OK",
+          "202": {
+            "description": "Accepted",
             "content": {
               "application/json": {
                 "schema": {
@@ -4968,6 +4816,9 @@
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       },
@@ -5029,22 +4880,15 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/MovieResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/MovieResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/MovieResource"
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       }
@@ -5061,22 +4905,22 @@
               "schema": {
                 "$ref": "#/components/schemas/MovieEditorResource"
               }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/MovieEditorResource"
-              }
-            },
-            "application/*\u002Bjson": {
-              "schema": {
-                "$ref": "#/components/schemas/MovieEditorResource"
-              }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PutApiV3MovieEditor200ResponseSchema"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request"
           }
         }
       },
@@ -5091,22 +4935,19 @@
               "schema": {
                 "$ref": "#/components/schemas/MovieEditorResource"
               }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/MovieEditorResource"
-              }
-            },
-            "application/*\u002Bjson": {
-              "schema": {
-                "$ref": "#/components/schemas/MovieEditorResource"
-              }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeleteApiV3MovieEditor200ResponseSchema"
+                }
+              }
+            }
           }
         }
       }
@@ -5151,6 +4992,9 @@
                 }
               }
             }
+          },
+          "400": {
+            "description": "Bad Request"
           }
         }
       }
@@ -5181,25 +5025,18 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "OK",
+          "202": {
+            "description": "Accepted",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/MovieFileResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/MovieFileResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/MovieFileResource"
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       },
@@ -5222,6 +5059,9 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       },
@@ -5245,22 +5085,15 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/MovieFileResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/MovieFileResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/MovieFileResource"
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       }
@@ -5282,7 +5115,14 @@
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PutApiV3MoviefileEditor200ResponseSchema"
+                }
+              }
+            }
           }
         },
         "deprecated": true
@@ -5305,7 +5145,17 @@
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeleteApiV3MoviefileBulk200ResponseSchema"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request"
           }
         }
       },
@@ -5325,7 +5175,14 @@
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PutApiV3MoviefileBulk200ResponseSchema"
+                }
+              }
+            }
           }
         }
       }
@@ -5349,7 +5206,14 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MovieFolderResource"
+                }
+              }
+            }
           }
         }
       }
@@ -5481,17 +5345,7 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/NamingConfigResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/NamingConfigResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/NamingConfigResource"
                 }
@@ -5523,39 +5377,22 @@
               "schema": {
                 "$ref": "#/components/schemas/NamingConfigResource"
               }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NamingConfigResource"
-              }
-            },
-            "application/*\u002Bjson": {
-              "schema": {
-                "$ref": "#/components/schemas/NamingConfigResource"
-              }
             }
           }
         },
         "responses": {
-          "200": {
-            "description": "OK",
+          "202": {
+            "description": "Accepted",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/NamingConfigResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/NamingConfigResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/NamingConfigResource"
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       },
@@ -5579,22 +5416,15 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/NamingConfigResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/NamingConfigResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/NamingConfigResource"
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       }
@@ -5659,7 +5489,14 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NamingExampleResource"
+                }
+              }
+            }
           }
         }
       }
@@ -5708,8 +5545,8 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "OK",
+          "201": {
+            "description": "Created",
             "content": {
               "application/json": {
                 "schema": {
@@ -5717,6 +5554,9 @@
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       }
@@ -5756,8 +5596,8 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "OK",
+          "202": {
+            "description": "Accepted",
             "content": {
               "application/json": {
                 "schema": {
@@ -5765,6 +5605,9 @@
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       },
@@ -5786,7 +5629,14 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeleteApiV3NotificationById200ResponseSchema"
+                }
+              }
+            }
           }
         }
       },
@@ -5810,22 +5660,15 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/NotificationResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/NotificationResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/NotificationResource"
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       }
@@ -5876,8 +5719,8 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "OK"
+          "204": {
+            "description": "No Content"
           }
         }
       }
@@ -5890,7 +5733,24 @@
         "operationId": "PostApiV3NotificationTestall",
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostApiV3NotificationTestall200ResponseSchema"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostApiV3NotificationTestall400ResponseSchema"
+                }
+              }
+            }
           }
         }
       }
@@ -5921,8 +5781,8 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "OK"
+          "400": {
+            "description": "Bad Request"
           }
         }
       }
@@ -5946,17 +5806,7 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ParseResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ParseResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ParseResource"
                 }
@@ -5982,6 +5832,16 @@
                 }
               }
             }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PingResource"
+                }
+              }
+            }
           }
         }
       },
@@ -5993,6 +5853,16 @@
         "responses": {
           "200": {
             "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PingResource"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
             "content": {
               "application/json": {
                 "schema": {
@@ -6026,39 +5896,22 @@
               "schema": {
                 "$ref": "#/components/schemas/QualityDefinitionResource"
               }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/QualityDefinitionResource"
-              }
-            },
-            "application/*\u002Bjson": {
-              "schema": {
-                "$ref": "#/components/schemas/QualityDefinitionResource"
-              }
             }
           }
         },
         "responses": {
-          "200": {
-            "description": "OK",
+          "202": {
+            "description": "Accepted",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/QualityDefinitionResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/QualityDefinitionResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/QualityDefinitionResource"
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       },
@@ -6082,22 +5935,15 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/QualityDefinitionResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/QualityDefinitionResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/QualityDefinitionResource"
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       }
@@ -6112,19 +5958,9 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Qualitydefinition200PlainResponseSchema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Qualitydefinition200ResponseSchema2"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Qualitydefinition200ResponseSchema3"
+                  "$ref": "#/components/schemas/GetApiV3Qualitydefinition200ResponseSchema"
                 }
               }
             }
@@ -6142,24 +5978,21 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/PutApiV3QualitydefinitionUpdateRequest"
-              }
-            },
-            "text/json": {
-              "schema": {
                 "$ref": "#/components/schemas/PutApiV3QualitydefinitionUpdateRequestRequestBody"
-              }
-            },
-            "application/*\u002Bjson": {
-              "schema": {
-                "$ref": "#/components/schemas/PutApiV3QualitydefinitionUpdateMediaRequestRequestBody"
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PutApiV3QualitydefinitionUpdate200ResponseSchema"
+                }
+              }
+            }
           }
         }
       }
@@ -6174,17 +6007,7 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/QualityDefinitionLimitsResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/QualityDefinitionLimitsResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/QualityDefinitionLimitsResource"
                 }
@@ -6210,25 +6033,18 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "OK",
+          "201": {
+            "description": "Created",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/QualityProfileResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/QualityProfileResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/QualityProfileResource"
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       },
@@ -6241,19 +6057,9 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Qualityprofile200PlainResponseSchema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Qualityprofile200ResponseSchema2"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Qualityprofile200ResponseSchema3"
+                  "$ref": "#/components/schemas/GetApiV3Qualityprofile200ResponseSchema"
                 }
               }
             }
@@ -6309,25 +6115,18 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "OK",
+          "202": {
+            "description": "Accepted",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/QualityProfileResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/QualityProfileResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/QualityProfileResource"
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       },
@@ -6351,22 +6150,15 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/QualityProfileResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/QualityProfileResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/QualityProfileResource"
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       }
@@ -6381,17 +6173,7 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/QualityProfileResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/QualityProfileResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/QualityProfileResource"
                 }
@@ -6453,6 +6235,9 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       }
@@ -6503,22 +6288,19 @@
               "schema": {
                 "$ref": "#/components/schemas/QueueBulkResource"
               }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/QueueBulkResource"
-              }
-            },
-            "application/*\u002Bjson": {
-              "schema": {
-                "$ref": "#/components/schemas/QueueBulkResource"
-              }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeleteApiV3QueueBulk200ResponseSchema"
+                }
+              }
+            }
           }
         }
       }
@@ -6662,7 +6444,17 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostApiV3QueueGrabById200ResponseSchema"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       }
@@ -6684,7 +6476,17 @@
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostApiV3QueueGrabBulk200ResponseSchema"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       }
@@ -6717,19 +6519,9 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetApiV3QueueDetails200PlainResponseSchema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3QueueDetails200ResponseSchema2"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetApiV3QueueDetails200ResponseSchema3"
+                  "$ref": "#/components/schemas/GetApiV3QueueDetails200ResponseSchema"
                 }
               }
             }
@@ -6747,17 +6539,7 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/QueueStatusResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/QueueStatusResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/QueueStatusResource"
                 }
@@ -6784,7 +6566,17 @@
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReleaseResource"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       },
@@ -6813,6 +6605,9 @@
                 }
               }
             }
+          },
+          "400": {
+            "description": "Bad Request"
           }
         }
       }
@@ -6829,39 +6624,22 @@
               "schema": {
                 "$ref": "#/components/schemas/ReleaseProfileResource"
               }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/ReleaseProfileResource"
-              }
-            },
-            "application/*\u002Bjson": {
-              "schema": {
-                "$ref": "#/components/schemas/ReleaseProfileResource"
-              }
             }
           }
         },
         "responses": {
-          "200": {
-            "description": "OK",
+          "201": {
+            "description": "Created",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ReleaseProfileResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ReleaseProfileResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ReleaseProfileResource"
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       },
@@ -6874,19 +6652,9 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Releaseprofile200PlainResponseSchema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Releaseprofile200ResponseSchema2"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Releaseprofile200ResponseSchema3"
+                  "$ref": "#/components/schemas/GetApiV3Releaseprofile200ResponseSchema"
                 }
               }
             }
@@ -6938,39 +6706,22 @@
               "schema": {
                 "$ref": "#/components/schemas/ReleaseProfileResource"
               }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/ReleaseProfileResource"
-              }
-            },
-            "application/*\u002Bjson": {
-              "schema": {
-                "$ref": "#/components/schemas/ReleaseProfileResource"
-              }
             }
           }
         },
         "responses": {
-          "200": {
-            "description": "OK",
+          "202": {
+            "description": "Accepted",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ReleaseProfileResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ReleaseProfileResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ReleaseProfileResource"
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       },
@@ -6994,22 +6745,15 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ReleaseProfileResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ReleaseProfileResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ReleaseProfileResource"
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       }
@@ -7033,22 +6777,15 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/PostApiV3ReleasePush200PlainResponseSchema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PostApiV3ReleasePush200ResponseSchema2"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/PostApiV3ReleasePush200ResponseSchema3"
+                  "$ref": "#/components/schemas/PostApiV3ReleasePush200ResponseSchema"
                 }
               }
             }
+          },
+          "400": {
+            "description": "Bad Request"
           }
         }
       }
@@ -7069,25 +6806,18 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "OK",
+          "201": {
+            "description": "Created",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/RemotePathMappingResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/RemotePathMappingResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/RemotePathMappingResource"
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       },
@@ -7100,19 +6830,9 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Remotepathmapping200PlainResponseSchema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Remotepathmapping200ResponseSchema2"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Remotepathmapping200ResponseSchema3"
+                  "$ref": "#/components/schemas/GetApiV3Remotepathmapping200ResponseSchema"
                 }
               }
             }
@@ -7164,16 +6884,6 @@
               "schema": {
                 "$ref": "#/components/schemas/RemotePathMappingResource"
               }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/RemotePathMappingResource"
-              }
-            },
-            "application/*\u002Bjson": {
-              "schema": {
-                "$ref": "#/components/schemas/RemotePathMappingResource"
-              }
             }
           }
         },
@@ -7181,22 +6891,15 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/RemotePathMappingResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/RemotePathMappingResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/RemotePathMappingResource"
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       },
@@ -7220,22 +6923,15 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/RemotePathMappingResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/RemotePathMappingResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/RemotePathMappingResource"
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       }
@@ -7263,22 +6959,15 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Rename200PlainResponseSchema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Rename200ResponseSchema2"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Rename200ResponseSchema3"
+                  "$ref": "#/components/schemas/GetApiV3Rename200ResponseSchema"
                 }
               }
             }
+          },
+          "400": {
+            "description": "Bad Request"
           }
         }
       }
@@ -7299,25 +6988,18 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "OK",
+          "201": {
+            "description": "Created",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/RootFolderResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/RootFolderResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/RootFolderResource"
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       },
@@ -7330,19 +7012,9 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Rootfolder200PlainResponseSchema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Rootfolder200ResponseSchema2"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Rootfolder200ResponseSchema3"
+                  "$ref": "#/components/schemas/GetApiV3Rootfolder200ResponseSchema"
                 }
               }
             }
@@ -7393,22 +7065,15 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/RootFolderResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/RootFolderResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/RootFolderResource"
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       }
@@ -7484,17 +7149,7 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/SystemResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/SystemResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/SystemResource"
                 }
@@ -7512,7 +7167,14 @@
         "operationId": "GetApiV3SystemRoutes",
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetApiV3SystemRoutes200PlainResponseSchema"
+                }
+              }
+            }
           }
         }
       }
@@ -7525,7 +7187,14 @@
         "operationId": "GetApiV3SystemRoutesDuplicate",
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetApiV3SystemRoutesDuplicate200ResponseSchema"
+                }
+              }
+            }
           }
         }
       }
@@ -7538,7 +7207,14 @@
         "operationId": "PostApiV3SystemShutdown",
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SystemShutdownResource"
+                }
+              }
+            }
           }
         }
       }
@@ -7551,7 +7227,14 @@
         "operationId": "PostApiV3SystemRestart",
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SystemRestartResource"
+                }
+              }
+            }
           }
         }
       }
@@ -7566,19 +7249,9 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Tag200PlainResponseSchema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Tag200ResponseSchema2"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Tag200ResponseSchema3"
+                  "$ref": "#/components/schemas/GetApiV3Tag200ResponseSchema"
                 }
               }
             }
@@ -7600,25 +7273,18 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "OK",
+          "201": {
+            "description": "Created",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/TagResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/TagResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/TagResource"
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       }
@@ -7649,25 +7315,18 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "OK",
+          "202": {
+            "description": "Accepted",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/TagResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/TagResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/TagResource"
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       },
@@ -7713,22 +7372,15 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/TagResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/TagResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/TagResource"
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       }
@@ -7743,19 +7395,9 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetApiV3TagDetail200PlainResponseSchema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3TagDetail200ResponseSchema2"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetApiV3TagDetail200ResponseSchema3"
+                  "$ref": "#/components/schemas/GetApiV3TagDetail200ResponseSchema"
                 }
               }
             }
@@ -7784,22 +7426,15 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/TagDetailsResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/TagDetailsResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/TagDetailsResource"
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       }
@@ -7814,19 +7449,9 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetApiV3SystemTask200PlainResponseSchema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3SystemTask200ResponseSchema2"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetApiV3SystemTask200ResponseSchema3"
+                  "$ref": "#/components/schemas/GetApiV3SystemTask200ResponseSchema"
                 }
               }
             }
@@ -7855,22 +7480,15 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/TaskResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/TaskResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/TaskResource"
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       }
@@ -7901,25 +7519,18 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "OK",
+          "202": {
+            "description": "Accepted",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/UiConfigResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/UiConfigResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/UiConfigResource"
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       },
@@ -7943,22 +7554,15 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/UiConfigResource"
-                }
-              },
               "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/UiConfigResource"
-                }
-              },
-              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/UiConfigResource"
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       }
@@ -7993,19 +7597,9 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Update200PlainResponseSchema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Update200ResponseSchema2"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetApiV3Update200ResponseSchema3"
+                  "$ref": "#/components/schemas/GetApiV3Update200ResponseSchema"
                 }
               }
             }
@@ -8023,19 +7617,9 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetApiV3LogFileUpdate200PlainResponseSchema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV3LogFileUpdate200ResponseSchema2"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetApiV3LogFileUpdate200ResponseSchema3"
+                  "$ref": "#/components/schemas/GetApiV3LogFileUpdate200ResponseSchema"
                 }
               }
             }
@@ -8061,8 +7645,18 @@
           }
         ],
         "responses": {
+          "404": {
+            "description": "Not Found"
+          },
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetApiV3LogFileUpdateByFilename200PlainResponseSchema"
+                }
+              }
+            }
           }
         }
       }
@@ -8114,6 +7708,31 @@
           },
           "addMethod": {
             "$ref": "#/components/schemas/AddMovieMethod"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AlternativeTitle": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "sourceType": {
+            "$ref": "#/components/schemas/SourceType"
+          },
+          "movieMetadataId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "cleanTitle": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -8334,6 +7953,25 @@
           "time": {
             "type": "string",
             "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "BackupRestoreErrorResource": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BackupRestoreResource": {
+        "type": "object",
+        "properties": {
+          "restartRequired": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -9621,6 +9259,119 @@
           ]
         }
       },
+      "FileSystemEntityType": {
+        "enum": [
+          "parent",
+          "drive",
+          "folder",
+          "file"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "FileSystemEntityType",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "parent",
+              "name": "Parent"
+            },
+            {
+              "value": "drive",
+              "name": "Drive"
+            },
+            {
+              "value": "folder",
+              "name": "Folder"
+            },
+            {
+              "value": "file",
+              "name": "File"
+            }
+          ]
+        }
+      },
+      "FileSystemMediaFileResource": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "nullable": true
+          },
+          "relativePath": {
+            "type": "string",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FileSystemModel": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "$ref": "#/components/schemas/FileSystemEntityType"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "path": {
+            "type": "string",
+            "nullable": true
+          },
+          "extension": {
+            "type": "string",
+            "nullable": true
+          },
+          "size": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "lastModified": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FileSystemResult": {
+        "type": "object",
+        "properties": {
+          "parent": {
+            "type": "string",
+            "nullable": true
+          },
+          "directories": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FileSystemModel"
+            },
+            "nullable": true
+          },
+          "files": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FileSystemModel"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FileSystemTypeResource": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "$ref": "#/components/schemas/FileSystemEntityType"
+          }
+        },
+        "additionalProperties": false
+      },
       "HealthCheckResult": {
         "enum": [
           "ok",
@@ -9800,6 +9551,10 @@
           "authenticationRequired": {
             "$ref": "#/components/schemas/AuthenticationRequiredType"
           },
+          "allowedHosts": {
+            "type": "string",
+            "nullable": true
+          },
           "analyticsEnabled": {
             "type": "boolean"
           },
@@ -9844,6 +9599,10 @@
             "nullable": true
           },
           "urlBase": {
+            "type": "string",
+            "nullable": true
+          },
+          "trustedNetworks": {
             "type": "string",
             "nullable": true
           },
@@ -10083,6 +9842,137 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/ImportListExclusionResource"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ImportListMoviesResource": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "sortTitle": {
+            "type": "string",
+            "nullable": true
+          },
+          "originalLanguage": {
+            "$ref": "#/components/schemas/Language"
+          },
+          "status": {
+            "$ref": "#/components/schemas/MovieStatusType"
+          },
+          "overview": {
+            "type": "string",
+            "nullable": true
+          },
+          "inCinemas": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "physicalRelease": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "digitalRelease": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "images": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MediaCover"
+            },
+            "nullable": true
+          },
+          "website": {
+            "type": "string",
+            "nullable": true
+          },
+          "remotePoster": {
+            "type": "string",
+            "nullable": true
+          },
+          "year": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "youTubeTrailerId": {
+            "type": "string",
+            "nullable": true
+          },
+          "studio": {
+            "type": "string",
+            "nullable": true
+          },
+          "runtime": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "imdbId": {
+            "type": "string",
+            "nullable": true
+          },
+          "tmdbId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "folder": {
+            "type": "string",
+            "nullable": true
+          },
+          "certification": {
+            "type": "string",
+            "nullable": true
+          },
+          "popularity": {
+            "type": "number",
+            "format": "float"
+          },
+          "genres": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "ratings": {
+            "$ref": "#/components/schemas/Ratings"
+          },
+          "collection": {
+            "$ref": "#/components/schemas/MovieCollection"
+          },
+          "isExcluded": {
+            "type": "boolean"
+          },
+          "isExisting": {
+            "type": "boolean"
+          },
+          "isTrending": {
+            "type": "boolean"
+          },
+          "isPopular": {
+            "type": "boolean"
+          },
+          "isRecommendation": {
+            "type": "boolean"
+          },
+          "lists": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
             },
             "nullable": true
           }
@@ -11059,6 +10949,85 @@
           ]
         }
       },
+      "MovieCollection": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "cleanTitle": {
+            "type": "string",
+            "nullable": true
+          },
+          "sortTitle": {
+            "type": "string",
+            "nullable": true
+          },
+          "tmdbId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "overview": {
+            "type": "string",
+            "nullable": true
+          },
+          "monitored": {
+            "type": "boolean"
+          },
+          "qualityProfileId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "rootFolderPath": {
+            "type": "string",
+            "nullable": true
+          },
+          "searchOnAdd": {
+            "type": "boolean"
+          },
+          "minimumAvailability": {
+            "$ref": "#/components/schemas/MovieStatusType"
+          },
+          "lastInfoSync": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "images": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MediaCover"
+            },
+            "nullable": true
+          },
+          "added": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "movies": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MovieMetadata"
+            },
+            "nullable": true
+          },
+          "tags": {
+            "uniqueItems": true,
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "MovieCollectionResource": {
         "type": "object",
         "properties": {
@@ -11243,6 +11212,16 @@
         },
         "additionalProperties": false
       },
+      "MovieFolderResource": {
+        "type": "object",
+        "properties": {
+          "folder": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "MovieHistoryEventType": {
         "enum": [
           "unknown",
@@ -11294,6 +11273,165 @@
             }
           ]
         }
+      },
+      "MovieMetadata": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "tmdbId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "images": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MediaCover"
+            },
+            "nullable": true
+          },
+          "genres": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "keywords": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "inCinemas": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "physicalRelease": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "digitalRelease": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "certification": {
+            "type": "string",
+            "nullable": true
+          },
+          "year": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ratings": {
+            "$ref": "#/components/schemas/Ratings"
+          },
+          "collectionTmdbId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "collectionTitle": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastInfoSync": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "runtime": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "website": {
+            "type": "string",
+            "nullable": true
+          },
+          "imdbId": {
+            "type": "string",
+            "nullable": true
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "cleanTitle": {
+            "type": "string",
+            "nullable": true
+          },
+          "sortTitle": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "$ref": "#/components/schemas/MovieStatusType"
+          },
+          "overview": {
+            "type": "string",
+            "nullable": true
+          },
+          "alternativeTitles": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AlternativeTitle"
+            },
+            "nullable": true
+          },
+          "translations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MovieTranslation"
+            },
+            "nullable": true
+          },
+          "secondaryYear": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "youTubeTrailerId": {
+            "type": "string",
+            "nullable": true
+          },
+          "studio": {
+            "type": "string",
+            "nullable": true
+          },
+          "originalTitle": {
+            "type": "string",
+            "nullable": true
+          },
+          "cleanOriginalTitle": {
+            "type": "string",
+            "nullable": true
+          },
+          "originalLanguage": {
+            "$ref": "#/components/schemas/Language"
+          },
+          "recommendations": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "nullable": true
+          },
+          "popularity": {
+            "type": "number",
+            "format": "float"
+          },
+          "isRecentMovie": {
+            "type": "boolean",
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
       },
       "MovieResource": {
         "type": "object",
@@ -11582,6 +11720,13 @@
               "type": "string"
             },
             "nullable": true
+          },
+          "movieFileQualities": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Quality"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -11623,6 +11768,35 @@
           ]
         }
       },
+      "MovieTranslation": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "movieMetadataId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "cleanTitle": {
+            "type": "string",
+            "nullable": true
+          },
+          "overview": {
+            "type": "string",
+            "nullable": true
+          },
+          "language": {
+            "$ref": "#/components/schemas/Language"
+          }
+        },
+        "additionalProperties": false
+      },
       "NamingConfigResource": {
         "type": "object",
         "properties": {
@@ -11644,6 +11818,20 @@
             "nullable": true
           },
           "movieFolderFormat": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "NamingExampleResource": {
+        "type": "object",
+        "properties": {
+          "movieExample": {
+            "type": "string",
+            "nullable": true
+          },
+          "movieFolderExample": {
             "type": "string",
             "nullable": true
           }
@@ -11942,6 +12130,35 @@
           ]
         }
       },
+      "ProblemDetails": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "detail": {
+            "type": "string",
+            "nullable": true
+          },
+          "instance": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": {
+          "$ref": "#/components/schemas/ProblemDetailsAdditionalProperties"
+        }
+      },
       "ProfileFormatItemResource": {
         "type": "object",
         "properties": {
@@ -12030,6 +12247,27 @@
             }
           ]
         }
+      },
+      "ProviderTestAllResult": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "isValid": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "validationFailures": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ValidationFailure"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
       },
       "ProxyType": {
         "enum": [
@@ -12617,6 +12855,22 @@
           ]
         }
       },
+      "ReleaseHistoryResource": {
+        "type": "object",
+        "properties": {
+          "grabbed": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "failed": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "ReleaseProfileResource": {
         "type": "object",
         "properties": {
@@ -12677,6 +12931,9 @@
           "customFormatScore": {
             "type": "integer",
             "format": "int32"
+          },
+          "history": {
+            "$ref": "#/components/schemas/ReleaseHistoryResource"
           },
           "qualityWeight": {
             "type": "integer",
@@ -13016,6 +13273,33 @@
         },
         "additionalProperties": false
       },
+      "Severity": {
+        "enum": [
+          "error",
+          "warning",
+          "info"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "Severity",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "error",
+              "name": "Error"
+            },
+            {
+              "value": "warning",
+              "name": "Warning"
+            },
+            {
+              "value": "info",
+              "name": "Info"
+            }
+          ]
+        }
+      },
       "SortDirection": {
         "enum": [
           "default",
@@ -13137,6 +13421,9 @@
           "isDocker": {
             "type": "boolean"
           },
+          "isContainerized": {
+            "type": "boolean"
+          },
           "mode": {
             "$ref": "#/components/schemas/RuntimeMode"
           },
@@ -13188,6 +13475,24 @@
           "packageUpdateMechanismMessage": {
             "type": "string",
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SystemRestartResource": {
+        "type": "object",
+        "properties": {
+          "restarting": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SystemShutdownResource": {
+        "type": "object",
+        "properties": {
+          "shuttingDown": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -13673,59 +13978,43 @@
         },
         "additionalProperties": false
       },
-      "PostApiV3ExclusionsBulkJsonRequest": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ImportListExclusionResource"
-        }
-      },
-      "PostApiV3ExclusionsBulkJsonRequestRequestBody": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ImportListExclusionResource"
-        }
-      },
-      "PostApiV3ExclusionsBulkMediaRequest": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ImportListExclusionResource"
-        }
-      },
-      "PostApiV3ImportlistMovieJsonRequest": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/MovieResource"
-        }
-      },
-      "PostApiV3ImportlistMovieJsonRequestRequestBody": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/MovieResource"
-        }
-      },
-      "PostApiV3ImportlistMovieMediaRequest": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/MovieResource"
-        }
-      },
-      "PutApiV3QualitydefinitionUpdateJsonRequest": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/QualityDefinitionResource"
-        }
-      },
-      "PutApiV3QualitydefinitionUpdateJsonRequestRequestBody": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/QualityDefinitionResource"
-        }
-      },
-      "PutApiV3QualitydefinitionUpdateMediaRequest": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/QualityDefinitionResource"
-        }
+      "ValidationFailure": {
+        "type": "object",
+        "properties": {
+          "propertyName": {
+            "type": "string",
+            "nullable": true
+          },
+          "errorMessage": {
+            "type": "string",
+            "nullable": true
+          },
+          "attemptedValue": {
+            "$ref": "#/components/schemas/ValidationFailureAttemptedValue"
+          },
+          "customState": {
+            "$ref": "#/components/schemas/ValidationFailureCustomState"
+          },
+          "severity": {
+            "$ref": "#/components/schemas/Severity"
+          },
+          "errorCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "formattedMessageArguments": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ValidationFailureFormattedMessageArgumentsItem"
+            },
+            "nullable": true,
+            "deprecated": true
+          },
+          "formattedMessagePlaceholderValues": {
+            "$ref": "#/components/schemas/ValidationFailureFormattedMessagePlaceholderValuesProperty"
+          }
+        },
+        "additionalProperties": false
       },
       "CustomFilterResourceFiltersItem": {
         "type": "object",
@@ -13741,19 +14030,14 @@
         },
         "nullable": true
       },
-      "GetApiV3Alttitle200PlainResponse": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/AlternativeTitleResource"
-        }
+      "ValidationFailureFormattedMessagePlaceholderValues": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/ValidationFailureFormattedMessagePlaceholderValuesAdditionalProperties"
+        },
+        "nullable": true
       },
       "GetApiV3Alttitle200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/AlternativeTitleResource"
-        }
-      },
-      "GetApiV3Alttitle200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/AlternativeTitleResource"
@@ -13779,10 +14063,10 @@
           "$ref": "#/components/schemas/AutoTaggingResource"
         }
       },
-      "GetApiV3SystemBackup200PlainResponse": {
+      "GetApiV3AutotaggingSchema200Response": {
         "type": "array",
         "items": {
-          "$ref": "#/components/schemas/BackupResource"
+          "$ref": "#/components/schemas/AutoTaggingSpecificationSchema"
         }
       },
       "GetApiV3SystemBackup200Response": {
@@ -13791,17 +14075,8 @@
           "$ref": "#/components/schemas/BackupResource"
         }
       },
-      "GetApiV3SystemBackup200ResponseSchema": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/BackupResource"
-        }
-      },
-      "GetApiV3BlocklistMovie200PlainResponse": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/BlocklistResource"
-        }
+      "DeleteApiV3SystemBackupById200Response": {
+        "type": "object"
       },
       "GetApiV3BlocklistMovie200Response": {
         "type": "array",
@@ -13809,11 +14084,8 @@
           "$ref": "#/components/schemas/BlocklistResource"
         }
       },
-      "GetApiV3BlocklistMovie200ResponseSchema": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/BlocklistResource"
-        }
+      "DeleteApiV3BlocklistBulk200Response": {
+        "type": "object"
       },
       "GetApiV3Calendar200Response": {
         "type": "array",
@@ -13827,10 +14099,10 @@
           "$ref": "#/components/schemas/CollectionResource"
         }
       },
-      "GetApiV3Command200PlainResponse": {
+      "PutApiV3Collection200Response": {
         "type": "array",
         "items": {
-          "$ref": "#/components/schemas/CommandResource"
+          "$ref": "#/components/schemas/CollectionResource"
         }
       },
       "GetApiV3Command200Response": {
@@ -13839,25 +14111,13 @@
           "$ref": "#/components/schemas/CommandResource"
         }
       },
-      "GetApiV3Command200ResponseSchema": {
+      "GetApiV3Credit200Response": {
         "type": "array",
         "items": {
-          "$ref": "#/components/schemas/CommandResource"
-        }
-      },
-      "GetApiV3Customfilter200PlainResponse": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/CustomFilterResource"
+          "$ref": "#/components/schemas/CreditResource"
         }
       },
       "GetApiV3Customfilter200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/CustomFilterResource"
-        }
-      },
-      "GetApiV3Customfilter200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/CustomFilterResource"
@@ -13869,25 +14129,22 @@
           "$ref": "#/components/schemas/CustomFormatResource"
         }
       },
-      "GetApiV3Delayprofile200PlainResponse": {
+      "PutApiV3CustomformatBulk200Response": {
         "type": "array",
         "items": {
-          "$ref": "#/components/schemas/DelayProfileResource"
+          "$ref": "#/components/schemas/CustomFormatResource"
+        }
+      },
+      "DeleteApiV3CustomformatBulk200Response": {
+        "type": "object"
+      },
+      "GetApiV3CustomformatSchema200Response": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/CustomFormatSpecificationSchema"
         }
       },
       "GetApiV3Delayprofile200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/DelayProfileResource"
-        }
-      },
-      "GetApiV3Delayprofile200ResponseSchema": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/DelayProfileResource"
-        }
-      },
-      "PutApiV3DelayprofileReorderById200PlainResponse": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/DelayProfileResource"
@@ -13899,25 +14156,7 @@
           "$ref": "#/components/schemas/DelayProfileResource"
         }
       },
-      "PutApiV3DelayprofileReorderById200ResponseSchema": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/DelayProfileResource"
-        }
-      },
-      "GetApiV3Diskspace200PlainResponse": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/DiskSpaceResource"
-        }
-      },
       "GetApiV3Diskspace200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/DiskSpaceResource"
-        }
-      },
-      "GetApiV3Diskspace200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/DiskSpaceResource"
@@ -13929,16 +14168,34 @@
           "$ref": "#/components/schemas/DownloadClientResource"
         }
       },
+      "DeleteApiV3DownloadclientById200Response": {
+        "type": "object"
+      },
+      "PutApiV3DownloadclientBulk200Response": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/DownloadClientResource"
+        }
+      },
+      "DeleteApiV3DownloadclientBulk200Response": {
+        "type": "object"
+      },
       "GetApiV3DownloadclientSchema200Response": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/DownloadClientResource"
         }
       },
-      "GetApiV3Extrafile200PlainResponse": {
+      "PostApiV3DownloadclientTestall200Response": {
         "type": "array",
         "items": {
-          "$ref": "#/components/schemas/ExtraFileResource"
+          "$ref": "#/components/schemas/ProviderTestAllResult"
+        }
+      },
+      "PostApiV3DownloadclientTestall400Response": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ProviderTestAllResult"
         }
       },
       "GetApiV3Extrafile200Response": {
@@ -13947,25 +14204,13 @@
           "$ref": "#/components/schemas/ExtraFileResource"
         }
       },
-      "GetApiV3Extrafile200ResponseSchema": {
+      "GetApiV3FilesystemMediafiles200Response": {
         "type": "array",
         "items": {
-          "$ref": "#/components/schemas/ExtraFileResource"
-        }
-      },
-      "GetApiV3Health200PlainResponse": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/HealthResource"
+          "$ref": "#/components/schemas/FileSystemMediaFileResource"
         }
       },
       "GetApiV3Health200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/HealthResource"
-        }
-      },
-      "GetApiV3Health200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/HealthResource"
@@ -13983,16 +14228,43 @@
           "$ref": "#/components/schemas/HistoryResource"
         }
       },
+      "PostApiV3HistoryFailedById200Response": {
+        "type": "object"
+      },
       "GetApiV3Importlist200Response": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/ImportListResource"
         }
       },
+      "DeleteApiV3ImportlistById200Response": {
+        "type": "object"
+      },
+      "PutApiV3ImportlistBulk200Response": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ImportListResource"
+        }
+      },
+      "DeleteApiV3ImportlistBulk200Response": {
+        "type": "object"
+      },
       "GetApiV3ImportlistSchema200Response": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/ImportListResource"
+        }
+      },
+      "PostApiV3ImportlistTestall200Response": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ProviderTestAllResult"
+        }
+      },
+      "PostApiV3ImportlistTestall400Response": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ProviderTestAllResult"
         }
       },
       "GetApiV3Exclusions200Response": {
@@ -14001,11 +14273,56 @@
           "$ref": "#/components/schemas/ImportListExclusionResource"
         }
       },
+      "PostApiV3ExclusionsBulkRequest": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ImportListExclusionResource"
+        }
+      },
+      "PostApiV3ExclusionsBulk200Response": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ImportListExclusionResource"
+        }
+      },
+      "DeleteApiV3ExclusionsBulk200Response": {
+        "type": "object"
+      },
+      "GetApiV3ImportlistMovie200Response": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ImportListMoviesResource"
+        }
+      },
+      "PostApiV3ImportlistMovieRequest": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/MovieResource"
+        }
+      },
+      "PostApiV3ImportlistMovie200Response": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/MovieResource"
+        }
+      },
       "GetApiV3Indexer200Response": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/IndexerResource"
         }
+      },
+      "DeleteApiV3IndexerById200Response": {
+        "type": "object"
+      },
+      "PutApiV3IndexerBulk200Response": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/IndexerResource"
+        }
+      },
+      "DeleteApiV3IndexerBulk200Response": {
+        "type": "object"
       },
       "GetApiV3IndexerSchema200Response": {
         "type": "array",
@@ -14013,10 +14330,16 @@
           "$ref": "#/components/schemas/IndexerResource"
         }
       },
-      "GetApiV3Indexerflag200PlainResponse": {
+      "PostApiV3IndexerTestall200Response": {
         "type": "array",
         "items": {
-          "$ref": "#/components/schemas/IndexerFlagResource"
+          "$ref": "#/components/schemas/ProviderTestAllResult"
+        }
+      },
+      "PostApiV3IndexerTestall400Response": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ProviderTestAllResult"
         }
       },
       "GetApiV3Indexerflag200Response": {
@@ -14025,43 +14348,10 @@
           "$ref": "#/components/schemas/IndexerFlagResource"
         }
       },
-      "GetApiV3Indexerflag200ResponseSchema": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/IndexerFlagResource"
-        }
-      },
-      "GetApiV3Language200PlainResponse": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/LanguageResource"
-        }
-      },
       "GetApiV3Language200Response": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/LanguageResource"
-        }
-      },
-      "GetApiV3Language200ResponseSchema": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/LanguageResource"
-        }
-      },
-      "GetApiV3Localization200PlainResponse": {
-        "type": "string"
-      },
-      "GetApiV3Localization200Response": {
-        "type": "string"
-      },
-      "GetApiV3Localization200ResponseSchema": {
-        "type": "string"
-      },
-      "GetApiV3LogFile200PlainResponse": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/LogFileResource"
         }
       },
       "GetApiV3LogFile200Response": {
@@ -14070,11 +14360,8 @@
           "$ref": "#/components/schemas/LogFileResource"
         }
       },
-      "GetApiV3LogFile200ResponseSchema": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/LogFileResource"
-        }
+      "GetApiV3LogFileByFilename200PlainResponse": {
+        "type": "string"
       },
       "GetApiV3Manualimport200Response": {
         "type": "array",
@@ -14088,11 +14375,20 @@
           "$ref": "#/components/schemas/ManualImportReprocessResource"
         }
       },
+      "PostApiV3Manualimport200Response": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ManualImportReprocessResource"
+        }
+      },
       "GetApiV3Metadata200Response": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/MetadataResource"
         }
+      },
+      "DeleteApiV3MetadataById200Response": {
+        "type": "object"
       },
       "GetApiV3MetadataSchema200Response": {
         "type": "array",
@@ -14100,10 +14396,16 @@
           "$ref": "#/components/schemas/MetadataResource"
         }
       },
-      "GetApiV3Movie200PlainResponse": {
+      "PostApiV3MetadataTestall200Response": {
         "type": "array",
         "items": {
-          "$ref": "#/components/schemas/MovieResource"
+          "$ref": "#/components/schemas/ProviderTestAllResult"
+        }
+      },
+      "PostApiV3MetadataTestall400Response": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ProviderTestAllResult"
         }
       },
       "GetApiV3Movie200Response": {
@@ -14112,11 +14414,14 @@
           "$ref": "#/components/schemas/MovieResource"
         }
       },
-      "GetApiV3Movie200ResponseSchema": {
+      "PutApiV3MovieEditor200Response": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/MovieResource"
         }
+      },
+      "DeleteApiV3MovieEditor200Response": {
+        "type": "object"
       },
       "GetApiV3Moviefile200Response": {
         "type": "array",
@@ -14124,7 +14429,22 @@
           "$ref": "#/components/schemas/MovieFileResource"
         }
       },
+      "PutApiV3MoviefileEditor200Response": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/MovieFileResource"
+        }
+      },
+      "DeleteApiV3MoviefileBulk200Response": {
+        "type": "object"
+      },
       "PutApiV3MoviefileBulkRequest": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/MovieFileResource"
+        }
+      },
+      "PutApiV3MoviefileBulk200Response": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/MovieFileResource"
@@ -14154,16 +14474,25 @@
           "$ref": "#/components/schemas/NotificationResource"
         }
       },
+      "DeleteApiV3NotificationById200Response": {
+        "type": "object"
+      },
       "GetApiV3NotificationSchema200Response": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/NotificationResource"
         }
       },
-      "GetApiV3Qualitydefinition200PlainResponse": {
+      "PostApiV3NotificationTestall200Response": {
         "type": "array",
         "items": {
-          "$ref": "#/components/schemas/QualityDefinitionResource"
+          "$ref": "#/components/schemas/ProviderTestAllResult"
+        }
+      },
+      "PostApiV3NotificationTestall400Response": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ProviderTestAllResult"
         }
       },
       "GetApiV3Qualitydefinition200Response": {
@@ -14172,16 +14501,16 @@
           "$ref": "#/components/schemas/QualityDefinitionResource"
         }
       },
-      "GetApiV3Qualitydefinition200ResponseSchema": {
+      "PutApiV3QualitydefinitionUpdateRequest": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/QualityDefinitionResource"
         }
       },
-      "GetApiV3Qualityprofile200PlainResponse": {
+      "PutApiV3QualitydefinitionUpdate200Response": {
         "type": "array",
         "items": {
-          "$ref": "#/components/schemas/QualityProfileResource"
+          "$ref": "#/components/schemas/QualityDefinitionResource"
         }
       },
       "GetApiV3Qualityprofile200Response": {
@@ -14190,25 +14519,16 @@
           "$ref": "#/components/schemas/QualityProfileResource"
         }
       },
-      "GetApiV3Qualityprofile200ResponseSchema": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/QualityProfileResource"
-        }
+      "DeleteApiV3QueueBulk200Response": {
+        "type": "object"
       },
-      "GetApiV3QueueDetails200PlainResponse": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/QueueResource"
-        }
+      "PostApiV3QueueGrabById200Response": {
+        "type": "object"
+      },
+      "PostApiV3QueueGrabBulk200Response": {
+        "type": "object"
       },
       "GetApiV3QueueDetails200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/QueueResource"
-        }
-      },
-      "GetApiV3QueueDetails200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/QueueResource"
@@ -14220,28 +14540,10 @@
           "$ref": "#/components/schemas/ReleaseResource"
         }
       },
-      "GetApiV3Releaseprofile200PlainResponse": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ReleaseProfileResource"
-        }
-      },
       "GetApiV3Releaseprofile200Response": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/ReleaseProfileResource"
-        }
-      },
-      "GetApiV3Releaseprofile200ResponseSchema": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ReleaseProfileResource"
-        }
-      },
-      "PostApiV3ReleasePush200PlainResponse": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ReleaseResource"
         }
       },
       "PostApiV3ReleasePush200Response": {
@@ -14250,34 +14552,10 @@
           "$ref": "#/components/schemas/ReleaseResource"
         }
       },
-      "PostApiV3ReleasePush200ResponseSchema": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ReleaseResource"
-        }
-      },
-      "GetApiV3Remotepathmapping200PlainResponse": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/RemotePathMappingResource"
-        }
-      },
       "GetApiV3Remotepathmapping200Response": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/RemotePathMappingResource"
-        }
-      },
-      "GetApiV3Remotepathmapping200ResponseSchema": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/RemotePathMappingResource"
-        }
-      },
-      "GetApiV3Rename200PlainResponse": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/RenameMovieResource"
         }
       },
       "GetApiV3Rename200Response": {
@@ -14286,34 +14564,22 @@
           "$ref": "#/components/schemas/RenameMovieResource"
         }
       },
-      "GetApiV3Rename200ResponseSchema": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/RenameMovieResource"
-        }
-      },
-      "GetApiV3Rootfolder200PlainResponse": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/RootFolderResource"
-        }
-      },
       "GetApiV3Rootfolder200Response": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/RootFolderResource"
         }
       },
-      "GetApiV3Rootfolder200ResponseSchema": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/RootFolderResource"
-        }
+      "GetApiV3SystemRoutes200PlainResponse": {
+        "type": "string"
       },
-      "GetApiV3Tag200PlainResponse": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/TagResource"
+      "GetApiV3SystemRoutesDuplicate200Response": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         }
       },
       "GetApiV3Tag200Response": {
@@ -14322,34 +14588,10 @@
           "$ref": "#/components/schemas/TagResource"
         }
       },
-      "GetApiV3Tag200ResponseSchema": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/TagResource"
-        }
-      },
-      "GetApiV3TagDetail200PlainResponse": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/TagDetailsResource"
-        }
-      },
       "GetApiV3TagDetail200Response": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/TagDetailsResource"
-        }
-      },
-      "GetApiV3TagDetail200ResponseSchema": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/TagDetailsResource"
-        }
-      },
-      "GetApiV3SystemTask200PlainResponse": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/TaskResource"
         }
       },
       "GetApiV3SystemTask200Response": {
@@ -14358,34 +14600,10 @@
           "$ref": "#/components/schemas/TaskResource"
         }
       },
-      "GetApiV3SystemTask200ResponseSchema": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/TaskResource"
-        }
-      },
-      "GetApiV3Update200PlainResponse": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/UpdateResource"
-        }
-      },
       "GetApiV3Update200Response": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/UpdateResource"
-        }
-      },
-      "GetApiV3Update200ResponseSchema": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/UpdateResource"
-        }
-      },
-      "GetApiV3LogFileUpdate200PlainResponse": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/LogFileResource"
         }
       },
       "GetApiV3LogFileUpdate200Response": {
@@ -14394,29 +14612,14 @@
           "$ref": "#/components/schemas/LogFileResource"
         }
       },
-      "GetApiV3LogFileUpdate200ResponseSchema": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/LogFileResource"
-        }
+      "GetApiV3LogFileUpdateByFilename200PlainResponse": {
+        "type": "string"
       },
       "ExamplePayload": {
         "type": "object",
         "description": "Placeholder schema for path example refs"
       },
-      "GetApiV3Alttitle200PlainResponseSchema": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/AlternativeTitleResource"
-        }
-      },
-      "GetApiV3Alttitle200ResponseSchema2": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/AlternativeTitleResource"
-        }
-      },
-      "GetApiV3Alttitle200ResponseSchema3": {
+      "GetApiV3Alttitle200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/AlternativeTitleResource"
@@ -14428,41 +14631,29 @@
           "$ref": "#/components/schemas/AutoTaggingResource"
         }
       },
-      "GetApiV3SystemBackup200PlainResponseSchema": {
+      "GetApiV3AutotaggingSchema200ResponseSchema": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/AutoTaggingSpecificationSchema"
+        }
+      },
+      "GetApiV3SystemBackup200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/BackupResource"
         }
       },
-      "GetApiV3SystemBackup200ResponseSchema2": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/BackupResource"
-        }
+      "DeleteApiV3SystemBackupById200ResponseSchema": {
+        "type": "object"
       },
-      "GetApiV3SystemBackup200ResponseSchema3": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/BackupResource"
-        }
-      },
-      "GetApiV3BlocklistMovie200PlainResponseSchema": {
+      "GetApiV3BlocklistMovie200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/BlocklistResource"
         }
       },
-      "GetApiV3BlocklistMovie200ResponseSchema2": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/BlocklistResource"
-        }
-      },
-      "GetApiV3BlocklistMovie200ResponseSchema3": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/BlocklistResource"
-        }
+      "DeleteApiV3BlocklistBulk200ResponseSchema": {
+        "type": "object"
       },
       "GetApiV3Calendar200ResponseSchema": {
         "type": "array",
@@ -14476,37 +14667,25 @@
           "$ref": "#/components/schemas/CollectionResource"
         }
       },
-      "GetApiV3Command200PlainResponseSchema": {
+      "PutApiV3Collection200ResponseSchema": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/CollectionResource"
+        }
+      },
+      "GetApiV3Command200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/CommandResource"
         }
       },
-      "GetApiV3Command200ResponseSchema2": {
+      "GetApiV3Credit200ResponseSchema": {
         "type": "array",
         "items": {
-          "$ref": "#/components/schemas/CommandResource"
+          "$ref": "#/components/schemas/CreditResource"
         }
       },
-      "GetApiV3Command200ResponseSchema3": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/CommandResource"
-        }
-      },
-      "GetApiV3Customfilter200PlainResponseSchema": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/CustomFilterResource"
-        }
-      },
-      "GetApiV3Customfilter200ResponseSchema2": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/CustomFilterResource"
-        }
-      },
-      "GetApiV3Customfilter200ResponseSchema3": {
+      "GetApiV3Customfilter200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/CustomFilterResource"
@@ -14518,55 +14697,34 @@
           "$ref": "#/components/schemas/CustomFormatResource"
         }
       },
-      "GetApiV3Delayprofile200PlainResponseSchema": {
+      "PutApiV3CustomformatBulk200ResponseSchema": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/CustomFormatResource"
+        }
+      },
+      "DeleteApiV3CustomformatBulk200ResponseSchema": {
+        "type": "object"
+      },
+      "GetApiV3CustomformatSchema200ResponseSchema": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/CustomFormatSpecificationSchema"
+        }
+      },
+      "GetApiV3Delayprofile200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/DelayProfileResource"
         }
       },
-      "GetApiV3Delayprofile200ResponseSchema2": {
+      "PutApiV3DelayprofileReorderById200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/DelayProfileResource"
         }
       },
-      "GetApiV3Delayprofile200ResponseSchema3": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/DelayProfileResource"
-        }
-      },
-      "PutApiV3DelayprofileReorderById200PlainResponseSchema": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/DelayProfileResource"
-        }
-      },
-      "PutApiV3DelayprofileReorderById200ResponseSchema2": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/DelayProfileResource"
-        }
-      },
-      "PutApiV3DelayprofileReorderById200ResponseSchema3": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/DelayProfileResource"
-        }
-      },
-      "GetApiV3Diskspace200PlainResponseSchema": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/DiskSpaceResource"
-        }
-      },
-      "GetApiV3Diskspace200ResponseSchema2": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/DiskSpaceResource"
-        }
-      },
-      "GetApiV3Diskspace200ResponseSchema3": {
+      "GetApiV3Diskspace200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/DiskSpaceResource"
@@ -14578,43 +14736,49 @@
           "$ref": "#/components/schemas/DownloadClientResource"
         }
       },
+      "DeleteApiV3DownloadclientById200ResponseSchema": {
+        "type": "object"
+      },
+      "PutApiV3DownloadclientBulk200ResponseSchema": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/DownloadClientResource"
+        }
+      },
+      "DeleteApiV3DownloadclientBulk200ResponseSchema": {
+        "type": "object"
+      },
       "GetApiV3DownloadclientSchema200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/DownloadClientResource"
         }
       },
-      "GetApiV3Extrafile200PlainResponseSchema": {
+      "PostApiV3DownloadclientTestall200ResponseSchema": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ProviderTestAllResult"
+        }
+      },
+      "PostApiV3DownloadclientTestall400ResponseSchema": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ProviderTestAllResult"
+        }
+      },
+      "GetApiV3Extrafile200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/ExtraFileResource"
         }
       },
-      "GetApiV3Extrafile200ResponseSchema2": {
+      "GetApiV3FilesystemMediafiles200ResponseSchema": {
         "type": "array",
         "items": {
-          "$ref": "#/components/schemas/ExtraFileResource"
+          "$ref": "#/components/schemas/FileSystemMediaFileResource"
         }
       },
-      "GetApiV3Extrafile200ResponseSchema3": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ExtraFileResource"
-        }
-      },
-      "GetApiV3Health200PlainResponseSchema": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/HealthResource"
-        }
-      },
-      "GetApiV3Health200ResponseSchema2": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/HealthResource"
-        }
-      },
-      "GetApiV3Health200ResponseSchema3": {
+      "GetApiV3Health200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/HealthResource"
@@ -14632,11 +14796,26 @@
           "$ref": "#/components/schemas/HistoryResource"
         }
       },
+      "PostApiV3HistoryFailedById200ResponseSchema": {
+        "type": "object"
+      },
       "GetApiV3Importlist200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/ImportListResource"
         }
+      },
+      "DeleteApiV3ImportlistById200ResponseSchema": {
+        "type": "object"
+      },
+      "PutApiV3ImportlistBulk200ResponseSchema": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ImportListResource"
+        }
+      },
+      "DeleteApiV3ImportlistBulk200ResponseSchema": {
+        "type": "object"
       },
       "GetApiV3ImportlistSchema200ResponseSchema": {
         "type": "array",
@@ -14644,13 +14823,19 @@
           "$ref": "#/components/schemas/ImportListResource"
         }
       },
-      "GetApiV3Exclusions200ResponseSchema": {
+      "PostApiV3ImportlistTestall200ResponseSchema": {
         "type": "array",
         "items": {
-          "$ref": "#/components/schemas/ImportListExclusionResource"
+          "$ref": "#/components/schemas/ProviderTestAllResult"
         }
       },
-      "PostApiV3ExclusionsBulkRequest": {
+      "PostApiV3ImportlistTestall400ResponseSchema": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ProviderTestAllResult"
+        }
+      },
+      "GetApiV3Exclusions200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/ImportListExclusionResource"
@@ -14662,16 +14847,19 @@
           "$ref": "#/components/schemas/ImportListExclusionResource"
         }
       },
-      "PostApiV3ExclusionsBulkMediaRequestRequestBody": {
+      "PostApiV3ExclusionsBulk200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/ImportListExclusionResource"
         }
       },
-      "PostApiV3ImportlistMovieRequest": {
+      "DeleteApiV3ExclusionsBulk200ResponseSchema": {
+        "type": "object"
+      },
+      "GetApiV3ImportlistMovie200ResponseSchema": {
         "type": "array",
         "items": {
-          "$ref": "#/components/schemas/MovieResource"
+          "$ref": "#/components/schemas/ImportListMoviesResource"
         }
       },
       "PostApiV3ImportlistMovieRequestRequestBody": {
@@ -14680,7 +14868,7 @@
           "$ref": "#/components/schemas/MovieResource"
         }
       },
-      "PostApiV3ImportlistMovieMediaRequestRequestBody": {
+      "PostApiV3ImportlistMovie200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/MovieResource"
@@ -14692,74 +14880,56 @@
           "$ref": "#/components/schemas/IndexerResource"
         }
       },
+      "DeleteApiV3IndexerById200ResponseSchema": {
+        "type": "object"
+      },
+      "PutApiV3IndexerBulk200ResponseSchema": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/IndexerResource"
+        }
+      },
+      "DeleteApiV3IndexerBulk200ResponseSchema": {
+        "type": "object"
+      },
       "GetApiV3IndexerSchema200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/IndexerResource"
         }
       },
-      "GetApiV3Indexerflag200PlainResponseSchema": {
+      "PostApiV3IndexerTestall200ResponseSchema": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ProviderTestAllResult"
+        }
+      },
+      "PostApiV3IndexerTestall400ResponseSchema": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ProviderTestAllResult"
+        }
+      },
+      "GetApiV3Indexerflag200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/IndexerFlagResource"
         }
       },
-      "GetApiV3Indexerflag200ResponseSchema2": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/IndexerFlagResource"
-        }
-      },
-      "GetApiV3Indexerflag200ResponseSchema3": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/IndexerFlagResource"
-        }
-      },
-      "GetApiV3Language200PlainResponseSchema": {
+      "GetApiV3Language200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/LanguageResource"
         }
       },
-      "GetApiV3Language200ResponseSchema2": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/LanguageResource"
-        }
-      },
-      "GetApiV3Language200ResponseSchema3": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/LanguageResource"
-        }
-      },
-      "GetApiV3Localization200PlainResponseSchema": {
-        "type": "string"
-      },
-      "GetApiV3Localization200ResponseSchema2": {
-        "type": "string"
-      },
-      "GetApiV3Localization200ResponseSchema3": {
-        "type": "string"
-      },
-      "GetApiV3LogFile200PlainResponseSchema": {
+      "GetApiV3LogFile200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/LogFileResource"
         }
       },
-      "GetApiV3LogFile200ResponseSchema2": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/LogFileResource"
-        }
-      },
-      "GetApiV3LogFile200ResponseSchema3": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/LogFileResource"
-        }
+      "GetApiV3LogFileByFilename200PlainResponseSchema": {
+        "type": "string"
       },
       "GetApiV3Manualimport200ResponseSchema": {
         "type": "array",
@@ -14773,11 +14943,20 @@
           "$ref": "#/components/schemas/ManualImportReprocessResource"
         }
       },
+      "PostApiV3Manualimport200ResponseSchema": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ManualImportReprocessResource"
+        }
+      },
       "GetApiV3Metadata200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/MetadataResource"
         }
+      },
+      "DeleteApiV3MetadataById200ResponseSchema": {
+        "type": "object"
       },
       "GetApiV3MetadataSchema200ResponseSchema": {
         "type": "array",
@@ -14785,23 +14964,32 @@
           "$ref": "#/components/schemas/MetadataResource"
         }
       },
-      "GetApiV3Movie200PlainResponseSchema": {
+      "PostApiV3MetadataTestall200ResponseSchema": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ProviderTestAllResult"
+        }
+      },
+      "PostApiV3MetadataTestall400ResponseSchema": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ProviderTestAllResult"
+        }
+      },
+      "GetApiV3Movie200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/MovieResource"
         }
       },
-      "GetApiV3Movie200ResponseSchema2": {
+      "PutApiV3MovieEditor200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/MovieResource"
         }
       },
-      "GetApiV3Movie200ResponseSchema3": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/MovieResource"
-        }
+      "DeleteApiV3MovieEditor200ResponseSchema": {
+        "type": "object"
       },
       "GetApiV3Moviefile200ResponseSchema": {
         "type": "array",
@@ -14809,7 +14997,22 @@
           "$ref": "#/components/schemas/MovieFileResource"
         }
       },
+      "PutApiV3MoviefileEditor200ResponseSchema": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/MovieFileResource"
+        }
+      },
+      "DeleteApiV3MoviefileBulk200ResponseSchema": {
+        "type": "object"
+      },
       "PutApiV3MoviefileBulkRequestRequestBody": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/MovieFileResource"
+        }
+      },
+      "PutApiV3MoviefileBulk200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/MovieFileResource"
@@ -14839,31 +15042,28 @@
           "$ref": "#/components/schemas/NotificationResource"
         }
       },
+      "DeleteApiV3NotificationById200ResponseSchema": {
+        "type": "object"
+      },
       "GetApiV3NotificationSchema200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/NotificationResource"
         }
       },
-      "GetApiV3Qualitydefinition200PlainResponseSchema": {
+      "PostApiV3NotificationTestall200ResponseSchema": {
         "type": "array",
         "items": {
-          "$ref": "#/components/schemas/QualityDefinitionResource"
+          "$ref": "#/components/schemas/ProviderTestAllResult"
         }
       },
-      "GetApiV3Qualitydefinition200ResponseSchema2": {
+      "PostApiV3NotificationTestall400ResponseSchema": {
         "type": "array",
         "items": {
-          "$ref": "#/components/schemas/QualityDefinitionResource"
+          "$ref": "#/components/schemas/ProviderTestAllResult"
         }
       },
-      "GetApiV3Qualitydefinition200ResponseSchema3": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/QualityDefinitionResource"
-        }
-      },
-      "PutApiV3QualitydefinitionUpdateRequest": {
+      "GetApiV3Qualitydefinition200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/QualityDefinitionResource"
@@ -14875,43 +15075,28 @@
           "$ref": "#/components/schemas/QualityDefinitionResource"
         }
       },
-      "PutApiV3QualitydefinitionUpdateMediaRequestRequestBody": {
+      "PutApiV3QualitydefinitionUpdate200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/QualityDefinitionResource"
         }
       },
-      "GetApiV3Qualityprofile200PlainResponseSchema": {
+      "GetApiV3Qualityprofile200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/QualityProfileResource"
         }
       },
-      "GetApiV3Qualityprofile200ResponseSchema2": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/QualityProfileResource"
-        }
+      "DeleteApiV3QueueBulk200ResponseSchema": {
+        "type": "object"
       },
-      "GetApiV3Qualityprofile200ResponseSchema3": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/QualityProfileResource"
-        }
+      "PostApiV3QueueGrabById200ResponseSchema": {
+        "type": "object"
       },
-      "GetApiV3QueueDetails200PlainResponseSchema": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/QueueResource"
-        }
+      "PostApiV3QueueGrabBulk200ResponseSchema": {
+        "type": "object"
       },
-      "GetApiV3QueueDetails200ResponseSchema2": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/QueueResource"
-        }
-      },
-      "GetApiV3QueueDetails200ResponseSchema3": {
+      "GetApiV3QueueDetails200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/QueueResource"
@@ -14923,185 +15108,80 @@
           "$ref": "#/components/schemas/ReleaseResource"
         }
       },
-      "GetApiV3Releaseprofile200PlainResponseSchema": {
+      "GetApiV3Releaseprofile200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/ReleaseProfileResource"
         }
       },
-      "GetApiV3Releaseprofile200ResponseSchema2": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ReleaseProfileResource"
-        }
-      },
-      "GetApiV3Releaseprofile200ResponseSchema3": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ReleaseProfileResource"
-        }
-      },
-      "PostApiV3ReleasePush200PlainResponseSchema": {
+      "PostApiV3ReleasePush200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/ReleaseResource"
         }
       },
-      "PostApiV3ReleasePush200ResponseSchema2": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ReleaseResource"
-        }
-      },
-      "PostApiV3ReleasePush200ResponseSchema3": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ReleaseResource"
-        }
-      },
-      "GetApiV3Remotepathmapping200PlainResponseSchema": {
+      "GetApiV3Remotepathmapping200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/RemotePathMappingResource"
         }
       },
-      "GetApiV3Remotepathmapping200ResponseSchema2": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/RemotePathMappingResource"
-        }
-      },
-      "GetApiV3Remotepathmapping200ResponseSchema3": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/RemotePathMappingResource"
-        }
-      },
-      "GetApiV3Rename200PlainResponseSchema": {
+      "GetApiV3Rename200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/RenameMovieResource"
         }
       },
-      "GetApiV3Rename200ResponseSchema2": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/RenameMovieResource"
-        }
-      },
-      "GetApiV3Rename200ResponseSchema3": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/RenameMovieResource"
-        }
-      },
-      "GetApiV3Rootfolder200PlainResponseSchema": {
+      "GetApiV3Rootfolder200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/RootFolderResource"
         }
       },
-      "GetApiV3Rootfolder200ResponseSchema2": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/RootFolderResource"
+      "GetApiV3SystemRoutes200PlainResponseSchema": {
+        "type": "string"
+      },
+      "GetApiV3SystemRoutesDuplicate200ResponseSchema": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         }
       },
-      "GetApiV3Rootfolder200ResponseSchema3": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/RootFolderResource"
-        }
-      },
-      "GetApiV3Tag200PlainResponseSchema": {
+      "GetApiV3Tag200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/TagResource"
         }
       },
-      "GetApiV3Tag200ResponseSchema2": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/TagResource"
-        }
-      },
-      "GetApiV3Tag200ResponseSchema3": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/TagResource"
-        }
-      },
-      "GetApiV3TagDetail200PlainResponseSchema": {
+      "GetApiV3TagDetail200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/TagDetailsResource"
         }
       },
-      "GetApiV3TagDetail200ResponseSchema2": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/TagDetailsResource"
-        }
-      },
-      "GetApiV3TagDetail200ResponseSchema3": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/TagDetailsResource"
-        }
-      },
-      "GetApiV3SystemTask200PlainResponseSchema": {
+      "GetApiV3SystemTask200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/TaskResource"
         }
       },
-      "GetApiV3SystemTask200ResponseSchema2": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/TaskResource"
-        }
-      },
-      "GetApiV3SystemTask200ResponseSchema3": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/TaskResource"
-        }
-      },
-      "GetApiV3Update200PlainResponseSchema": {
+      "GetApiV3Update200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/UpdateResource"
         }
       },
-      "GetApiV3Update200ResponseSchema2": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/UpdateResource"
-        }
-      },
-      "GetApiV3Update200ResponseSchema3": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/UpdateResource"
-        }
-      },
-      "GetApiV3LogFileUpdate200PlainResponseSchema": {
+      "GetApiV3LogFileUpdate200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/LogFileResource"
         }
       },
-      "GetApiV3LogFileUpdate200ResponseSchema2": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/LogFileResource"
-        }
-      },
-      "GetApiV3LogFileUpdate200ResponseSchema3": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/LogFileResource"
-        }
+      "GetApiV3LogFileUpdateByFilename200PlainResponseSchema": {
+        "type": "string"
       },
       "CustomFilterResourceFiltersItemProperty": {
         "type": "object",
@@ -15119,6 +15199,9 @@
           "nullable": true
         }
       },
+      "ProblemDetailsAdditionalProperties": {
+        "type": "object"
+      },
       "ReleaseProfileResourceRequired": {
         "type": "object"
       },
@@ -15128,10 +15211,31 @@
       "ReleaseResourceIndexerFlags": {
         "type": "object"
       },
+      "ValidationFailureAttemptedValue": {
+        "type": "object"
+      },
+      "ValidationFailureCustomState": {
+        "type": "object"
+      },
+      "ValidationFailureFormattedMessageArgumentsItem": {
+        "type": "object"
+      },
+      "ValidationFailureFormattedMessagePlaceholderValuesProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/ValidationFailureFormattedMessagePlaceholderValuesPropertyAdditionalProperties"
+        }
+      },
       "CustomFilterResourceFiltersItemAdditionalProperties": {
         "type": "object"
       },
+      "ValidationFailureFormattedMessagePlaceholderValuesAdditionalProperties": {
+        "type": "object"
+      },
       "CustomFilterResourceFiltersItemPropertyAdditionalProperties": {
+        "type": "object"
+      },
+      "ValidationFailureFormattedMessagePlaceholderValuesPropertyAdditionalProperties": {
         "type": "object"
       }
     },
@@ -15156,6 +15260,221 @@
     },
     {
       "apikey": []
+    }
+  ],
+  "tags": [
+    {
+      "name": "AlternativeTitle"
+    },
+    {
+      "name": "ApiInfo"
+    },
+    {
+      "name": "Authentication"
+    },
+    {
+      "name": "StaticResource"
+    },
+    {
+      "name": "AutoTagging"
+    },
+    {
+      "name": "Backup"
+    },
+    {
+      "name": "Blocklist"
+    },
+    {
+      "name": "Calendar"
+    },
+    {
+      "name": "CalendarFeed"
+    },
+    {
+      "name": "Collection"
+    },
+    {
+      "name": "Command"
+    },
+    {
+      "name": "Credit"
+    },
+    {
+      "name": "CustomFilter"
+    },
+    {
+      "name": "CustomFormat"
+    },
+    {
+      "name": "Cutoff"
+    },
+    {
+      "name": "DelayProfile"
+    },
+    {
+      "name": "DiskSpace"
+    },
+    {
+      "name": "DownloadClient"
+    },
+    {
+      "name": "DownloadClientConfig"
+    },
+    {
+      "name": "ExtraFile"
+    },
+    {
+      "name": "FileSystem"
+    },
+    {
+      "name": "Health"
+    },
+    {
+      "name": "History"
+    },
+    {
+      "name": "HostConfig"
+    },
+    {
+      "name": "ImportList"
+    },
+    {
+      "name": "ImportListConfig"
+    },
+    {
+      "name": "ImportListExclusion"
+    },
+    {
+      "name": "ImportListMovies"
+    },
+    {
+      "name": "Indexer"
+    },
+    {
+      "name": "IndexerConfig"
+    },
+    {
+      "name": "IndexerFlag"
+    },
+    {
+      "name": "Language"
+    },
+    {
+      "name": "Localization"
+    },
+    {
+      "name": "Log"
+    },
+    {
+      "name": "LogFile"
+    },
+    {
+      "name": "ManualImport"
+    },
+    {
+      "name": "MediaCover"
+    },
+    {
+      "name": "MediaManagementConfig"
+    },
+    {
+      "name": "Metadata"
+    },
+    {
+      "name": "MetadataConfig"
+    },
+    {
+      "name": "Missing"
+    },
+    {
+      "name": "Movie"
+    },
+    {
+      "name": "MovieEditor"
+    },
+    {
+      "name": "MovieFile"
+    },
+    {
+      "name": "MovieFolder"
+    },
+    {
+      "name": "MovieImport"
+    },
+    {
+      "name": "MovieLookup"
+    },
+    {
+      "name": "NamingConfig"
+    },
+    {
+      "name": "Notification"
+    },
+    {
+      "name": "Parse"
+    },
+    {
+      "name": "Ping"
+    },
+    {
+      "name": "QualityDefinition"
+    },
+    {
+      "name": "QualityProfile"
+    },
+    {
+      "name": "QualityProfileSchema"
+    },
+    {
+      "name": "Queue"
+    },
+    {
+      "name": "QueueAction"
+    },
+    {
+      "name": "QueueDetails"
+    },
+    {
+      "name": "QueueStatus"
+    },
+    {
+      "name": "Release"
+    },
+    {
+      "name": "ReleaseProfile"
+    },
+    {
+      "name": "ReleasePush"
+    },
+    {
+      "name": "RemotePathMapping"
+    },
+    {
+      "name": "RenameMovie"
+    },
+    {
+      "name": "RootFolder"
+    },
+    {
+      "name": "System"
+    },
+    {
+      "name": "Tag"
+    },
+    {
+      "name": "TagDetails"
+    },
+    {
+      "name": "Task"
+    },
+    {
+      "name": "UiConfig"
+    },
+    {
+      "name": "Update"
+    },
+    {
+      "name": "UpdateLogFile"
     }
   ]
 }
