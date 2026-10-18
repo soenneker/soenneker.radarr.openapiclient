@@ -119,6 +119,28 @@
         }
       }
     },
+    "/login/sso": {
+      "get": {
+        "tags": [
+          "Authentication"
+        ],
+        "operationId": "GetLoginSso",
+        "parameters": [
+          {
+            "name": "returnUrl",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "302": {
+            "description": "Found"
+          }
+        }
+      }
+    },
     "/login": {
       "post": {
         "tags": [
@@ -7078,6 +7100,19 @@
         }
       }
     },
+    "/loggedout": {
+      "get": {
+        "tags": [
+          "StaticResource"
+        ],
+        "operationId": "GetLoggedout",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/content/{path}": {
       "get": {
         "tags": [
@@ -7809,7 +7844,8 @@
       "AuthenticationRequiredType": {
         "enum": [
           "enabled",
-          "disabledForLocalAddresses"
+          "disabledForLocalAddresses",
+          "disabledForLocalhost"
         ],
         "type": "string",
         "additionalProperties": false,
@@ -7824,6 +7860,10 @@
             {
               "value": "disabledForLocalAddresses",
               "name": "DisabledForLocalAddresses"
+            },
+            {
+              "value": "disabledForLocalhost",
+              "name": "DisabledForLocalhost"
             }
           ]
         }
@@ -7833,7 +7873,8 @@
           "none",
           "basic",
           "forms",
-          "external"
+          "external",
+          "oidc"
         ],
         "type": "string",
         "additionalProperties": false,
@@ -7856,6 +7897,10 @@
             {
               "value": "external",
               "name": "External"
+            },
+            {
+              "value": "oidc",
+              "name": "Oidc"
             }
           ]
         }
@@ -9570,6 +9615,26 @@
             "type": "string",
             "nullable": true
           },
+          "oidcAuthority": {
+            "type": "string",
+            "nullable": true
+          },
+          "oidcClientId": {
+            "type": "string",
+            "nullable": true
+          },
+          "oidcClientSecret": {
+            "type": "string",
+            "nullable": true
+          },
+          "oidcUserIdentifier": {
+            "type": "string",
+            "nullable": true
+          },
+          "oidcScopes": {
+            "type": "string",
+            "nullable": true
+          },
           "logLevel": {
             "type": "string",
             "nullable": true
@@ -9591,6 +9656,10 @@
             "nullable": true
           },
           "sslCertPath": {
+            "type": "string",
+            "nullable": true
+          },
+          "sslKeyPath": {
             "type": "string",
             "nullable": true
           },

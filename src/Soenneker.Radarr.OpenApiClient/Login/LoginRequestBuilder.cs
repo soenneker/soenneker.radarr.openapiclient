@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.Radarr.OpenApiClient.Login.Sso;
 using Soenneker.Radarr.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
@@ -17,6 +18,11 @@ namespace Soenneker.Radarr.OpenApiClient.Login
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class LoginRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The sso property</summary>
+        public global::Soenneker.Radarr.OpenApiClient.Login.Sso.SsoRequestBuilder Sso
+        {
+            get => new global::Soenneker.Radarr.OpenApiClient.Login.Sso.SsoRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Radarr.OpenApiClient.Login.LoginRequestBuilder"/> and sets the default values.
         /// </summary>

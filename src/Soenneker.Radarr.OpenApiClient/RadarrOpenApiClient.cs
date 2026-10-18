@@ -11,6 +11,7 @@ using Soenneker.Radarr.OpenApiClient.Api;
 using Soenneker.Radarr.OpenApiClient.Content;
 using Soenneker.Radarr.OpenApiClient.Feed;
 using Soenneker.Radarr.OpenApiClient.Item;
+using Soenneker.Radarr.OpenApiClient.Loggedout;
 using Soenneker.Radarr.OpenApiClient.Login;
 using Soenneker.Radarr.OpenApiClient.Logout;
 using Soenneker.Radarr.OpenApiClient.Ping;
@@ -41,6 +42,11 @@ namespace Soenneker.Radarr.OpenApiClient
         public global::Soenneker.Radarr.OpenApiClient.Feed.FeedRequestBuilder Feed
         {
             get => new global::Soenneker.Radarr.OpenApiClient.Feed.FeedRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The loggedout property</summary>
+        public global::Soenneker.Radarr.OpenApiClient.Loggedout.LoggedoutRequestBuilder Loggedout
+        {
+            get => new global::Soenneker.Radarr.OpenApiClient.Loggedout.LoggedoutRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The login property</summary>
         public global::Soenneker.Radarr.OpenApiClient.Login.LoginRequestBuilder Login
