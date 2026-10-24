@@ -33,20 +33,20 @@ namespace Soenneker.Radarr.OpenApiClient.Api.V3.Metadata.Item
         public MetadataItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v3/metadata/{id}{?forceSave*}", rawUrl)
         {
         }
-        /// <returns>A <see cref="global::Soenneker.Radarr.OpenApiClient.Models.DeleteApiV3MetadataById200ResponseSchema"/></returns>
+        /// <returns>A <see cref="UntypedNode"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Radarr.OpenApiClient.Models.DeleteApiV3MetadataById200ResponseSchema?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<UntypedNode?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Radarr.OpenApiClient.Models.DeleteApiV3MetadataById200ResponseSchema> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<UntypedNode> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Radarr.OpenApiClient.Models.DeleteApiV3MetadataById200ResponseSchema>(requestInfo, global::Soenneker.Radarr.OpenApiClient.Models.DeleteApiV3MetadataById200ResponseSchema.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<UntypedNode>(requestInfo, UntypedNode.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <returns>A <see cref="global::Soenneker.Radarr.OpenApiClient.Models.MetadataResource"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>

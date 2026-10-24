@@ -7706,7 +7706,6 @@
           "collection"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "AddMovieMethod",
           "modelAsString": false,
@@ -7821,7 +7820,6 @@
           "replace"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ApplyTags",
           "modelAsString": false,
@@ -7848,7 +7846,6 @@
           "disabledForLocalhost"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "AuthenticationRequiredType",
           "modelAsString": false,
@@ -7877,7 +7874,6 @@
           "oidc"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "AuthenticationType",
           "modelAsString": false,
@@ -8028,7 +8024,6 @@
           "update"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "BackupType",
           "modelAsString": false,
@@ -8154,7 +8149,6 @@
           "physicalRelease"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "CalendarReleaseType",
           "modelAsString": false,
@@ -8181,7 +8175,6 @@
           "disabled"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "CertificateValidationType",
           "modelAsString": false,
@@ -8386,7 +8379,6 @@
           "smart"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ColonReplacementFormat",
           "modelAsString": false,
@@ -8480,7 +8472,6 @@
           "low"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "CommandPriority",
           "modelAsString": false,
@@ -8587,7 +8578,6 @@
           "unsuccessful"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "CommandResult",
           "modelAsString": false,
@@ -8618,7 +8608,6 @@
           "orphaned"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "CommandStatus",
           "modelAsString": false,
@@ -8661,7 +8650,6 @@
           "scheduled"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "CommandTrigger",
           "modelAsString": false,
@@ -8739,7 +8727,6 @@
           "crew"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "CreditType",
           "modelAsString": false,
@@ -8876,7 +8863,6 @@
           "postgreSQL"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "DatabaseType",
           "modelAsString": false,
@@ -9116,7 +9102,6 @@
           "torrent"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "DownloadProtocol",
           "modelAsString": false,
@@ -9184,7 +9169,6 @@
           "other"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ExtraFileType",
           "modelAsString": false,
@@ -9235,9 +9219,7 @@
             "type": "string",
             "nullable": true
           },
-          "value": {
-            "$ref": "#/components/schemas/FieldValue"
-          },
+          "value": {},
           "type": {
             "type": "string",
             "nullable": true
@@ -9284,7 +9266,6 @@
           "release"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "FileDateType",
           "modelAsString": false,
@@ -9312,7 +9293,6 @@
           "file"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "FileSystemEntityType",
           "modelAsString": false,
@@ -9425,7 +9405,6 @@
           "error"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "HealthCheckResult",
           "modelAsString": false,
@@ -10149,7 +10128,6 @@
           "advanced"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ImportListType",
           "modelAsString": false,
@@ -10691,7 +10669,6 @@
           "clearlogo"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "MediaCoverTypes",
           "modelAsString": false,
@@ -10959,7 +10936,6 @@
           "remux"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "Modifier",
           "modelAsString": false,
@@ -10998,7 +10974,6 @@
           "none"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "MonitorTypes",
           "modelAsString": false,
@@ -11303,7 +11278,6 @@
           "downloadIgnored"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "MovieHistoryEventType",
           "modelAsString": false,
@@ -11756,7 +11730,6 @@
           "minutes"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "MovieRuntimeFormatType",
           "modelAsString": false,
@@ -11809,7 +11782,6 @@
           "deleted"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "MovieStatusType",
           "modelAsString": false,
@@ -12175,7 +12147,6 @@
           "userName"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "PrivacyLevel",
           "modelAsString": false,
@@ -12224,9 +12195,7 @@
             "nullable": true
           }
         },
-        "additionalProperties": {
-          "$ref": "#/components/schemas/ProblemDetailsAdditionalProperties"
-        }
+        "additionalProperties": {}
       },
       "ProfileFormatItemResource": {
         "type": "object",
@@ -12257,7 +12226,6 @@
           "doNotPrefer"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ProperDownloadTypes",
           "modelAsString": false,
@@ -12297,7 +12265,6 @@
           "error"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ProviderMessageType",
           "modelAsString": false,
@@ -12345,7 +12312,6 @@
           "socks5"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ProxyType",
           "modelAsString": false,
@@ -12542,7 +12508,6 @@
           "bluray"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "QualitySource",
           "modelAsString": false,
@@ -12760,7 +12725,6 @@
           "fallback"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "QueueStatus",
           "modelAsString": false,
@@ -12865,7 +12829,6 @@
           "critic"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "RatingType",
           "modelAsString": false,
@@ -12908,7 +12871,6 @@
           "temporary"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "RejectionType",
           "modelAsString": false,
@@ -12954,12 +12916,8 @@
           "enabled": {
             "type": "boolean"
           },
-          "required": {
-            "$ref": "#/components/schemas/ReleaseProfileResourceRequired"
-          },
-          "ignored": {
-            "$ref": "#/components/schemas/ReleaseProfileResourceIgnored"
-          },
+          "required": {},
+          "ignored": {},
           "indexerId": {
             "type": "integer",
             "format": "int32"
@@ -13145,9 +13103,7 @@
           "protocol": {
             "$ref": "#/components/schemas/DownloadProtocol"
           },
-          "indexerFlags": {
-            "$ref": "#/components/schemas/ReleaseResourceIndexerFlags"
-          },
+          "indexerFlags": {},
           "movieId": {
             "type": "integer",
             "format": "int32",
@@ -13224,7 +13180,6 @@
           "never"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "RescanAfterRefreshType",
           "modelAsString": false,
@@ -13297,7 +13252,6 @@
           "tray"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "RuntimeMode",
           "modelAsString": false,
@@ -13349,7 +13303,6 @@
           "info"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "Severity",
           "modelAsString": false,
@@ -13376,7 +13329,6 @@
           "descending"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "SortDirection",
           "modelAsString": false,
@@ -13404,7 +13356,6 @@
           "indexer"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "SourceType",
           "modelAsString": false,
@@ -13583,7 +13534,6 @@
           "us"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "TmDbCountryCode",
           "modelAsString": false,
@@ -13786,7 +13736,6 @@
           "ignored"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "TrackedDownloadState",
           "modelAsString": false,
@@ -13833,7 +13782,6 @@
           "error"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "TrackedDownloadStatus",
           "modelAsString": false,
@@ -13968,7 +13916,6 @@
           "docker"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "UpdateMechanism",
           "modelAsString": false,
@@ -14058,12 +14005,8 @@
             "type": "string",
             "nullable": true
           },
-          "attemptedValue": {
-            "$ref": "#/components/schemas/ValidationFailureAttemptedValue"
-          },
-          "customState": {
-            "$ref": "#/components/schemas/ValidationFailureCustomState"
-          },
+          "attemptedValue": {},
+          "customState": {},
           "severity": {
             "$ref": "#/components/schemas/Severity"
           },
@@ -14073,9 +14016,7 @@
           },
           "formattedMessageArguments": {
             "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ValidationFailureFormattedMessageArgumentsItem"
-            },
+            "items": {},
             "nullable": true,
             "deprecated": true
           },
@@ -14087,9 +14028,7 @@
       },
       "CustomFilterResourceFiltersItem": {
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/CustomFilterResourceFiltersItemAdditionalProperties"
-        }
+        "additionalProperties": {}
       },
       "HistoryResourceData": {
         "type": "object",
@@ -14101,9 +14040,7 @@
       },
       "ValidationFailureFormattedMessagePlaceholderValues": {
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/ValidationFailureFormattedMessagePlaceholderValuesAdditionalProperties"
-        },
+        "additionalProperties": {},
         "nullable": true
       },
       "GetApiV3Alttitle200Response": {
@@ -14144,18 +14081,14 @@
           "$ref": "#/components/schemas/BackupResource"
         }
       },
-      "DeleteApiV3SystemBackupById200Response": {
-        "type": "object"
-      },
+      "DeleteApiV3SystemBackupById200Response": {},
       "GetApiV3BlocklistMovie200Response": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/BlocklistResource"
         }
       },
-      "DeleteApiV3BlocklistBulk200Response": {
-        "type": "object"
-      },
+      "DeleteApiV3BlocklistBulk200Response": {},
       "GetApiV3Calendar200Response": {
         "type": "array",
         "items": {
@@ -14204,9 +14137,7 @@
           "$ref": "#/components/schemas/CustomFormatResource"
         }
       },
-      "DeleteApiV3CustomformatBulk200Response": {
-        "type": "object"
-      },
+      "DeleteApiV3CustomformatBulk200Response": {},
       "GetApiV3CustomformatSchema200Response": {
         "type": "array",
         "items": {
@@ -14237,18 +14168,14 @@
           "$ref": "#/components/schemas/DownloadClientResource"
         }
       },
-      "DeleteApiV3DownloadclientById200Response": {
-        "type": "object"
-      },
+      "DeleteApiV3DownloadclientById200Response": {},
       "PutApiV3DownloadclientBulk200Response": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/DownloadClientResource"
         }
       },
-      "DeleteApiV3DownloadclientBulk200Response": {
-        "type": "object"
-      },
+      "DeleteApiV3DownloadclientBulk200Response": {},
       "GetApiV3DownloadclientSchema200Response": {
         "type": "array",
         "items": {
@@ -14297,27 +14224,21 @@
           "$ref": "#/components/schemas/HistoryResource"
         }
       },
-      "PostApiV3HistoryFailedById200Response": {
-        "type": "object"
-      },
+      "PostApiV3HistoryFailedById200Response": {},
       "GetApiV3Importlist200Response": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/ImportListResource"
         }
       },
-      "DeleteApiV3ImportlistById200Response": {
-        "type": "object"
-      },
+      "DeleteApiV3ImportlistById200Response": {},
       "PutApiV3ImportlistBulk200Response": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/ImportListResource"
         }
       },
-      "DeleteApiV3ImportlistBulk200Response": {
-        "type": "object"
-      },
+      "DeleteApiV3ImportlistBulk200Response": {},
       "GetApiV3ImportlistSchema200Response": {
         "type": "array",
         "items": {
@@ -14354,9 +14275,7 @@
           "$ref": "#/components/schemas/ImportListExclusionResource"
         }
       },
-      "DeleteApiV3ExclusionsBulk200Response": {
-        "type": "object"
-      },
+      "DeleteApiV3ExclusionsBulk200Response": {},
       "GetApiV3ImportlistMovie200Response": {
         "type": "array",
         "items": {
@@ -14381,18 +14300,14 @@
           "$ref": "#/components/schemas/IndexerResource"
         }
       },
-      "DeleteApiV3IndexerById200Response": {
-        "type": "object"
-      },
+      "DeleteApiV3IndexerById200Response": {},
       "PutApiV3IndexerBulk200Response": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/IndexerResource"
         }
       },
-      "DeleteApiV3IndexerBulk200Response": {
-        "type": "object"
-      },
+      "DeleteApiV3IndexerBulk200Response": {},
       "GetApiV3IndexerSchema200Response": {
         "type": "array",
         "items": {
@@ -14456,9 +14371,7 @@
           "$ref": "#/components/schemas/MetadataResource"
         }
       },
-      "DeleteApiV3MetadataById200Response": {
-        "type": "object"
-      },
+      "DeleteApiV3MetadataById200Response": {},
       "GetApiV3MetadataSchema200Response": {
         "type": "array",
         "items": {
@@ -14489,9 +14402,7 @@
           "$ref": "#/components/schemas/MovieResource"
         }
       },
-      "DeleteApiV3MovieEditor200Response": {
-        "type": "object"
-      },
+      "DeleteApiV3MovieEditor200Response": {},
       "GetApiV3Moviefile200Response": {
         "type": "array",
         "items": {
@@ -14504,9 +14415,7 @@
           "$ref": "#/components/schemas/MovieFileResource"
         }
       },
-      "DeleteApiV3MoviefileBulk200Response": {
-        "type": "object"
-      },
+      "DeleteApiV3MoviefileBulk200Response": {},
       "PutApiV3MoviefileBulkRequest": {
         "type": "array",
         "items": {
@@ -14543,9 +14452,7 @@
           "$ref": "#/components/schemas/NotificationResource"
         }
       },
-      "DeleteApiV3NotificationById200Response": {
-        "type": "object"
-      },
+      "DeleteApiV3NotificationById200Response": {},
       "GetApiV3NotificationSchema200Response": {
         "type": "array",
         "items": {
@@ -14588,15 +14495,9 @@
           "$ref": "#/components/schemas/QualityProfileResource"
         }
       },
-      "DeleteApiV3QueueBulk200Response": {
-        "type": "object"
-      },
-      "PostApiV3QueueGrabById200Response": {
-        "type": "object"
-      },
-      "PostApiV3QueueGrabBulk200Response": {
-        "type": "object"
-      },
+      "DeleteApiV3QueueBulk200Response": {},
+      "PostApiV3QueueGrabById200Response": {},
+      "PostApiV3QueueGrabBulk200Response": {},
       "GetApiV3QueueDetails200Response": {
         "type": "array",
         "items": {
@@ -14712,18 +14613,14 @@
           "$ref": "#/components/schemas/BackupResource"
         }
       },
-      "DeleteApiV3SystemBackupById200ResponseSchema": {
-        "type": "object"
-      },
+      "DeleteApiV3SystemBackupById200ResponseSchema": {},
       "GetApiV3BlocklistMovie200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/BlocklistResource"
         }
       },
-      "DeleteApiV3BlocklistBulk200ResponseSchema": {
-        "type": "object"
-      },
+      "DeleteApiV3BlocklistBulk200ResponseSchema": {},
       "GetApiV3Calendar200ResponseSchema": {
         "type": "array",
         "items": {
@@ -14772,9 +14669,7 @@
           "$ref": "#/components/schemas/CustomFormatResource"
         }
       },
-      "DeleteApiV3CustomformatBulk200ResponseSchema": {
-        "type": "object"
-      },
+      "DeleteApiV3CustomformatBulk200ResponseSchema": {},
       "GetApiV3CustomformatSchema200ResponseSchema": {
         "type": "array",
         "items": {
@@ -14805,18 +14700,14 @@
           "$ref": "#/components/schemas/DownloadClientResource"
         }
       },
-      "DeleteApiV3DownloadclientById200ResponseSchema": {
-        "type": "object"
-      },
+      "DeleteApiV3DownloadclientById200ResponseSchema": {},
       "PutApiV3DownloadclientBulk200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/DownloadClientResource"
         }
       },
-      "DeleteApiV3DownloadclientBulk200ResponseSchema": {
-        "type": "object"
-      },
+      "DeleteApiV3DownloadclientBulk200ResponseSchema": {},
       "GetApiV3DownloadclientSchema200ResponseSchema": {
         "type": "array",
         "items": {
@@ -14865,27 +14756,21 @@
           "$ref": "#/components/schemas/HistoryResource"
         }
       },
-      "PostApiV3HistoryFailedById200ResponseSchema": {
-        "type": "object"
-      },
+      "PostApiV3HistoryFailedById200ResponseSchema": {},
       "GetApiV3Importlist200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/ImportListResource"
         }
       },
-      "DeleteApiV3ImportlistById200ResponseSchema": {
-        "type": "object"
-      },
+      "DeleteApiV3ImportlistById200ResponseSchema": {},
       "PutApiV3ImportlistBulk200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/ImportListResource"
         }
       },
-      "DeleteApiV3ImportlistBulk200ResponseSchema": {
-        "type": "object"
-      },
+      "DeleteApiV3ImportlistBulk200ResponseSchema": {},
       "GetApiV3ImportlistSchema200ResponseSchema": {
         "type": "array",
         "items": {
@@ -14922,9 +14807,7 @@
           "$ref": "#/components/schemas/ImportListExclusionResource"
         }
       },
-      "DeleteApiV3ExclusionsBulk200ResponseSchema": {
-        "type": "object"
-      },
+      "DeleteApiV3ExclusionsBulk200ResponseSchema": {},
       "GetApiV3ImportlistMovie200ResponseSchema": {
         "type": "array",
         "items": {
@@ -14949,18 +14832,14 @@
           "$ref": "#/components/schemas/IndexerResource"
         }
       },
-      "DeleteApiV3IndexerById200ResponseSchema": {
-        "type": "object"
-      },
+      "DeleteApiV3IndexerById200ResponseSchema": {},
       "PutApiV3IndexerBulk200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/IndexerResource"
         }
       },
-      "DeleteApiV3IndexerBulk200ResponseSchema": {
-        "type": "object"
-      },
+      "DeleteApiV3IndexerBulk200ResponseSchema": {},
       "GetApiV3IndexerSchema200ResponseSchema": {
         "type": "array",
         "items": {
@@ -15024,9 +14903,7 @@
           "$ref": "#/components/schemas/MetadataResource"
         }
       },
-      "DeleteApiV3MetadataById200ResponseSchema": {
-        "type": "object"
-      },
+      "DeleteApiV3MetadataById200ResponseSchema": {},
       "GetApiV3MetadataSchema200ResponseSchema": {
         "type": "array",
         "items": {
@@ -15057,9 +14934,7 @@
           "$ref": "#/components/schemas/MovieResource"
         }
       },
-      "DeleteApiV3MovieEditor200ResponseSchema": {
-        "type": "object"
-      },
+      "DeleteApiV3MovieEditor200ResponseSchema": {},
       "GetApiV3Moviefile200ResponseSchema": {
         "type": "array",
         "items": {
@@ -15072,9 +14947,7 @@
           "$ref": "#/components/schemas/MovieFileResource"
         }
       },
-      "DeleteApiV3MoviefileBulk200ResponseSchema": {
-        "type": "object"
-      },
+      "DeleteApiV3MoviefileBulk200ResponseSchema": {},
       "PutApiV3MoviefileBulkRequestRequestBody": {
         "type": "array",
         "items": {
@@ -15111,9 +14984,7 @@
           "$ref": "#/components/schemas/NotificationResource"
         }
       },
-      "DeleteApiV3NotificationById200ResponseSchema": {
-        "type": "object"
-      },
+      "DeleteApiV3NotificationById200ResponseSchema": {},
       "GetApiV3NotificationSchema200ResponseSchema": {
         "type": "array",
         "items": {
@@ -15156,15 +15027,9 @@
           "$ref": "#/components/schemas/QualityProfileResource"
         }
       },
-      "DeleteApiV3QueueBulk200ResponseSchema": {
-        "type": "object"
-      },
-      "PostApiV3QueueGrabById200ResponseSchema": {
-        "type": "object"
-      },
-      "PostApiV3QueueGrabBulk200ResponseSchema": {
-        "type": "object"
-      },
+      "DeleteApiV3QueueBulk200ResponseSchema": {},
+      "PostApiV3QueueGrabById200ResponseSchema": {},
+      "PostApiV3QueueGrabBulk200ResponseSchema": {},
       "GetApiV3QueueDetails200ResponseSchema": {
         "type": "array",
         "items": {
@@ -15254,58 +15119,20 @@
       },
       "CustomFilterResourceFiltersItemProperty": {
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/CustomFilterResourceFiltersItemPropertyAdditionalProperties"
-        }
-      },
-      "FieldValue": {
-        "type": "object"
+        "additionalProperties": {}
       },
       "HistoryResourceDataProperty": {
         "type": "object",
         "additionalProperties": {
           "type": "string",
           "nullable": true
-        }
-      },
-      "ProblemDetailsAdditionalProperties": {
-        "type": "object"
-      },
-      "ReleaseProfileResourceRequired": {
-        "type": "object"
-      },
-      "ReleaseProfileResourceIgnored": {
-        "type": "object"
-      },
-      "ReleaseResourceIndexerFlags": {
-        "type": "object"
-      },
-      "ValidationFailureAttemptedValue": {
-        "type": "object"
-      },
-      "ValidationFailureCustomState": {
-        "type": "object"
-      },
-      "ValidationFailureFormattedMessageArgumentsItem": {
-        "type": "object"
+        },
+        "nullable": true
       },
       "ValidationFailureFormattedMessagePlaceholderValuesProperty": {
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/ValidationFailureFormattedMessagePlaceholderValuesPropertyAdditionalProperties"
-        }
-      },
-      "CustomFilterResourceFiltersItemAdditionalProperties": {
-        "type": "object"
-      },
-      "ValidationFailureFormattedMessagePlaceholderValuesAdditionalProperties": {
-        "type": "object"
-      },
-      "CustomFilterResourceFiltersItemPropertyAdditionalProperties": {
-        "type": "object"
-      },
-      "ValidationFailureFormattedMessagePlaceholderValuesPropertyAdditionalProperties": {
-        "type": "object"
+        "additionalProperties": {},
+        "nullable": true
       }
     },
     "securitySchemes": {

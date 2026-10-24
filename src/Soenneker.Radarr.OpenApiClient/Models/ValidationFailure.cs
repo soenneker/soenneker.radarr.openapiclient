@@ -15,18 +15,18 @@ namespace Soenneker.Radarr.OpenApiClient.Models
         /// <summary>The attemptedValue property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Radarr.OpenApiClient.Models.ValidationFailureAttemptedValue? AttemptedValue { get; set; }
+        public UntypedNode? AttemptedValue { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Radarr.OpenApiClient.Models.ValidationFailureAttemptedValue AttemptedValue { get; set; }
+        public UntypedNode AttemptedValue { get; set; }
 #endif
         /// <summary>The customState property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Radarr.OpenApiClient.Models.ValidationFailureCustomState? CustomState { get; set; }
+        public UntypedNode? CustomState { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Radarr.OpenApiClient.Models.ValidationFailureCustomState CustomState { get; set; }
+        public UntypedNode CustomState { get; set; }
 #endif
         /// <summary>The errorCode property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -48,10 +48,10 @@ namespace Soenneker.Radarr.OpenApiClient.Models
         [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Radarr.OpenApiClient.Models.ValidationFailureFormattedMessageArgumentsItem>? FormattedMessageArguments { get; set; }
+        public UntypedNode? FormattedMessageArguments { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Radarr.OpenApiClient.Models.ValidationFailureFormattedMessageArgumentsItem> FormattedMessageArguments { get; set; }
+        public UntypedNode FormattedMessageArguments { get; set; }
 #endif
         /// <summary>The formattedMessagePlaceholderValues property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -89,11 +89,11 @@ namespace Soenneker.Radarr.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "attemptedValue", n => { AttemptedValue = n.GetObjectValue<global::Soenneker.Radarr.OpenApiClient.Models.ValidationFailureAttemptedValue>(global::Soenneker.Radarr.OpenApiClient.Models.ValidationFailureAttemptedValue.CreateFromDiscriminatorValue); } },
-                { "customState", n => { CustomState = n.GetObjectValue<global::Soenneker.Radarr.OpenApiClient.Models.ValidationFailureCustomState>(global::Soenneker.Radarr.OpenApiClient.Models.ValidationFailureCustomState.CreateFromDiscriminatorValue); } },
+                { "attemptedValue", n => { AttemptedValue = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "customState", n => { CustomState = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "errorCode", n => { ErrorCode = n.GetStringValue(); } },
                 { "errorMessage", n => { ErrorMessage = n.GetStringValue(); } },
-                { "formattedMessageArguments", n => { FormattedMessageArguments = n.GetCollectionOfObjectValues<global::Soenneker.Radarr.OpenApiClient.Models.ValidationFailureFormattedMessageArgumentsItem>(global::Soenneker.Radarr.OpenApiClient.Models.ValidationFailureFormattedMessageArgumentsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "formattedMessageArguments", n => { FormattedMessageArguments = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "formattedMessagePlaceholderValues", n => { FormattedMessagePlaceholderValues = n.GetObjectValue<global::Soenneker.Radarr.OpenApiClient.Models.ValidationFailureFormattedMessagePlaceholderValuesProperty>(global::Soenneker.Radarr.OpenApiClient.Models.ValidationFailureFormattedMessagePlaceholderValuesProperty.CreateFromDiscriminatorValue); } },
                 { "propertyName", n => { PropertyName = n.GetStringValue(); } },
                 { "severity", n => { Severity = n.GetEnumValue<global::Soenneker.Radarr.OpenApiClient.Models.Severity>(); } },
@@ -106,11 +106,11 @@ namespace Soenneker.Radarr.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Radarr.OpenApiClient.Models.ValidationFailureAttemptedValue>("attemptedValue", AttemptedValue);
-            writer.WriteObjectValue<global::Soenneker.Radarr.OpenApiClient.Models.ValidationFailureCustomState>("customState", CustomState);
+            writer.WriteObjectValue<UntypedNode>("attemptedValue", AttemptedValue);
+            writer.WriteObjectValue<UntypedNode>("customState", CustomState);
             writer.WriteStringValue("errorCode", ErrorCode);
             writer.WriteStringValue("errorMessage", ErrorMessage);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Radarr.OpenApiClient.Models.ValidationFailureFormattedMessageArgumentsItem>("formattedMessageArguments", FormattedMessageArguments);
+            writer.WriteObjectValue<UntypedNode>("formattedMessageArguments", FormattedMessageArguments);
             writer.WriteObjectValue<global::Soenneker.Radarr.OpenApiClient.Models.ValidationFailureFormattedMessagePlaceholderValuesProperty>("formattedMessagePlaceholderValues", FormattedMessagePlaceholderValues);
             writer.WriteStringValue("propertyName", PropertyName);
             writer.WriteEnumValue<global::Soenneker.Radarr.OpenApiClient.Models.Severity>("severity", Severity);
