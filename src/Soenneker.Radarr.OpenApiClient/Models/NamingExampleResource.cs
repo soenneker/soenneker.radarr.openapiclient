@@ -11,22 +11,35 @@ namespace Soenneker.Radarr.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class NamingExampleResource : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("movieExample") is { } nullNodeMovieExample && nullNodeMovieExample.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MovieExample = null;
+            if (parseNode.GetChildNode("movieFolderExample") is { } nullNodeMovieFolderExample && nullNodeMovieFolderExample.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MovieFolderExample = null;
+        }
+
         /// <summary>The movieExample property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MovieExample { get; set; }
+        public string? MovieExample { get => _explicitNullValueMovieExample; set { _explicitNullValueMovieExample = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("movieExample"); else _explicitNullProperties?.Remove("movieExample"); } }
+        private string? _explicitNullValueMovieExample = default!;
 #nullable restore
 #else
-        public string MovieExample { get; set; }
+        public string MovieExample { get => _explicitNullValueMovieExample; set { _explicitNullValueMovieExample = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("movieExample"); else _explicitNullProperties?.Remove("movieExample"); } }
+        private string _explicitNullValueMovieExample = default!;
 #endif
         /// <summary>The movieFolderExample property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MovieFolderExample { get; set; }
+        public string? MovieFolderExample { get => _explicitNullValueMovieFolderExample; set { _explicitNullValueMovieFolderExample = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("movieFolderExample"); else _explicitNullProperties?.Remove("movieFolderExample"); } }
+        private string? _explicitNullValueMovieFolderExample = default!;
 #nullable restore
 #else
-        public string MovieFolderExample { get; set; }
+        public string MovieFolderExample { get => _explicitNullValueMovieFolderExample; set { _explicitNullValueMovieFolderExample = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("movieFolderExample"); else _explicitNullProperties?.Remove("movieFolderExample"); } }
+        private string _explicitNullValueMovieFolderExample = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -36,7 +49,7 @@ namespace Soenneker.Radarr.OpenApiClient.Models
         public static global::Soenneker.Radarr.OpenApiClient.Models.NamingExampleResource CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Radarr.OpenApiClient.Models.NamingExampleResource();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Radarr.OpenApiClient.Models.NamingExampleResource(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -58,7 +71,8 @@ namespace Soenneker.Radarr.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("movieExample", MovieExample);
-            writer.WriteStringValue("movieFolderExample", MovieFolderExample);
+            writer.WriteStringValue("movieFolderExample", MovieFolderExample);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

@@ -11,28 +11,47 @@ namespace Soenneker.Radarr.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class RootFolderResource : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("accessible") is { } nullNodeAccessible && nullNodeAccessible.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Accessible = null;
+            if (parseNode.GetChildNode("freeSpace") is { } nullNodeFreeSpace && nullNodeFreeSpace.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FreeSpace = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("path") is { } nullNodePath && nullNodePath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Path = null;
+            if (parseNode.GetChildNode("unmappedFolders") is { } nullNodeUnmappedFolders && nullNodeUnmappedFolders.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnmappedFolders = null;
+        }
+
         /// <summary>The accessible property</summary>
-        public bool? Accessible { get; set; }
+        public bool? Accessible { get => _explicitNullValueAccessible; set { _explicitNullValueAccessible = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accessible"); else _explicitNullProperties?.Remove("accessible"); } }
+        private bool? _explicitNullValueAccessible = default!;
         /// <summary>The freeSpace property</summary>
-        public long? FreeSpace { get; set; }
+        public long? FreeSpace { get => _explicitNullValueFreeSpace; set { _explicitNullValueFreeSpace = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("freeSpace"); else _explicitNullProperties?.Remove("freeSpace"); } }
+        private long? _explicitNullValueFreeSpace = default!;
         /// <summary>The id property</summary>
-        public int? Id { get; set; }
+        public int? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private int? _explicitNullValueId = default!;
         /// <summary>The path property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Path { get; set; }
+        public string? Path { get => _explicitNullValuePath; set { _explicitNullValuePath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("path"); else _explicitNullProperties?.Remove("path"); } }
+        private string? _explicitNullValuePath = default!;
 #nullable restore
 #else
-        public string Path { get; set; }
+        public string Path { get => _explicitNullValuePath; set { _explicitNullValuePath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("path"); else _explicitNullProperties?.Remove("path"); } }
+        private string _explicitNullValuePath = default!;
 #endif
         /// <summary>The unmappedFolders property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Radarr.OpenApiClient.Models.UnmappedFolder>? UnmappedFolders { get; set; }
+        public List<global::Soenneker.Radarr.OpenApiClient.Models.UnmappedFolder>? UnmappedFolders { get => _explicitNullValueUnmappedFolders; set { _explicitNullValueUnmappedFolders = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unmappedFolders"); else _explicitNullProperties?.Remove("unmappedFolders"); } }
+        private List<global::Soenneker.Radarr.OpenApiClient.Models.UnmappedFolder>? _explicitNullValueUnmappedFolders = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Radarr.OpenApiClient.Models.UnmappedFolder> UnmappedFolders { get; set; }
+        public List<global::Soenneker.Radarr.OpenApiClient.Models.UnmappedFolder> UnmappedFolders { get => _explicitNullValueUnmappedFolders; set { _explicitNullValueUnmappedFolders = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unmappedFolders"); else _explicitNullProperties?.Remove("unmappedFolders"); } }
+        private List<global::Soenneker.Radarr.OpenApiClient.Models.UnmappedFolder> _explicitNullValueUnmappedFolders = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -42,7 +61,7 @@ namespace Soenneker.Radarr.OpenApiClient.Models
         public static global::Soenneker.Radarr.OpenApiClient.Models.RootFolderResource CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Radarr.OpenApiClient.Models.RootFolderResource();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Radarr.OpenApiClient.Models.RootFolderResource(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -70,7 +89,8 @@ namespace Soenneker.Radarr.OpenApiClient.Models
             writer.WriteLongValue("freeSpace", FreeSpace);
             writer.WriteIntValue("id", Id);
             writer.WriteStringValue("path", Path);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Radarr.OpenApiClient.Models.UnmappedFolder>("unmappedFolders", UnmappedFolders);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Radarr.OpenApiClient.Models.UnmappedFolder>("unmappedFolders", UnmappedFolders);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

@@ -11,30 +11,46 @@ namespace Soenneker.Radarr.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class FileSystemResult : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("directories") is { } nullNodeDirectories && nullNodeDirectories.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Directories = null;
+            if (parseNode.GetChildNode("files") is { } nullNodeFiles && nullNodeFiles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Files = null;
+            if (parseNode.GetChildNode("parent") is { } nullNodeParent && nullNodeParent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parent = null;
+        }
+
         /// <summary>The directories property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Radarr.OpenApiClient.Models.FileSystemModel>? Directories { get; set; }
+        public List<global::Soenneker.Radarr.OpenApiClient.Models.FileSystemModel>? Directories { get => _explicitNullValueDirectories; set { _explicitNullValueDirectories = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("directories"); else _explicitNullProperties?.Remove("directories"); } }
+        private List<global::Soenneker.Radarr.OpenApiClient.Models.FileSystemModel>? _explicitNullValueDirectories = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Radarr.OpenApiClient.Models.FileSystemModel> Directories { get; set; }
+        public List<global::Soenneker.Radarr.OpenApiClient.Models.FileSystemModel> Directories { get => _explicitNullValueDirectories; set { _explicitNullValueDirectories = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("directories"); else _explicitNullProperties?.Remove("directories"); } }
+        private List<global::Soenneker.Radarr.OpenApiClient.Models.FileSystemModel> _explicitNullValueDirectories = default!;
 #endif
         /// <summary>The files property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Radarr.OpenApiClient.Models.FileSystemModel>? Files { get; set; }
+        public List<global::Soenneker.Radarr.OpenApiClient.Models.FileSystemModel>? Files { get => _explicitNullValueFiles; set { _explicitNullValueFiles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("files"); else _explicitNullProperties?.Remove("files"); } }
+        private List<global::Soenneker.Radarr.OpenApiClient.Models.FileSystemModel>? _explicitNullValueFiles = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Radarr.OpenApiClient.Models.FileSystemModel> Files { get; set; }
+        public List<global::Soenneker.Radarr.OpenApiClient.Models.FileSystemModel> Files { get => _explicitNullValueFiles; set { _explicitNullValueFiles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("files"); else _explicitNullProperties?.Remove("files"); } }
+        private List<global::Soenneker.Radarr.OpenApiClient.Models.FileSystemModel> _explicitNullValueFiles = default!;
 #endif
         /// <summary>The parent property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parent { get; set; }
+        public string? Parent { get => _explicitNullValueParent; set { _explicitNullValueParent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent"); else _explicitNullProperties?.Remove("parent"); } }
+        private string? _explicitNullValueParent = default!;
 #nullable restore
 #else
-        public string Parent { get; set; }
+        public string Parent { get => _explicitNullValueParent; set { _explicitNullValueParent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent"); else _explicitNullProperties?.Remove("parent"); } }
+        private string _explicitNullValueParent = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -44,7 +60,7 @@ namespace Soenneker.Radarr.OpenApiClient.Models
         public static global::Soenneker.Radarr.OpenApiClient.Models.FileSystemResult CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Radarr.OpenApiClient.Models.FileSystemResult();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Radarr.OpenApiClient.Models.FileSystemResult(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,7 +84,8 @@ namespace Soenneker.Radarr.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Radarr.OpenApiClient.Models.FileSystemModel>("directories", Directories);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Radarr.OpenApiClient.Models.FileSystemModel>("files", Files);
-            writer.WriteStringValue("parent", Parent);
+            writer.WriteStringValue("parent", Parent);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

@@ -50,6 +50,8 @@ namespace Soenneker.Radarr.OpenApiClient.Api.V3.Indexer.Testall
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "400", global::Soenneker.Radarr.OpenApiClient.Models.ProviderTestAllResult.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.Radarr.OpenApiClient.Models.ProviderTestAllResult>(requestInfo, global::Soenneker.Radarr.OpenApiClient.Models.ProviderTestAllResult.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
             return collectionResult?.AsList();

@@ -46,7 +46,7 @@ namespace Soenneker.Radarr.OpenApiClient.Api.V3.Importlist.Movie
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.Radarr.OpenApiClient.Models.ImportListMoviesResource>(requestInfo, global::Soenneker.Radarr.OpenApiClient.Models.ImportListMoviesResource.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.Radarr.OpenApiClient.Models.ImportListMoviesResource>(requestInfo, global::Soenneker.Radarr.OpenApiClient.Models.ImportListMoviesResource.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
             return collectionResult?.AsList();
         }
         /// <returns>A List&lt;global::Soenneker.Radarr.OpenApiClient.Models.MovieResource&gt;</returns>
@@ -64,7 +64,7 @@ namespace Soenneker.Radarr.OpenApiClient.Api.V3.Importlist.Movie
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.Radarr.OpenApiClient.Models.MovieResource>(requestInfo, global::Soenneker.Radarr.OpenApiClient.Models.MovieResource.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.Radarr.OpenApiClient.Models.MovieResource>(requestInfo, global::Soenneker.Radarr.OpenApiClient.Models.MovieResource.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
             return collectionResult?.AsList();
         }
         /// <returns>A <see cref="RequestInformation"/></returns>

@@ -11,28 +11,47 @@ namespace Soenneker.Radarr.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class RenameMovieResource : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("existingPath") is { } nullNodeExistingPath && nullNodeExistingPath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExistingPath = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("movieFileId") is { } nullNodeMovieFileId && nullNodeMovieFileId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MovieFileId = null;
+            if (parseNode.GetChildNode("movieId") is { } nullNodeMovieId && nullNodeMovieId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MovieId = null;
+            if (parseNode.GetChildNode("newPath") is { } nullNodeNewPath && nullNodeNewPath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewPath = null;
+        }
+
         /// <summary>The existingPath property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExistingPath { get; set; }
+        public string? ExistingPath { get => _explicitNullValueExistingPath; set { _explicitNullValueExistingPath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("existingPath"); else _explicitNullProperties?.Remove("existingPath"); } }
+        private string? _explicitNullValueExistingPath = default!;
 #nullable restore
 #else
-        public string ExistingPath { get; set; }
+        public string ExistingPath { get => _explicitNullValueExistingPath; set { _explicitNullValueExistingPath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("existingPath"); else _explicitNullProperties?.Remove("existingPath"); } }
+        private string _explicitNullValueExistingPath = default!;
 #endif
         /// <summary>The id property</summary>
-        public int? Id { get; set; }
+        public int? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private int? _explicitNullValueId = default!;
         /// <summary>The movieFileId property</summary>
-        public int? MovieFileId { get; set; }
+        public int? MovieFileId { get => _explicitNullValueMovieFileId; set { _explicitNullValueMovieFileId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("movieFileId"); else _explicitNullProperties?.Remove("movieFileId"); } }
+        private int? _explicitNullValueMovieFileId = default!;
         /// <summary>The movieId property</summary>
-        public int? MovieId { get; set; }
+        public int? MovieId { get => _explicitNullValueMovieId; set { _explicitNullValueMovieId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("movieId"); else _explicitNullProperties?.Remove("movieId"); } }
+        private int? _explicitNullValueMovieId = default!;
         /// <summary>The newPath property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NewPath { get; set; }
+        public string? NewPath { get => _explicitNullValueNewPath; set { _explicitNullValueNewPath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("newPath"); else _explicitNullProperties?.Remove("newPath"); } }
+        private string? _explicitNullValueNewPath = default!;
 #nullable restore
 #else
-        public string NewPath { get; set; }
+        public string NewPath { get => _explicitNullValueNewPath; set { _explicitNullValueNewPath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("newPath"); else _explicitNullProperties?.Remove("newPath"); } }
+        private string _explicitNullValueNewPath = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -42,7 +61,7 @@ namespace Soenneker.Radarr.OpenApiClient.Models
         public static global::Soenneker.Radarr.OpenApiClient.Models.RenameMovieResource CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Radarr.OpenApiClient.Models.RenameMovieResource();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Radarr.OpenApiClient.Models.RenameMovieResource(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -70,7 +89,8 @@ namespace Soenneker.Radarr.OpenApiClient.Models
             writer.WriteIntValue("id", Id);
             writer.WriteIntValue("movieFileId", MovieFileId);
             writer.WriteIntValue("movieId", MovieId);
-            writer.WriteStringValue("newPath", NewPath);
+            writer.WriteStringValue("newPath", NewPath);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

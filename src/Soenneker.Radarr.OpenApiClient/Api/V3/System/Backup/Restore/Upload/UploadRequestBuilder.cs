@@ -50,6 +50,8 @@ namespace Soenneker.Radarr.OpenApiClient.Api.V3.System.Backup.Restore.Upload
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "400", global::Soenneker.Radarr.OpenApiClient.Models.BackupRestoreErrorResource.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Radarr.OpenApiClient.Models.BackupRestoreResource>(requestInfo, global::Soenneker.Radarr.OpenApiClient.Models.BackupRestoreResource.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

@@ -26,6 +26,7 @@ namespace Soenneker.Radarr.OpenApiClient.Api.V3.Moviefile
             get => new global::Soenneker.Radarr.OpenApiClient.Api.V3.Moviefile.Bulk.BulkRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The editor property</summary>
+        [Obsolete("")]
         public global::Soenneker.Radarr.OpenApiClient.Api.V3.Moviefile.Editor.EditorRequestBuilder Editor
         {
             get => new global::Soenneker.Radarr.OpenApiClient.Api.V3.Moviefile.Editor.EditorRequestBuilder(PathParameters, RequestAdapter);
@@ -71,7 +72,7 @@ namespace Soenneker.Radarr.OpenApiClient.Api.V3.Moviefile
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.Radarr.OpenApiClient.Models.MovieFileResource>(requestInfo, global::Soenneker.Radarr.OpenApiClient.Models.MovieFileResource.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.Radarr.OpenApiClient.Models.MovieFileResource>(requestInfo, global::Soenneker.Radarr.OpenApiClient.Models.MovieFileResource.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
             return collectionResult?.AsList();
         }
         /// <returns>A <see cref="RequestInformation"/></returns>

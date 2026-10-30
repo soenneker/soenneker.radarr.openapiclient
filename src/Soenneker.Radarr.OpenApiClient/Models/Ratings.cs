@@ -11,46 +11,68 @@ namespace Soenneker.Radarr.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class Ratings : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("imdb") is { } nullNodeImdb && nullNodeImdb.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Imdb = null;
+            if (parseNode.GetChildNode("metacritic") is { } nullNodeMetacritic && nullNodeMetacritic.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metacritic = null;
+            if (parseNode.GetChildNode("rottenTomatoes") is { } nullNodeRottenTomatoes && nullNodeRottenTomatoes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RottenTomatoes = null;
+            if (parseNode.GetChildNode("tmdb") is { } nullNodeTmdb && nullNodeTmdb.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tmdb = null;
+            if (parseNode.GetChildNode("trakt") is { } nullNodeTrakt && nullNodeTrakt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Trakt = null;
+        }
+
         /// <summary>The imdb property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Radarr.OpenApiClient.Models.RatingChild? Imdb { get; set; }
+        public global::Soenneker.Radarr.OpenApiClient.Models.RatingChild? Imdb { get => _explicitNullValueImdb; set { _explicitNullValueImdb = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("imdb"); else _explicitNullProperties?.Remove("imdb"); } }
+        private global::Soenneker.Radarr.OpenApiClient.Models.RatingChild? _explicitNullValueImdb = default!;
 #nullable restore
 #else
-        public global::Soenneker.Radarr.OpenApiClient.Models.RatingChild Imdb { get; set; }
+        public global::Soenneker.Radarr.OpenApiClient.Models.RatingChild Imdb { get => _explicitNullValueImdb; set { _explicitNullValueImdb = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("imdb"); else _explicitNullProperties?.Remove("imdb"); } }
+        private global::Soenneker.Radarr.OpenApiClient.Models.RatingChild _explicitNullValueImdb = default!;
 #endif
         /// <summary>The metacritic property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Radarr.OpenApiClient.Models.RatingChild? Metacritic { get; set; }
+        public global::Soenneker.Radarr.OpenApiClient.Models.RatingChild? Metacritic { get => _explicitNullValueMetacritic; set { _explicitNullValueMetacritic = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metacritic"); else _explicitNullProperties?.Remove("metacritic"); } }
+        private global::Soenneker.Radarr.OpenApiClient.Models.RatingChild? _explicitNullValueMetacritic = default!;
 #nullable restore
 #else
-        public global::Soenneker.Radarr.OpenApiClient.Models.RatingChild Metacritic { get; set; }
+        public global::Soenneker.Radarr.OpenApiClient.Models.RatingChild Metacritic { get => _explicitNullValueMetacritic; set { _explicitNullValueMetacritic = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metacritic"); else _explicitNullProperties?.Remove("metacritic"); } }
+        private global::Soenneker.Radarr.OpenApiClient.Models.RatingChild _explicitNullValueMetacritic = default!;
 #endif
         /// <summary>The rottenTomatoes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Radarr.OpenApiClient.Models.RatingChild? RottenTomatoes { get; set; }
+        public global::Soenneker.Radarr.OpenApiClient.Models.RatingChild? RottenTomatoes { get => _explicitNullValueRottenTomatoes; set { _explicitNullValueRottenTomatoes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rottenTomatoes"); else _explicitNullProperties?.Remove("rottenTomatoes"); } }
+        private global::Soenneker.Radarr.OpenApiClient.Models.RatingChild? _explicitNullValueRottenTomatoes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Radarr.OpenApiClient.Models.RatingChild RottenTomatoes { get; set; }
+        public global::Soenneker.Radarr.OpenApiClient.Models.RatingChild RottenTomatoes { get => _explicitNullValueRottenTomatoes; set { _explicitNullValueRottenTomatoes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rottenTomatoes"); else _explicitNullProperties?.Remove("rottenTomatoes"); } }
+        private global::Soenneker.Radarr.OpenApiClient.Models.RatingChild _explicitNullValueRottenTomatoes = default!;
 #endif
         /// <summary>The tmdb property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Radarr.OpenApiClient.Models.RatingChild? Tmdb { get; set; }
+        public global::Soenneker.Radarr.OpenApiClient.Models.RatingChild? Tmdb { get => _explicitNullValueTmdb; set { _explicitNullValueTmdb = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tmdb"); else _explicitNullProperties?.Remove("tmdb"); } }
+        private global::Soenneker.Radarr.OpenApiClient.Models.RatingChild? _explicitNullValueTmdb = default!;
 #nullable restore
 #else
-        public global::Soenneker.Radarr.OpenApiClient.Models.RatingChild Tmdb { get; set; }
+        public global::Soenneker.Radarr.OpenApiClient.Models.RatingChild Tmdb { get => _explicitNullValueTmdb; set { _explicitNullValueTmdb = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tmdb"); else _explicitNullProperties?.Remove("tmdb"); } }
+        private global::Soenneker.Radarr.OpenApiClient.Models.RatingChild _explicitNullValueTmdb = default!;
 #endif
         /// <summary>The trakt property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Radarr.OpenApiClient.Models.RatingChild? Trakt { get; set; }
+        public global::Soenneker.Radarr.OpenApiClient.Models.RatingChild? Trakt { get => _explicitNullValueTrakt; set { _explicitNullValueTrakt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trakt"); else _explicitNullProperties?.Remove("trakt"); } }
+        private global::Soenneker.Radarr.OpenApiClient.Models.RatingChild? _explicitNullValueTrakt = default!;
 #nullable restore
 #else
-        public global::Soenneker.Radarr.OpenApiClient.Models.RatingChild Trakt { get; set; }
+        public global::Soenneker.Radarr.OpenApiClient.Models.RatingChild Trakt { get => _explicitNullValueTrakt; set { _explicitNullValueTrakt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trakt"); else _explicitNullProperties?.Remove("trakt"); } }
+        private global::Soenneker.Radarr.OpenApiClient.Models.RatingChild _explicitNullValueTrakt = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -60,7 +82,7 @@ namespace Soenneker.Radarr.OpenApiClient.Models
         public static global::Soenneker.Radarr.OpenApiClient.Models.Ratings CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Radarr.OpenApiClient.Models.Ratings();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Radarr.OpenApiClient.Models.Ratings(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -88,7 +110,8 @@ namespace Soenneker.Radarr.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Radarr.OpenApiClient.Models.RatingChild>("metacritic", Metacritic);
             writer.WriteObjectValue<global::Soenneker.Radarr.OpenApiClient.Models.RatingChild>("rottenTomatoes", RottenTomatoes);
             writer.WriteObjectValue<global::Soenneker.Radarr.OpenApiClient.Models.RatingChild>("tmdb", Tmdb);
-            writer.WriteObjectValue<global::Soenneker.Radarr.OpenApiClient.Models.RatingChild>("trakt", Trakt);
+            writer.WriteObjectValue<global::Soenneker.Radarr.OpenApiClient.Models.RatingChild>("trakt", Trakt);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

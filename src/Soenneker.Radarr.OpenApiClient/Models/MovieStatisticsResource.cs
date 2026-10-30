@@ -11,27 +11,44 @@ namespace Soenneker.Radarr.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class MovieStatisticsResource : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("movieFileCount") is { } nullNodeMovieFileCount && nullNodeMovieFileCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MovieFileCount = null;
+            if (parseNode.GetChildNode("movieFileQualities") is { } nullNodeMovieFileQualities && nullNodeMovieFileQualities.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MovieFileQualities = null;
+            if (parseNode.GetChildNode("releaseGroups") is { } nullNodeReleaseGroups && nullNodeReleaseGroups.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReleaseGroups = null;
+            if (parseNode.GetChildNode("sizeOnDisk") is { } nullNodeSizeOnDisk && nullNodeSizeOnDisk.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SizeOnDisk = null;
+        }
+
         /// <summary>The movieFileCount property</summary>
-        public int? MovieFileCount { get; set; }
+        public int? MovieFileCount { get => _explicitNullValueMovieFileCount; set { _explicitNullValueMovieFileCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("movieFileCount"); else _explicitNullProperties?.Remove("movieFileCount"); } }
+        private int? _explicitNullValueMovieFileCount = default!;
         /// <summary>The movieFileQualities property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Radarr.OpenApiClient.Models.Quality>? MovieFileQualities { get; set; }
+        public List<global::Soenneker.Radarr.OpenApiClient.Models.Quality>? MovieFileQualities { get => _explicitNullValueMovieFileQualities; set { _explicitNullValueMovieFileQualities = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("movieFileQualities"); else _explicitNullProperties?.Remove("movieFileQualities"); } }
+        private List<global::Soenneker.Radarr.OpenApiClient.Models.Quality>? _explicitNullValueMovieFileQualities = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Radarr.OpenApiClient.Models.Quality> MovieFileQualities { get; set; }
+        public List<global::Soenneker.Radarr.OpenApiClient.Models.Quality> MovieFileQualities { get => _explicitNullValueMovieFileQualities; set { _explicitNullValueMovieFileQualities = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("movieFileQualities"); else _explicitNullProperties?.Remove("movieFileQualities"); } }
+        private List<global::Soenneker.Radarr.OpenApiClient.Models.Quality> _explicitNullValueMovieFileQualities = default!;
 #endif
         /// <summary>The releaseGroups property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ReleaseGroups { get; set; }
+        public List<string>? ReleaseGroups { get => _explicitNullValueReleaseGroups; set { _explicitNullValueReleaseGroups = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("releaseGroups"); else _explicitNullProperties?.Remove("releaseGroups"); } }
+        private List<string>? _explicitNullValueReleaseGroups = default!;
 #nullable restore
 #else
-        public List<string> ReleaseGroups { get; set; }
+        public List<string> ReleaseGroups { get => _explicitNullValueReleaseGroups; set { _explicitNullValueReleaseGroups = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("releaseGroups"); else _explicitNullProperties?.Remove("releaseGroups"); } }
+        private List<string> _explicitNullValueReleaseGroups = default!;
 #endif
         /// <summary>The sizeOnDisk property</summary>
-        public long? SizeOnDisk { get; set; }
+        public long? SizeOnDisk { get => _explicitNullValueSizeOnDisk; set { _explicitNullValueSizeOnDisk = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sizeOnDisk"); else _explicitNullProperties?.Remove("sizeOnDisk"); } }
+        private long? _explicitNullValueSizeOnDisk = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -40,7 +57,7 @@ namespace Soenneker.Radarr.OpenApiClient.Models
         public static global::Soenneker.Radarr.OpenApiClient.Models.MovieStatisticsResource CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Radarr.OpenApiClient.Models.MovieStatisticsResource();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Radarr.OpenApiClient.Models.MovieStatisticsResource(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -66,7 +83,8 @@ namespace Soenneker.Radarr.OpenApiClient.Models
             writer.WriteIntValue("movieFileCount", MovieFileCount);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Radarr.OpenApiClient.Models.Quality>("movieFileQualities", MovieFileQualities);
             writer.WriteCollectionOfPrimitiveValues<string>("releaseGroups", ReleaseGroups);
-            writer.WriteLongValue("sizeOnDisk", SizeOnDisk);
+            writer.WriteLongValue("sizeOnDisk", SizeOnDisk);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

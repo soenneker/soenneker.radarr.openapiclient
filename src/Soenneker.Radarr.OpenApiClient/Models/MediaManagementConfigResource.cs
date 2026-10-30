@@ -11,81 +11,137 @@ namespace Soenneker.Radarr.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class MediaManagementConfigResource : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("autoRenameFolders") is { } nullNodeAutoRenameFolders && nullNodeAutoRenameFolders.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutoRenameFolders = null;
+            if (parseNode.GetChildNode("autoUnmonitorPreviouslyDownloadedMovies") is { } nullNodeAutoUnmonitorPreviouslyDownloadedMovies && nullNodeAutoUnmonitorPreviouslyDownloadedMovies.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutoUnmonitorPreviouslyDownloadedMovies = null;
+            if (parseNode.GetChildNode("chmodFolder") is { } nullNodeChmodFolder && nullNodeChmodFolder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChmodFolder = null;
+            if (parseNode.GetChildNode("chownGroup") is { } nullNodeChownGroup && nullNodeChownGroup.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChownGroup = null;
+            if (parseNode.GetChildNode("copyUsingHardlinks") is { } nullNodeCopyUsingHardlinks && nullNodeCopyUsingHardlinks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CopyUsingHardlinks = null;
+            if (parseNode.GetChildNode("createEmptyMovieFolders") is { } nullNodeCreateEmptyMovieFolders && nullNodeCreateEmptyMovieFolders.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreateEmptyMovieFolders = null;
+            if (parseNode.GetChildNode("deleteEmptyFolders") is { } nullNodeDeleteEmptyFolders && nullNodeDeleteEmptyFolders.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeleteEmptyFolders = null;
+            if (parseNode.GetChildNode("downloadPropersAndRepacks") is { } nullNodeDownloadPropersAndRepacks && nullNodeDownloadPropersAndRepacks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DownloadPropersAndRepacks = null;
+            if (parseNode.GetChildNode("enableMediaInfo") is { } nullNodeEnableMediaInfo && nullNodeEnableMediaInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableMediaInfo = null;
+            if (parseNode.GetChildNode("extraFileExtensions") is { } nullNodeExtraFileExtensions && nullNodeExtraFileExtensions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExtraFileExtensions = null;
+            if (parseNode.GetChildNode("fileDate") is { } nullNodeFileDate && nullNodeFileDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FileDate = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("importExtraFiles") is { } nullNodeImportExtraFiles && nullNodeImportExtraFiles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImportExtraFiles = null;
+            if (parseNode.GetChildNode("minimumFreeSpaceWhenImporting") is { } nullNodeMinimumFreeSpaceWhenImporting && nullNodeMinimumFreeSpaceWhenImporting.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinimumFreeSpaceWhenImporting = null;
+            if (parseNode.GetChildNode("pathsDefaultStatic") is { } nullNodePathsDefaultStatic && nullNodePathsDefaultStatic.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PathsDefaultStatic = null;
+            if (parseNode.GetChildNode("recycleBin") is { } nullNodeRecycleBin && nullNodeRecycleBin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecycleBin = null;
+            if (parseNode.GetChildNode("recycleBinCleanupDays") is { } nullNodeRecycleBinCleanupDays && nullNodeRecycleBinCleanupDays.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecycleBinCleanupDays = null;
+            if (parseNode.GetChildNode("rescanAfterRefresh") is { } nullNodeRescanAfterRefresh && nullNodeRescanAfterRefresh.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RescanAfterRefresh = null;
+            if (parseNode.GetChildNode("scriptImportPath") is { } nullNodeScriptImportPath && nullNodeScriptImportPath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScriptImportPath = null;
+            if (parseNode.GetChildNode("setPermissionsLinux") is { } nullNodeSetPermissionsLinux && nullNodeSetPermissionsLinux.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SetPermissionsLinux = null;
+            if (parseNode.GetChildNode("skipFreeSpaceCheckWhenImporting") is { } nullNodeSkipFreeSpaceCheckWhenImporting && nullNodeSkipFreeSpaceCheckWhenImporting.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SkipFreeSpaceCheckWhenImporting = null;
+            if (parseNode.GetChildNode("useScriptImport") is { } nullNodeUseScriptImport && nullNodeUseScriptImport.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UseScriptImport = null;
+        }
+
         /// <summary>The autoRenameFolders property</summary>
-        public bool? AutoRenameFolders { get; set; }
+        public bool? AutoRenameFolders { get => _explicitNullValueAutoRenameFolders; set { _explicitNullValueAutoRenameFolders = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("autoRenameFolders"); else _explicitNullProperties?.Remove("autoRenameFolders"); } }
+        private bool? _explicitNullValueAutoRenameFolders = default!;
         /// <summary>The autoUnmonitorPreviouslyDownloadedMovies property</summary>
-        public bool? AutoUnmonitorPreviouslyDownloadedMovies { get; set; }
+        public bool? AutoUnmonitorPreviouslyDownloadedMovies { get => _explicitNullValueAutoUnmonitorPreviouslyDownloadedMovies; set { _explicitNullValueAutoUnmonitorPreviouslyDownloadedMovies = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("autoUnmonitorPreviouslyDownloadedMovies"); else _explicitNullProperties?.Remove("autoUnmonitorPreviouslyDownloadedMovies"); } }
+        private bool? _explicitNullValueAutoUnmonitorPreviouslyDownloadedMovies = default!;
         /// <summary>The chmodFolder property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ChmodFolder { get; set; }
+        public string? ChmodFolder { get => _explicitNullValueChmodFolder; set { _explicitNullValueChmodFolder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("chmodFolder"); else _explicitNullProperties?.Remove("chmodFolder"); } }
+        private string? _explicitNullValueChmodFolder = default!;
 #nullable restore
 #else
-        public string ChmodFolder { get; set; }
+        public string ChmodFolder { get => _explicitNullValueChmodFolder; set { _explicitNullValueChmodFolder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("chmodFolder"); else _explicitNullProperties?.Remove("chmodFolder"); } }
+        private string _explicitNullValueChmodFolder = default!;
 #endif
         /// <summary>The chownGroup property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ChownGroup { get; set; }
+        public string? ChownGroup { get => _explicitNullValueChownGroup; set { _explicitNullValueChownGroup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("chownGroup"); else _explicitNullProperties?.Remove("chownGroup"); } }
+        private string? _explicitNullValueChownGroup = default!;
 #nullable restore
 #else
-        public string ChownGroup { get; set; }
+        public string ChownGroup { get => _explicitNullValueChownGroup; set { _explicitNullValueChownGroup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("chownGroup"); else _explicitNullProperties?.Remove("chownGroup"); } }
+        private string _explicitNullValueChownGroup = default!;
 #endif
         /// <summary>The copyUsingHardlinks property</summary>
-        public bool? CopyUsingHardlinks { get; set; }
+        public bool? CopyUsingHardlinks { get => _explicitNullValueCopyUsingHardlinks; set { _explicitNullValueCopyUsingHardlinks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("copyUsingHardlinks"); else _explicitNullProperties?.Remove("copyUsingHardlinks"); } }
+        private bool? _explicitNullValueCopyUsingHardlinks = default!;
         /// <summary>The createEmptyMovieFolders property</summary>
-        public bool? CreateEmptyMovieFolders { get; set; }
+        public bool? CreateEmptyMovieFolders { get => _explicitNullValueCreateEmptyMovieFolders; set { _explicitNullValueCreateEmptyMovieFolders = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("createEmptyMovieFolders"); else _explicitNullProperties?.Remove("createEmptyMovieFolders"); } }
+        private bool? _explicitNullValueCreateEmptyMovieFolders = default!;
         /// <summary>The deleteEmptyFolders property</summary>
-        public bool? DeleteEmptyFolders { get; set; }
+        public bool? DeleteEmptyFolders { get => _explicitNullValueDeleteEmptyFolders; set { _explicitNullValueDeleteEmptyFolders = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deleteEmptyFolders"); else _explicitNullProperties?.Remove("deleteEmptyFolders"); } }
+        private bool? _explicitNullValueDeleteEmptyFolders = default!;
         /// <summary>The downloadPropersAndRepacks property</summary>
-        public global::Soenneker.Radarr.OpenApiClient.Models.ProperDownloadTypes? DownloadPropersAndRepacks { get; set; }
+        public global::Soenneker.Radarr.OpenApiClient.Models.ProperDownloadTypes? DownloadPropersAndRepacks { get => _explicitNullValueDownloadPropersAndRepacks; set { _explicitNullValueDownloadPropersAndRepacks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("downloadPropersAndRepacks"); else _explicitNullProperties?.Remove("downloadPropersAndRepacks"); } }
+        private global::Soenneker.Radarr.OpenApiClient.Models.ProperDownloadTypes? _explicitNullValueDownloadPropersAndRepacks = default!;
         /// <summary>The enableMediaInfo property</summary>
-        public bool? EnableMediaInfo { get; set; }
+        public bool? EnableMediaInfo { get => _explicitNullValueEnableMediaInfo; set { _explicitNullValueEnableMediaInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enableMediaInfo"); else _explicitNullProperties?.Remove("enableMediaInfo"); } }
+        private bool? _explicitNullValueEnableMediaInfo = default!;
         /// <summary>The extraFileExtensions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExtraFileExtensions { get; set; }
+        public string? ExtraFileExtensions { get => _explicitNullValueExtraFileExtensions; set { _explicitNullValueExtraFileExtensions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extraFileExtensions"); else _explicitNullProperties?.Remove("extraFileExtensions"); } }
+        private string? _explicitNullValueExtraFileExtensions = default!;
 #nullable restore
 #else
-        public string ExtraFileExtensions { get; set; }
+        public string ExtraFileExtensions { get => _explicitNullValueExtraFileExtensions; set { _explicitNullValueExtraFileExtensions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extraFileExtensions"); else _explicitNullProperties?.Remove("extraFileExtensions"); } }
+        private string _explicitNullValueExtraFileExtensions = default!;
 #endif
         /// <summary>The fileDate property</summary>
-        public global::Soenneker.Radarr.OpenApiClient.Models.FileDateType? FileDate { get; set; }
+        public global::Soenneker.Radarr.OpenApiClient.Models.FileDateType? FileDate { get => _explicitNullValueFileDate; set { _explicitNullValueFileDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fileDate"); else _explicitNullProperties?.Remove("fileDate"); } }
+        private global::Soenneker.Radarr.OpenApiClient.Models.FileDateType? _explicitNullValueFileDate = default!;
         /// <summary>The id property</summary>
-        public int? Id { get; set; }
+        public int? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private int? _explicitNullValueId = default!;
         /// <summary>The importExtraFiles property</summary>
-        public bool? ImportExtraFiles { get; set; }
+        public bool? ImportExtraFiles { get => _explicitNullValueImportExtraFiles; set { _explicitNullValueImportExtraFiles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("importExtraFiles"); else _explicitNullProperties?.Remove("importExtraFiles"); } }
+        private bool? _explicitNullValueImportExtraFiles = default!;
         /// <summary>The minimumFreeSpaceWhenImporting property</summary>
-        public int? MinimumFreeSpaceWhenImporting { get; set; }
+        public int? MinimumFreeSpaceWhenImporting { get => _explicitNullValueMinimumFreeSpaceWhenImporting; set { _explicitNullValueMinimumFreeSpaceWhenImporting = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimumFreeSpaceWhenImporting"); else _explicitNullProperties?.Remove("minimumFreeSpaceWhenImporting"); } }
+        private int? _explicitNullValueMinimumFreeSpaceWhenImporting = default!;
         /// <summary>The pathsDefaultStatic property</summary>
-        public bool? PathsDefaultStatic { get; set; }
+        public bool? PathsDefaultStatic { get => _explicitNullValuePathsDefaultStatic; set { _explicitNullValuePathsDefaultStatic = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pathsDefaultStatic"); else _explicitNullProperties?.Remove("pathsDefaultStatic"); } }
+        private bool? _explicitNullValuePathsDefaultStatic = default!;
         /// <summary>The recycleBin property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RecycleBin { get; set; }
+        public string? RecycleBin { get => _explicitNullValueRecycleBin; set { _explicitNullValueRecycleBin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recycleBin"); else _explicitNullProperties?.Remove("recycleBin"); } }
+        private string? _explicitNullValueRecycleBin = default!;
 #nullable restore
 #else
-        public string RecycleBin { get; set; }
+        public string RecycleBin { get => _explicitNullValueRecycleBin; set { _explicitNullValueRecycleBin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recycleBin"); else _explicitNullProperties?.Remove("recycleBin"); } }
+        private string _explicitNullValueRecycleBin = default!;
 #endif
         /// <summary>The recycleBinCleanupDays property</summary>
-        public int? RecycleBinCleanupDays { get; set; }
+        public int? RecycleBinCleanupDays { get => _explicitNullValueRecycleBinCleanupDays; set { _explicitNullValueRecycleBinCleanupDays = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recycleBinCleanupDays"); else _explicitNullProperties?.Remove("recycleBinCleanupDays"); } }
+        private int? _explicitNullValueRecycleBinCleanupDays = default!;
         /// <summary>The rescanAfterRefresh property</summary>
-        public global::Soenneker.Radarr.OpenApiClient.Models.RescanAfterRefreshType? RescanAfterRefresh { get; set; }
+        public global::Soenneker.Radarr.OpenApiClient.Models.RescanAfterRefreshType? RescanAfterRefresh { get => _explicitNullValueRescanAfterRefresh; set { _explicitNullValueRescanAfterRefresh = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rescanAfterRefresh"); else _explicitNullProperties?.Remove("rescanAfterRefresh"); } }
+        private global::Soenneker.Radarr.OpenApiClient.Models.RescanAfterRefreshType? _explicitNullValueRescanAfterRefresh = default!;
         /// <summary>The scriptImportPath property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ScriptImportPath { get; set; }
+        public string? ScriptImportPath { get => _explicitNullValueScriptImportPath; set { _explicitNullValueScriptImportPath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scriptImportPath"); else _explicitNullProperties?.Remove("scriptImportPath"); } }
+        private string? _explicitNullValueScriptImportPath = default!;
 #nullable restore
 #else
-        public string ScriptImportPath { get; set; }
+        public string ScriptImportPath { get => _explicitNullValueScriptImportPath; set { _explicitNullValueScriptImportPath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scriptImportPath"); else _explicitNullProperties?.Remove("scriptImportPath"); } }
+        private string _explicitNullValueScriptImportPath = default!;
 #endif
         /// <summary>The setPermissionsLinux property</summary>
-        public bool? SetPermissionsLinux { get; set; }
+        public bool? SetPermissionsLinux { get => _explicitNullValueSetPermissionsLinux; set { _explicitNullValueSetPermissionsLinux = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("setPermissionsLinux"); else _explicitNullProperties?.Remove("setPermissionsLinux"); } }
+        private bool? _explicitNullValueSetPermissionsLinux = default!;
         /// <summary>The skipFreeSpaceCheckWhenImporting property</summary>
-        public bool? SkipFreeSpaceCheckWhenImporting { get; set; }
+        public bool? SkipFreeSpaceCheckWhenImporting { get => _explicitNullValueSkipFreeSpaceCheckWhenImporting; set { _explicitNullValueSkipFreeSpaceCheckWhenImporting = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("skipFreeSpaceCheckWhenImporting"); else _explicitNullProperties?.Remove("skipFreeSpaceCheckWhenImporting"); } }
+        private bool? _explicitNullValueSkipFreeSpaceCheckWhenImporting = default!;
         /// <summary>The useScriptImport property</summary>
-        public bool? UseScriptImport { get; set; }
+        public bool? UseScriptImport { get => _explicitNullValueUseScriptImport; set { _explicitNullValueUseScriptImport = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("useScriptImport"); else _explicitNullProperties?.Remove("useScriptImport"); } }
+        private bool? _explicitNullValueUseScriptImport = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -94,7 +150,7 @@ namespace Soenneker.Radarr.OpenApiClient.Models
         public static global::Soenneker.Radarr.OpenApiClient.Models.MediaManagementConfigResource CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Radarr.OpenApiClient.Models.MediaManagementConfigResource();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Radarr.OpenApiClient.Models.MediaManagementConfigResource(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -156,7 +212,8 @@ namespace Soenneker.Radarr.OpenApiClient.Models
             writer.WriteStringValue("scriptImportPath", ScriptImportPath);
             writer.WriteBoolValue("setPermissionsLinux", SetPermissionsLinux);
             writer.WriteBoolValue("skipFreeSpaceCheckWhenImporting", SkipFreeSpaceCheckWhenImporting);
-            writer.WriteBoolValue("useScriptImport", UseScriptImport);
+            writer.WriteBoolValue("useScriptImport", UseScriptImport);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

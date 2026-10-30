@@ -46,7 +46,7 @@ namespace Soenneker.Radarr.OpenApiClient.Api.V3.Manualimport
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.Radarr.OpenApiClient.Models.ManualImportResource>(requestInfo, global::Soenneker.Radarr.OpenApiClient.Models.ManualImportResource.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.Radarr.OpenApiClient.Models.ManualImportResource>(requestInfo, global::Soenneker.Radarr.OpenApiClient.Models.ManualImportResource.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
             return collectionResult?.AsList();
         }
         /// <returns>A List&lt;global::Soenneker.Radarr.OpenApiClient.Models.ManualImportReprocessResource&gt;</returns>
@@ -64,7 +64,7 @@ namespace Soenneker.Radarr.OpenApiClient.Api.V3.Manualimport
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.Radarr.OpenApiClient.Models.ManualImportReprocessResource>(requestInfo, global::Soenneker.Radarr.OpenApiClient.Models.ManualImportReprocessResource.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.Radarr.OpenApiClient.Models.ManualImportReprocessResource>(requestInfo, global::Soenneker.Radarr.OpenApiClient.Models.ManualImportReprocessResource.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
             return collectionResult?.AsList();
         }
         /// <returns>A <see cref="RequestInformation"/></returns>

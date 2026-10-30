@@ -11,66 +11,96 @@ namespace Soenneker.Radarr.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ValidationFailure : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("attemptedValue") is { } nullNodeAttemptedValue && nullNodeAttemptedValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AttemptedValue = null;
+            if (parseNode.GetChildNode("customState") is { } nullNodeCustomState && nullNodeCustomState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomState = null;
+            if (parseNode.GetChildNode("errorCode") is { } nullNodeErrorCode && nullNodeErrorCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorCode = null;
+            if (parseNode.GetChildNode("errorMessage") is { } nullNodeErrorMessage && nullNodeErrorMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorMessage = null;
+            if (parseNode.GetChildNode("formattedMessageArguments") is { } nullNodeFormattedMessageArguments && nullNodeFormattedMessageArguments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FormattedMessageArguments = null;
+            if (parseNode.GetChildNode("formattedMessagePlaceholderValues") is { } nullNodeFormattedMessagePlaceholderValues && nullNodeFormattedMessagePlaceholderValues.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FormattedMessagePlaceholderValues = null;
+            if (parseNode.GetChildNode("propertyName") is { } nullNodePropertyName && nullNodePropertyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PropertyName = null;
+            if (parseNode.GetChildNode("severity") is { } nullNodeSeverity && nullNodeSeverity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Severity = null;
+        }
+
         /// <summary>The attemptedValue property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? AttemptedValue { get; set; }
+        public UntypedNode? AttemptedValue { get => _explicitNullValueAttemptedValue; set { _explicitNullValueAttemptedValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attemptedValue"); else _explicitNullProperties?.Remove("attemptedValue"); } }
+        private UntypedNode? _explicitNullValueAttemptedValue = default!;
 #nullable restore
 #else
-        public UntypedNode AttemptedValue { get; set; }
+        public UntypedNode AttemptedValue { get => _explicitNullValueAttemptedValue; set { _explicitNullValueAttemptedValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attemptedValue"); else _explicitNullProperties?.Remove("attemptedValue"); } }
+        private UntypedNode _explicitNullValueAttemptedValue = default!;
 #endif
         /// <summary>The customState property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? CustomState { get; set; }
+        public UntypedNode? CustomState { get => _explicitNullValueCustomState; set { _explicitNullValueCustomState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customState"); else _explicitNullProperties?.Remove("customState"); } }
+        private UntypedNode? _explicitNullValueCustomState = default!;
 #nullable restore
 #else
-        public UntypedNode CustomState { get; set; }
+        public UntypedNode CustomState { get => _explicitNullValueCustomState; set { _explicitNullValueCustomState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customState"); else _explicitNullProperties?.Remove("customState"); } }
+        private UntypedNode _explicitNullValueCustomState = default!;
 #endif
         /// <summary>The errorCode property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ErrorCode { get; set; }
+        public string? ErrorCode { get => _explicitNullValueErrorCode; set { _explicitNullValueErrorCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errorCode"); else _explicitNullProperties?.Remove("errorCode"); } }
+        private string? _explicitNullValueErrorCode = default!;
 #nullable restore
 #else
-        public string ErrorCode { get; set; }
+        public string ErrorCode { get => _explicitNullValueErrorCode; set { _explicitNullValueErrorCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errorCode"); else _explicitNullProperties?.Remove("errorCode"); } }
+        private string _explicitNullValueErrorCode = default!;
 #endif
         /// <summary>The errorMessage property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ErrorMessage { get; set; }
+        public string? ErrorMessage { get => _explicitNullValueErrorMessage; set { _explicitNullValueErrorMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errorMessage"); else _explicitNullProperties?.Remove("errorMessage"); } }
+        private string? _explicitNullValueErrorMessage = default!;
 #nullable restore
 #else
-        public string ErrorMessage { get; set; }
+        public string ErrorMessage { get => _explicitNullValueErrorMessage; set { _explicitNullValueErrorMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errorMessage"); else _explicitNullProperties?.Remove("errorMessage"); } }
+        private string _explicitNullValueErrorMessage = default!;
 #endif
         /// <summary>The formattedMessageArguments property</summary>
         [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? FormattedMessageArguments { get; set; }
+        public UntypedNode? FormattedMessageArguments { get => _explicitNullValueFormattedMessageArguments; set { _explicitNullValueFormattedMessageArguments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("formattedMessageArguments"); else _explicitNullProperties?.Remove("formattedMessageArguments"); } }
+        private UntypedNode? _explicitNullValueFormattedMessageArguments = default!;
 #nullable restore
 #else
-        public UntypedNode FormattedMessageArguments { get; set; }
+        public UntypedNode FormattedMessageArguments { get => _explicitNullValueFormattedMessageArguments; set { _explicitNullValueFormattedMessageArguments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("formattedMessageArguments"); else _explicitNullProperties?.Remove("formattedMessageArguments"); } }
+        private UntypedNode _explicitNullValueFormattedMessageArguments = default!;
 #endif
         /// <summary>The formattedMessagePlaceholderValues property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Radarr.OpenApiClient.Models.ValidationFailureFormattedMessagePlaceholderValuesProperty? FormattedMessagePlaceholderValues { get; set; }
+        public global::Soenneker.Radarr.OpenApiClient.Models.ValidationFailureFormattedMessagePlaceholderValuesProperty? FormattedMessagePlaceholderValues { get => _explicitNullValueFormattedMessagePlaceholderValues; set { _explicitNullValueFormattedMessagePlaceholderValues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("formattedMessagePlaceholderValues"); else _explicitNullProperties?.Remove("formattedMessagePlaceholderValues"); } }
+        private global::Soenneker.Radarr.OpenApiClient.Models.ValidationFailureFormattedMessagePlaceholderValuesProperty? _explicitNullValueFormattedMessagePlaceholderValues = default!;
 #nullable restore
 #else
-        public global::Soenneker.Radarr.OpenApiClient.Models.ValidationFailureFormattedMessagePlaceholderValuesProperty FormattedMessagePlaceholderValues { get; set; }
+        public global::Soenneker.Radarr.OpenApiClient.Models.ValidationFailureFormattedMessagePlaceholderValuesProperty FormattedMessagePlaceholderValues { get => _explicitNullValueFormattedMessagePlaceholderValues; set { _explicitNullValueFormattedMessagePlaceholderValues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("formattedMessagePlaceholderValues"); else _explicitNullProperties?.Remove("formattedMessagePlaceholderValues"); } }
+        private global::Soenneker.Radarr.OpenApiClient.Models.ValidationFailureFormattedMessagePlaceholderValuesProperty _explicitNullValueFormattedMessagePlaceholderValues = default!;
 #endif
         /// <summary>The propertyName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PropertyName { get; set; }
+        public string? PropertyName { get => _explicitNullValuePropertyName; set { _explicitNullValuePropertyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("propertyName"); else _explicitNullProperties?.Remove("propertyName"); } }
+        private string? _explicitNullValuePropertyName = default!;
 #nullable restore
 #else
-        public string PropertyName { get; set; }
+        public string PropertyName { get => _explicitNullValuePropertyName; set { _explicitNullValuePropertyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("propertyName"); else _explicitNullProperties?.Remove("propertyName"); } }
+        private string _explicitNullValuePropertyName = default!;
 #endif
         /// <summary>The severity property</summary>
-        public global::Soenneker.Radarr.OpenApiClient.Models.Severity? Severity { get; set; }
+        public global::Soenneker.Radarr.OpenApiClient.Models.Severity? Severity { get => _explicitNullValueSeverity; set { _explicitNullValueSeverity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("severity"); else _explicitNullProperties?.Remove("severity"); } }
+        private global::Soenneker.Radarr.OpenApiClient.Models.Severity? _explicitNullValueSeverity = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -79,7 +109,7 @@ namespace Soenneker.Radarr.OpenApiClient.Models
         public static global::Soenneker.Radarr.OpenApiClient.Models.ValidationFailure CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Radarr.OpenApiClient.Models.ValidationFailure();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Radarr.OpenApiClient.Models.ValidationFailure(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -113,7 +143,8 @@ namespace Soenneker.Radarr.OpenApiClient.Models
             writer.WriteObjectValue<UntypedNode>("formattedMessageArguments", FormattedMessageArguments);
             writer.WriteObjectValue<global::Soenneker.Radarr.OpenApiClient.Models.ValidationFailureFormattedMessagePlaceholderValuesProperty>("formattedMessagePlaceholderValues", FormattedMessagePlaceholderValues);
             writer.WriteStringValue("propertyName", PropertyName);
-            writer.WriteEnumValue<global::Soenneker.Radarr.OpenApiClient.Models.Severity>("severity", Severity);
+            writer.WriteEnumValue<global::Soenneker.Radarr.OpenApiClient.Models.Severity>("severity", Severity);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

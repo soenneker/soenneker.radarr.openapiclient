@@ -11,30 +11,51 @@ namespace Soenneker.Radarr.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class NamingConfigResource : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("colonReplacementFormat") is { } nullNodeColonReplacementFormat && nullNodeColonReplacementFormat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ColonReplacementFormat = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("movieFolderFormat") is { } nullNodeMovieFolderFormat && nullNodeMovieFolderFormat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MovieFolderFormat = null;
+            if (parseNode.GetChildNode("renameMovies") is { } nullNodeRenameMovies && nullNodeRenameMovies.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RenameMovies = null;
+            if (parseNode.GetChildNode("replaceIllegalCharacters") is { } nullNodeReplaceIllegalCharacters && nullNodeReplaceIllegalCharacters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReplaceIllegalCharacters = null;
+            if (parseNode.GetChildNode("standardMovieFormat") is { } nullNodeStandardMovieFormat && nullNodeStandardMovieFormat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StandardMovieFormat = null;
+        }
+
         /// <summary>The colonReplacementFormat property</summary>
-        public global::Soenneker.Radarr.OpenApiClient.Models.ColonReplacementFormat? ColonReplacementFormat { get; set; }
+        public global::Soenneker.Radarr.OpenApiClient.Models.ColonReplacementFormat? ColonReplacementFormat { get => _explicitNullValueColonReplacementFormat; set { _explicitNullValueColonReplacementFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("colonReplacementFormat"); else _explicitNullProperties?.Remove("colonReplacementFormat"); } }
+        private global::Soenneker.Radarr.OpenApiClient.Models.ColonReplacementFormat? _explicitNullValueColonReplacementFormat = default!;
         /// <summary>The id property</summary>
-        public int? Id { get; set; }
+        public int? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private int? _explicitNullValueId = default!;
         /// <summary>The movieFolderFormat property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MovieFolderFormat { get; set; }
+        public string? MovieFolderFormat { get => _explicitNullValueMovieFolderFormat; set { _explicitNullValueMovieFolderFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("movieFolderFormat"); else _explicitNullProperties?.Remove("movieFolderFormat"); } }
+        private string? _explicitNullValueMovieFolderFormat = default!;
 #nullable restore
 #else
-        public string MovieFolderFormat { get; set; }
+        public string MovieFolderFormat { get => _explicitNullValueMovieFolderFormat; set { _explicitNullValueMovieFolderFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("movieFolderFormat"); else _explicitNullProperties?.Remove("movieFolderFormat"); } }
+        private string _explicitNullValueMovieFolderFormat = default!;
 #endif
         /// <summary>The renameMovies property</summary>
-        public bool? RenameMovies { get; set; }
+        public bool? RenameMovies { get => _explicitNullValueRenameMovies; set { _explicitNullValueRenameMovies = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("renameMovies"); else _explicitNullProperties?.Remove("renameMovies"); } }
+        private bool? _explicitNullValueRenameMovies = default!;
         /// <summary>The replaceIllegalCharacters property</summary>
-        public bool? ReplaceIllegalCharacters { get; set; }
+        public bool? ReplaceIllegalCharacters { get => _explicitNullValueReplaceIllegalCharacters; set { _explicitNullValueReplaceIllegalCharacters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("replaceIllegalCharacters"); else _explicitNullProperties?.Remove("replaceIllegalCharacters"); } }
+        private bool? _explicitNullValueReplaceIllegalCharacters = default!;
         /// <summary>The standardMovieFormat property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StandardMovieFormat { get; set; }
+        public string? StandardMovieFormat { get => _explicitNullValueStandardMovieFormat; set { _explicitNullValueStandardMovieFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("standardMovieFormat"); else _explicitNullProperties?.Remove("standardMovieFormat"); } }
+        private string? _explicitNullValueStandardMovieFormat = default!;
 #nullable restore
 #else
-        public string StandardMovieFormat { get; set; }
+        public string StandardMovieFormat { get => _explicitNullValueStandardMovieFormat; set { _explicitNullValueStandardMovieFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("standardMovieFormat"); else _explicitNullProperties?.Remove("standardMovieFormat"); } }
+        private string _explicitNullValueStandardMovieFormat = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -44,7 +65,7 @@ namespace Soenneker.Radarr.OpenApiClient.Models
         public static global::Soenneker.Radarr.OpenApiClient.Models.NamingConfigResource CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Radarr.OpenApiClient.Models.NamingConfigResource();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Radarr.OpenApiClient.Models.NamingConfigResource(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -74,7 +95,8 @@ namespace Soenneker.Radarr.OpenApiClient.Models
             writer.WriteStringValue("movieFolderFormat", MovieFolderFormat);
             writer.WriteBoolValue("renameMovies", RenameMovies);
             writer.WriteBoolValue("replaceIllegalCharacters", ReplaceIllegalCharacters);
-            writer.WriteStringValue("standardMovieFormat", StandardMovieFormat);
+            writer.WriteStringValue("standardMovieFormat", StandardMovieFormat);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

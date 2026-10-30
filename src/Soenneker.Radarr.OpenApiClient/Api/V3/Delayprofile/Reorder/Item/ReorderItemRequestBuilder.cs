@@ -46,7 +46,7 @@ namespace Soenneker.Radarr.OpenApiClient.Api.V3.Delayprofile.Reorder.Item
         {
 #endif
             var requestInfo = ToPutRequestInformation(requestConfiguration);
-            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.Radarr.OpenApiClient.Models.DelayProfileResource>(requestInfo, global::Soenneker.Radarr.OpenApiClient.Models.DelayProfileResource.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.Radarr.OpenApiClient.Models.DelayProfileResource>(requestInfo, global::Soenneker.Radarr.OpenApiClient.Models.DelayProfileResource.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
             return collectionResult?.AsList();
         }
         /// <returns>A <see cref="RequestInformation"/></returns>

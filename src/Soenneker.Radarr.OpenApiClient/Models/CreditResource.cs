@@ -11,65 +11,100 @@ namespace Soenneker.Radarr.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CreditResource : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("character") is { } nullNodeCharacter && nullNodeCharacter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Character = null;
+            if (parseNode.GetChildNode("creditTmdbId") is { } nullNodeCreditTmdbId && nullNodeCreditTmdbId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreditTmdbId = null;
+            if (parseNode.GetChildNode("department") is { } nullNodeDepartment && nullNodeDepartment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Department = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("images") is { } nullNodeImages && nullNodeImages.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Images = null;
+            if (parseNode.GetChildNode("job") is { } nullNodeJob && nullNodeJob.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Job = null;
+            if (parseNode.GetChildNode("movieMetadataId") is { } nullNodeMovieMetadataId && nullNodeMovieMetadataId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MovieMetadataId = null;
+            if (parseNode.GetChildNode("order") is { } nullNodeOrder && nullNodeOrder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Order = null;
+            if (parseNode.GetChildNode("personName") is { } nullNodePersonName && nullNodePersonName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PersonName = null;
+            if (parseNode.GetChildNode("personTmdbId") is { } nullNodePersonTmdbId && nullNodePersonTmdbId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PersonTmdbId = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>The character property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Character { get; set; }
+        public string? Character { get => _explicitNullValueCharacter; set { _explicitNullValueCharacter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("character"); else _explicitNullProperties?.Remove("character"); } }
+        private string? _explicitNullValueCharacter = default!;
 #nullable restore
 #else
-        public string Character { get; set; }
+        public string Character { get => _explicitNullValueCharacter; set { _explicitNullValueCharacter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("character"); else _explicitNullProperties?.Remove("character"); } }
+        private string _explicitNullValueCharacter = default!;
 #endif
         /// <summary>The creditTmdbId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CreditTmdbId { get; set; }
+        public string? CreditTmdbId { get => _explicitNullValueCreditTmdbId; set { _explicitNullValueCreditTmdbId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("creditTmdbId"); else _explicitNullProperties?.Remove("creditTmdbId"); } }
+        private string? _explicitNullValueCreditTmdbId = default!;
 #nullable restore
 #else
-        public string CreditTmdbId { get; set; }
+        public string CreditTmdbId { get => _explicitNullValueCreditTmdbId; set { _explicitNullValueCreditTmdbId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("creditTmdbId"); else _explicitNullProperties?.Remove("creditTmdbId"); } }
+        private string _explicitNullValueCreditTmdbId = default!;
 #endif
         /// <summary>The department property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Department { get; set; }
+        public string? Department { get => _explicitNullValueDepartment; set { _explicitNullValueDepartment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("department"); else _explicitNullProperties?.Remove("department"); } }
+        private string? _explicitNullValueDepartment = default!;
 #nullable restore
 #else
-        public string Department { get; set; }
+        public string Department { get => _explicitNullValueDepartment; set { _explicitNullValueDepartment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("department"); else _explicitNullProperties?.Remove("department"); } }
+        private string _explicitNullValueDepartment = default!;
 #endif
         /// <summary>The id property</summary>
-        public int? Id { get; set; }
+        public int? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private int? _explicitNullValueId = default!;
         /// <summary>The images property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Radarr.OpenApiClient.Models.MediaCover>? Images { get; set; }
+        public List<global::Soenneker.Radarr.OpenApiClient.Models.MediaCover>? Images { get => _explicitNullValueImages; set { _explicitNullValueImages = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("images"); else _explicitNullProperties?.Remove("images"); } }
+        private List<global::Soenneker.Radarr.OpenApiClient.Models.MediaCover>? _explicitNullValueImages = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Radarr.OpenApiClient.Models.MediaCover> Images { get; set; }
+        public List<global::Soenneker.Radarr.OpenApiClient.Models.MediaCover> Images { get => _explicitNullValueImages; set { _explicitNullValueImages = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("images"); else _explicitNullProperties?.Remove("images"); } }
+        private List<global::Soenneker.Radarr.OpenApiClient.Models.MediaCover> _explicitNullValueImages = default!;
 #endif
         /// <summary>The job property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Job { get; set; }
+        public string? Job { get => _explicitNullValueJob; set { _explicitNullValueJob = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("job"); else _explicitNullProperties?.Remove("job"); } }
+        private string? _explicitNullValueJob = default!;
 #nullable restore
 #else
-        public string Job { get; set; }
+        public string Job { get => _explicitNullValueJob; set { _explicitNullValueJob = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("job"); else _explicitNullProperties?.Remove("job"); } }
+        private string _explicitNullValueJob = default!;
 #endif
         /// <summary>The movieMetadataId property</summary>
-        public int? MovieMetadataId { get; set; }
+        public int? MovieMetadataId { get => _explicitNullValueMovieMetadataId; set { _explicitNullValueMovieMetadataId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("movieMetadataId"); else _explicitNullProperties?.Remove("movieMetadataId"); } }
+        private int? _explicitNullValueMovieMetadataId = default!;
         /// <summary>The order property</summary>
-        public int? Order { get; set; }
+        public int? Order { get => _explicitNullValueOrder; set { _explicitNullValueOrder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("order"); else _explicitNullProperties?.Remove("order"); } }
+        private int? _explicitNullValueOrder = default!;
         /// <summary>The personName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PersonName { get; set; }
+        public string? PersonName { get => _explicitNullValuePersonName; set { _explicitNullValuePersonName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("personName"); else _explicitNullProperties?.Remove("personName"); } }
+        private string? _explicitNullValuePersonName = default!;
 #nullable restore
 #else
-        public string PersonName { get; set; }
+        public string PersonName { get => _explicitNullValuePersonName; set { _explicitNullValuePersonName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("personName"); else _explicitNullProperties?.Remove("personName"); } }
+        private string _explicitNullValuePersonName = default!;
 #endif
         /// <summary>The personTmdbId property</summary>
-        public int? PersonTmdbId { get; set; }
+        public int? PersonTmdbId { get => _explicitNullValuePersonTmdbId; set { _explicitNullValuePersonTmdbId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("personTmdbId"); else _explicitNullProperties?.Remove("personTmdbId"); } }
+        private int? _explicitNullValuePersonTmdbId = default!;
         /// <summary>The type property</summary>
-        public global::Soenneker.Radarr.OpenApiClient.Models.CreditType? Type { get; set; }
+        public global::Soenneker.Radarr.OpenApiClient.Models.CreditType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Radarr.OpenApiClient.Models.CreditType? _explicitNullValueType = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -78,7 +113,7 @@ namespace Soenneker.Radarr.OpenApiClient.Models
         public static global::Soenneker.Radarr.OpenApiClient.Models.CreditResource CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Radarr.OpenApiClient.Models.CreditResource();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Radarr.OpenApiClient.Models.CreditResource(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -118,7 +153,8 @@ namespace Soenneker.Radarr.OpenApiClient.Models
             writer.WriteIntValue("order", Order);
             writer.WriteStringValue("personName", PersonName);
             writer.WriteIntValue("personTmdbId", PersonTmdbId);
-            writer.WriteEnumValue<global::Soenneker.Radarr.OpenApiClient.Models.CreditType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Radarr.OpenApiClient.Models.CreditType>("type", Type);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

@@ -11,38 +11,66 @@ namespace Soenneker.Radarr.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ParsedMovieInfo : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("edition") is { } nullNodeEdition && nullNodeEdition.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Edition = null;
+            if (parseNode.GetChildNode("hardcodedSubs") is { } nullNodeHardcodedSubs && nullNodeHardcodedSubs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HardcodedSubs = null;
+            if (parseNode.GetChildNode("imdbId") is { } nullNodeImdbId && nullNodeImdbId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImdbId = null;
+            if (parseNode.GetChildNode("languages") is { } nullNodeLanguages && nullNodeLanguages.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Languages = null;
+            if (parseNode.GetChildNode("movieTitles") is { } nullNodeMovieTitles && nullNodeMovieTitles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MovieTitles = null;
+            if (parseNode.GetChildNode("originalTitle") is { } nullNodeOriginalTitle && nullNodeOriginalTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginalTitle = null;
+            if (parseNode.GetChildNode("quality") is { } nullNodeQuality && nullNodeQuality.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Quality = null;
+            if (parseNode.GetChildNode("releaseGroup") is { } nullNodeReleaseGroup && nullNodeReleaseGroup.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReleaseGroup = null;
+            if (parseNode.GetChildNode("releaseHash") is { } nullNodeReleaseHash && nullNodeReleaseHash.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReleaseHash = null;
+            if (parseNode.GetChildNode("releaseTitle") is { } nullNodeReleaseTitle && nullNodeReleaseTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReleaseTitle = null;
+            if (parseNode.GetChildNode("simpleReleaseTitle") is { } nullNodeSimpleReleaseTitle && nullNodeSimpleReleaseTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SimpleReleaseTitle = null;
+            if (parseNode.GetChildNode("tmdbId") is { } nullNodeTmdbId && nullNodeTmdbId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TmdbId = null;
+            if (parseNode.GetChildNode("year") is { } nullNodeYear && nullNodeYear.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Year = null;
+        }
+
         /// <summary>The edition property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Edition { get; set; }
+        public string? Edition { get => _explicitNullValueEdition; set { _explicitNullValueEdition = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("edition"); else _explicitNullProperties?.Remove("edition"); } }
+        private string? _explicitNullValueEdition = default!;
 #nullable restore
 #else
-        public string Edition { get; set; }
+        public string Edition { get => _explicitNullValueEdition; set { _explicitNullValueEdition = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("edition"); else _explicitNullProperties?.Remove("edition"); } }
+        private string _explicitNullValueEdition = default!;
 #endif
         /// <summary>The hardcodedSubs property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HardcodedSubs { get; set; }
+        public string? HardcodedSubs { get => _explicitNullValueHardcodedSubs; set { _explicitNullValueHardcodedSubs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hardcodedSubs"); else _explicitNullProperties?.Remove("hardcodedSubs"); } }
+        private string? _explicitNullValueHardcodedSubs = default!;
 #nullable restore
 #else
-        public string HardcodedSubs { get; set; }
+        public string HardcodedSubs { get => _explicitNullValueHardcodedSubs; set { _explicitNullValueHardcodedSubs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hardcodedSubs"); else _explicitNullProperties?.Remove("hardcodedSubs"); } }
+        private string _explicitNullValueHardcodedSubs = default!;
 #endif
         /// <summary>The imdbId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ImdbId { get; set; }
+        public string? ImdbId { get => _explicitNullValueImdbId; set { _explicitNullValueImdbId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("imdbId"); else _explicitNullProperties?.Remove("imdbId"); } }
+        private string? _explicitNullValueImdbId = default!;
 #nullable restore
 #else
-        public string ImdbId { get; set; }
+        public string ImdbId { get => _explicitNullValueImdbId; set { _explicitNullValueImdbId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("imdbId"); else _explicitNullProperties?.Remove("imdbId"); } }
+        private string _explicitNullValueImdbId = default!;
 #endif
         /// <summary>The languages property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Radarr.OpenApiClient.Models.Language>? Languages { get; set; }
+        public List<global::Soenneker.Radarr.OpenApiClient.Models.Language>? Languages { get => _explicitNullValueLanguages; set { _explicitNullValueLanguages = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("languages"); else _explicitNullProperties?.Remove("languages"); } }
+        private List<global::Soenneker.Radarr.OpenApiClient.Models.Language>? _explicitNullValueLanguages = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Radarr.OpenApiClient.Models.Language> Languages { get; set; }
+        public List<global::Soenneker.Radarr.OpenApiClient.Models.Language> Languages { get => _explicitNullValueLanguages; set { _explicitNullValueLanguages = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("languages"); else _explicitNullProperties?.Remove("languages"); } }
+        private List<global::Soenneker.Radarr.OpenApiClient.Models.Language> _explicitNullValueLanguages = default!;
 #endif
         /// <summary>The movieTitle property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -55,18 +83,22 @@ namespace Soenneker.Radarr.OpenApiClient.Models
         /// <summary>The movieTitles property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? MovieTitles { get; set; }
+        public List<string>? MovieTitles { get => _explicitNullValueMovieTitles; set { _explicitNullValueMovieTitles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("movieTitles"); else _explicitNullProperties?.Remove("movieTitles"); } }
+        private List<string>? _explicitNullValueMovieTitles = default!;
 #nullable restore
 #else
-        public List<string> MovieTitles { get; set; }
+        public List<string> MovieTitles { get => _explicitNullValueMovieTitles; set { _explicitNullValueMovieTitles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("movieTitles"); else _explicitNullProperties?.Remove("movieTitles"); } }
+        private List<string> _explicitNullValueMovieTitles = default!;
 #endif
         /// <summary>The originalTitle property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OriginalTitle { get; set; }
+        public string? OriginalTitle { get => _explicitNullValueOriginalTitle; set { _explicitNullValueOriginalTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("originalTitle"); else _explicitNullProperties?.Remove("originalTitle"); } }
+        private string? _explicitNullValueOriginalTitle = default!;
 #nullable restore
 #else
-        public string OriginalTitle { get; set; }
+        public string OriginalTitle { get => _explicitNullValueOriginalTitle; set { _explicitNullValueOriginalTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("originalTitle"); else _explicitNullProperties?.Remove("originalTitle"); } }
+        private string _explicitNullValueOriginalTitle = default!;
 #endif
         /// <summary>The primaryMovieTitle property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -79,47 +111,59 @@ namespace Soenneker.Radarr.OpenApiClient.Models
         /// <summary>The quality property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Radarr.OpenApiClient.Models.QualityModel? Quality { get; set; }
+        public global::Soenneker.Radarr.OpenApiClient.Models.QualityModel? Quality { get => _explicitNullValueQuality; set { _explicitNullValueQuality = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quality"); else _explicitNullProperties?.Remove("quality"); } }
+        private global::Soenneker.Radarr.OpenApiClient.Models.QualityModel? _explicitNullValueQuality = default!;
 #nullable restore
 #else
-        public global::Soenneker.Radarr.OpenApiClient.Models.QualityModel Quality { get; set; }
+        public global::Soenneker.Radarr.OpenApiClient.Models.QualityModel Quality { get => _explicitNullValueQuality; set { _explicitNullValueQuality = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quality"); else _explicitNullProperties?.Remove("quality"); } }
+        private global::Soenneker.Radarr.OpenApiClient.Models.QualityModel _explicitNullValueQuality = default!;
 #endif
         /// <summary>The releaseGroup property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReleaseGroup { get; set; }
+        public string? ReleaseGroup { get => _explicitNullValueReleaseGroup; set { _explicitNullValueReleaseGroup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("releaseGroup"); else _explicitNullProperties?.Remove("releaseGroup"); } }
+        private string? _explicitNullValueReleaseGroup = default!;
 #nullable restore
 #else
-        public string ReleaseGroup { get; set; }
+        public string ReleaseGroup { get => _explicitNullValueReleaseGroup; set { _explicitNullValueReleaseGroup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("releaseGroup"); else _explicitNullProperties?.Remove("releaseGroup"); } }
+        private string _explicitNullValueReleaseGroup = default!;
 #endif
         /// <summary>The releaseHash property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReleaseHash { get; set; }
+        public string? ReleaseHash { get => _explicitNullValueReleaseHash; set { _explicitNullValueReleaseHash = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("releaseHash"); else _explicitNullProperties?.Remove("releaseHash"); } }
+        private string? _explicitNullValueReleaseHash = default!;
 #nullable restore
 #else
-        public string ReleaseHash { get; set; }
+        public string ReleaseHash { get => _explicitNullValueReleaseHash; set { _explicitNullValueReleaseHash = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("releaseHash"); else _explicitNullProperties?.Remove("releaseHash"); } }
+        private string _explicitNullValueReleaseHash = default!;
 #endif
         /// <summary>The releaseTitle property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReleaseTitle { get; set; }
+        public string? ReleaseTitle { get => _explicitNullValueReleaseTitle; set { _explicitNullValueReleaseTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("releaseTitle"); else _explicitNullProperties?.Remove("releaseTitle"); } }
+        private string? _explicitNullValueReleaseTitle = default!;
 #nullable restore
 #else
-        public string ReleaseTitle { get; set; }
+        public string ReleaseTitle { get => _explicitNullValueReleaseTitle; set { _explicitNullValueReleaseTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("releaseTitle"); else _explicitNullProperties?.Remove("releaseTitle"); } }
+        private string _explicitNullValueReleaseTitle = default!;
 #endif
         /// <summary>The simpleReleaseTitle property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SimpleReleaseTitle { get; set; }
+        public string? SimpleReleaseTitle { get => _explicitNullValueSimpleReleaseTitle; set { _explicitNullValueSimpleReleaseTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("simpleReleaseTitle"); else _explicitNullProperties?.Remove("simpleReleaseTitle"); } }
+        private string? _explicitNullValueSimpleReleaseTitle = default!;
 #nullable restore
 #else
-        public string SimpleReleaseTitle { get; set; }
+        public string SimpleReleaseTitle { get => _explicitNullValueSimpleReleaseTitle; set { _explicitNullValueSimpleReleaseTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("simpleReleaseTitle"); else _explicitNullProperties?.Remove("simpleReleaseTitle"); } }
+        private string _explicitNullValueSimpleReleaseTitle = default!;
 #endif
         /// <summary>The tmdbId property</summary>
-        public int? TmdbId { get; set; }
+        public int? TmdbId { get => _explicitNullValueTmdbId; set { _explicitNullValueTmdbId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tmdbId"); else _explicitNullProperties?.Remove("tmdbId"); } }
+        private int? _explicitNullValueTmdbId = default!;
         /// <summary>The year property</summary>
-        public int? Year { get; set; }
+        public int? Year { get => _explicitNullValueYear; set { _explicitNullValueYear = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("year"); else _explicitNullProperties?.Remove("year"); } }
+        private int? _explicitNullValueYear = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -128,7 +172,7 @@ namespace Soenneker.Radarr.OpenApiClient.Models
         public static global::Soenneker.Radarr.OpenApiClient.Models.ParsedMovieInfo CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Radarr.OpenApiClient.Models.ParsedMovieInfo();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Radarr.OpenApiClient.Models.ParsedMovieInfo(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -174,7 +218,8 @@ namespace Soenneker.Radarr.OpenApiClient.Models
             writer.WriteStringValue("releaseTitle", ReleaseTitle);
             writer.WriteStringValue("simpleReleaseTitle", SimpleReleaseTitle);
             writer.WriteIntValue("tmdbId", TmdbId);
-            writer.WriteIntValue("year", Year);
+            writer.WriteIntValue("year", Year);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

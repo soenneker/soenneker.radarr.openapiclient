@@ -71,7 +71,7 @@ namespace Soenneker.Radarr.OpenApiClient.Api.V3.Blocklist
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Radarr.OpenApiClient.Models.BlocklistResourcePagingResource>(requestInfo, global::Soenneker.Radarr.OpenApiClient.Models.BlocklistResourcePagingResource.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Radarr.OpenApiClient.Models.BlocklistResourcePagingResource>(requestInfo, global::Soenneker.Radarr.OpenApiClient.Models.BlocklistResourcePagingResource.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

@@ -11,17 +11,34 @@ namespace Soenneker.Radarr.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class AddMovieOptions : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("addMethod") is { } nullNodeAddMethod && nullNodeAddMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddMethod = null;
+            if (parseNode.GetChildNode("ignoreEpisodesWithFiles") is { } nullNodeIgnoreEpisodesWithFiles && nullNodeIgnoreEpisodesWithFiles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IgnoreEpisodesWithFiles = null;
+            if (parseNode.GetChildNode("ignoreEpisodesWithoutFiles") is { } nullNodeIgnoreEpisodesWithoutFiles && nullNodeIgnoreEpisodesWithoutFiles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IgnoreEpisodesWithoutFiles = null;
+            if (parseNode.GetChildNode("monitor") is { } nullNodeMonitor && nullNodeMonitor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Monitor = null;
+            if (parseNode.GetChildNode("searchForMovie") is { } nullNodeSearchForMovie && nullNodeSearchForMovie.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SearchForMovie = null;
+        }
+
         /// <summary>The addMethod property</summary>
-        public global::Soenneker.Radarr.OpenApiClient.Models.AddMovieMethod? AddMethod { get; set; }
+        public global::Soenneker.Radarr.OpenApiClient.Models.AddMovieMethod? AddMethod { get => _explicitNullValueAddMethod; set { _explicitNullValueAddMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("addMethod"); else _explicitNullProperties?.Remove("addMethod"); } }
+        private global::Soenneker.Radarr.OpenApiClient.Models.AddMovieMethod? _explicitNullValueAddMethod = default!;
         /// <summary>The ignoreEpisodesWithFiles property</summary>
-        public bool? IgnoreEpisodesWithFiles { get; set; }
+        public bool? IgnoreEpisodesWithFiles { get => _explicitNullValueIgnoreEpisodesWithFiles; set { _explicitNullValueIgnoreEpisodesWithFiles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ignoreEpisodesWithFiles"); else _explicitNullProperties?.Remove("ignoreEpisodesWithFiles"); } }
+        private bool? _explicitNullValueIgnoreEpisodesWithFiles = default!;
         /// <summary>The ignoreEpisodesWithoutFiles property</summary>
-        public bool? IgnoreEpisodesWithoutFiles { get; set; }
+        public bool? IgnoreEpisodesWithoutFiles { get => _explicitNullValueIgnoreEpisodesWithoutFiles; set { _explicitNullValueIgnoreEpisodesWithoutFiles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ignoreEpisodesWithoutFiles"); else _explicitNullProperties?.Remove("ignoreEpisodesWithoutFiles"); } }
+        private bool? _explicitNullValueIgnoreEpisodesWithoutFiles = default!;
         /// <summary>The monitor property</summary>
-        public global::Soenneker.Radarr.OpenApiClient.Models.MonitorTypes? Monitor { get; set; }
+        public global::Soenneker.Radarr.OpenApiClient.Models.MonitorTypes? Monitor { get => _explicitNullValueMonitor; set { _explicitNullValueMonitor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("monitor"); else _explicitNullProperties?.Remove("monitor"); } }
+        private global::Soenneker.Radarr.OpenApiClient.Models.MonitorTypes? _explicitNullValueMonitor = default!;
         /// <summary>The searchForMovie property</summary>
-        public bool? SearchForMovie { get; set; }
+        public bool? SearchForMovie { get => _explicitNullValueSearchForMovie; set { _explicitNullValueSearchForMovie = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("searchForMovie"); else _explicitNullProperties?.Remove("searchForMovie"); } }
+        private bool? _explicitNullValueSearchForMovie = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -30,7 +47,7 @@ namespace Soenneker.Radarr.OpenApiClient.Models
         public static global::Soenneker.Radarr.OpenApiClient.Models.AddMovieOptions CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Radarr.OpenApiClient.Models.AddMovieOptions();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Radarr.OpenApiClient.Models.AddMovieOptions(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -58,7 +75,8 @@ namespace Soenneker.Radarr.OpenApiClient.Models
             writer.WriteBoolValue("ignoreEpisodesWithFiles", IgnoreEpisodesWithFiles);
             writer.WriteBoolValue("ignoreEpisodesWithoutFiles", IgnoreEpisodesWithoutFiles);
             writer.WriteEnumValue<global::Soenneker.Radarr.OpenApiClient.Models.MonitorTypes>("monitor", Monitor);
-            writer.WriteBoolValue("searchForMovie", SearchForMovie);
+            writer.WriteBoolValue("searchForMovie", SearchForMovie);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }
