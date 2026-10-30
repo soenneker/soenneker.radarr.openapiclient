@@ -60,7 +60,7 @@ namespace Soenneker.Radarr.OpenApiClient.Api.V3.Delayprofile.Reorder.Item
         public RequestInformation ToPutRequestInformation(Action<RequestConfiguration<global::Soenneker.Radarr.OpenApiClient.Api.V3.Delayprofile.Reorder.Item.ReorderItemRequestBuilder.ReorderItemRequestBuilderPutQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.PUT, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.PUT, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "http://localhost:7878", "/api/v3/delayprofile/reorder/{id}", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;

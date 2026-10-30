@@ -17,7 +17,8 @@ namespace Soenneker.Radarr.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("restartRequired") is { } nullNodeRestartRequired && nullNodeRestartRequired.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RestartRequired = null;
+            if (parseNode.GetChildNode("restartRequired") is null) { _explicitNullValueRestartRequired = default!; _explicitNullProperties?.Remove("restartRequired"); }
+            else if (parseNode.GetChildNode("restartRequired") is { } nullNodeRestartRequired && nullNodeRestartRequired.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RestartRequired = null;
         }
 
         /// <summary>The restartRequired property</summary>

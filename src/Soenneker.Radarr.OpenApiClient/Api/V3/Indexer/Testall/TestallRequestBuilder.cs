@@ -36,7 +36,7 @@ namespace Soenneker.Radarr.OpenApiClient.Api.V3.Indexer.Testall
         /// <returns>A List&lt;global::Soenneker.Radarr.OpenApiClient.Models.ProviderTestAllResult&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="List<global::Soenneker.Radarr.OpenApiClient.Models.ProviderTestAllResult>">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.OpenApi.Generated.OpenApiRawError">When receiving a 400 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<List<global::Soenneker.Radarr.OpenApiClient.Models.ProviderTestAllResult>?> PostAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -49,7 +49,7 @@ namespace Soenneker.Radarr.OpenApiClient.Api.V3.Indexer.Testall
             var requestInfo = ToPostRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Radarr.OpenApiClient.Models.ProviderTestAllResult.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
                 { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
@@ -67,7 +67,7 @@ namespace Soenneker.Radarr.OpenApiClient.Api.V3.Indexer.Testall
         public RequestInformation ToPostRequestInformation(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "http://localhost:7878", "/api/v3/indexer/testall", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;

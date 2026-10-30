@@ -60,7 +60,7 @@ namespace Soenneker.Radarr.OpenApiClient.Api.V3.Extrafile
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Radarr.OpenApiClient.Api.V3.Extrafile.ExtrafileRequestBuilder.ExtrafileRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "http://localhost:7878", "/api/v3/extrafile", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;

@@ -17,8 +17,10 @@ namespace Soenneker.Radarr.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("failed") is { } nullNodeFailed && nullNodeFailed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Failed = null;
-            if (parseNode.GetChildNode("grabbed") is { } nullNodeGrabbed && nullNodeGrabbed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Grabbed = null;
+            if (parseNode.GetChildNode("failed") is null) { _explicitNullValueFailed = default!; _explicitNullProperties?.Remove("failed"); }
+            else if (parseNode.GetChildNode("failed") is { } nullNodeFailed && nullNodeFailed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Failed = null;
+            if (parseNode.GetChildNode("grabbed") is null) { _explicitNullValueGrabbed = default!; _explicitNullProperties?.Remove("grabbed"); }
+            else if (parseNode.GetChildNode("grabbed") is { } nullNodeGrabbed && nullNodeGrabbed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Grabbed = null;
         }
 
         /// <summary>The failed property</summary>

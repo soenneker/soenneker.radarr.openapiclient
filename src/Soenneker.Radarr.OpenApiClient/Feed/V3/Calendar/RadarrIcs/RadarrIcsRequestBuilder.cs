@@ -58,7 +58,7 @@ namespace Soenneker.Radarr.OpenApiClient.Feed.V3.Calendar.RadarrIcs
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Radarr.OpenApiClient.Feed.V3.Calendar.RadarrIcs.RadarrIcsRequestBuilder.RadarrIcsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "http://localhost:7878", "/feed/v3/calendar/radarr.ics", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             return requestInfo;
         }

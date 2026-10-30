@@ -57,7 +57,7 @@ namespace Soenneker.Radarr.OpenApiClient.Login.Sso
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Radarr.OpenApiClient.Login.Sso.SsoRequestBuilder.SsoRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "http://localhost:7878", "/login/sso", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             return requestInfo;
         }

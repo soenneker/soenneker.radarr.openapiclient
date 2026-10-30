@@ -17,8 +17,10 @@ namespace Soenneker.Radarr.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("movieExample") is { } nullNodeMovieExample && nullNodeMovieExample.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MovieExample = null;
-            if (parseNode.GetChildNode("movieFolderExample") is { } nullNodeMovieFolderExample && nullNodeMovieFolderExample.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MovieFolderExample = null;
+            if (parseNode.GetChildNode("movieExample") is null) { _explicitNullValueMovieExample = default!; _explicitNullProperties?.Remove("movieExample"); }
+            else if (parseNode.GetChildNode("movieExample") is { } nullNodeMovieExample && nullNodeMovieExample.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MovieExample = null;
+            if (parseNode.GetChildNode("movieFolderExample") is null) { _explicitNullValueMovieFolderExample = default!; _explicitNullProperties?.Remove("movieFolderExample"); }
+            else if (parseNode.GetChildNode("movieFolderExample") is { } nullNodeMovieFolderExample && nullNodeMovieFolderExample.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MovieFolderExample = null;
         }
 
         /// <summary>The movieExample property</summary>
