@@ -2156,7 +2156,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PostApiV3DownloadclientTestall400ResponseSchema"
+                  "$ref": "#/components/schemas/PostApiV3DownloadclientTestall400ResponseSchemaError"
                 }
               }
             }
@@ -3119,7 +3119,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PostApiV3ImportlistTestall400ResponseSchema"
+                  "$ref": "#/components/schemas/PostApiV3ImportlistTestall400ResponseSchemaError"
                 }
               }
             }
@@ -3943,7 +3943,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PostApiV3IndexerTestall400ResponseSchema"
+                  "$ref": "#/components/schemas/PostApiV3IndexerTestall400ResponseSchemaError"
                 }
               }
             }
@@ -4798,7 +4798,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PostApiV3MetadataTestall400ResponseSchema"
+                  "$ref": "#/components/schemas/PostApiV3MetadataTestall400ResponseSchemaError"
                 }
               }
             }
@@ -6121,7 +6121,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PostApiV3NotificationTestall400ResponseSchema"
+                  "$ref": "#/components/schemas/PostApiV3NotificationTestall400ResponseSchemaError"
                 }
               }
             }
@@ -9000,8 +9000,8 @@
           },
           "duration": {
             "type": "string",
-            "format": "date-span",
-            "nullable": true
+            "nullable": true,
+            "x-client-original-format": "date-span"
           },
           "exception": {
             "type": "string",
@@ -10574,7 +10574,7 @@
           },
           "minRefreshInterval": {
             "type": "string",
-            "format": "date-span"
+            "x-client-original-format": "date-span"
           }
         },
         "additionalProperties": false
@@ -13134,9 +13134,9 @@
           },
           "timeleft": {
             "type": "string",
-            "format": "date-span",
             "nullable": true,
-            "deprecated": true
+            "deprecated": true,
+            "x-client-original-format": "date-span"
           }
         },
         "additionalProperties": false
@@ -14180,8 +14180,8 @@
           },
           "lastDuration": {
             "type": "string",
-            "format": "date-span",
-            "readOnly": true
+            "readOnly": true,
+            "x-client-original-format": "date-span"
           }
         },
         "additionalProperties": false
@@ -14488,29 +14488,6 @@
         },
         "additionalProperties": false
       },
-      "CustomFilterResourceFiltersItem": {
-        "type": "object",
-        "additionalProperties": {}
-      },
-      "HistoryResourceData": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "string",
-          "nullable": true
-        },
-        "nullable": true
-      },
-      "ValidationFailureFormattedMessagePlaceholderValues": {
-        "type": "object",
-        "additionalProperties": {},
-        "nullable": true
-      },
-      "GetApiV3Alttitle200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/AlternativeTitleResource"
-        }
-      },
       "PostLoginFormDataRequest": {
         "type": "object",
         "properties": {
@@ -14524,532 +14501,6 @@
             "type": "string"
           }
         }
-      },
-      "GetApiV3Autotagging200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/AutoTaggingResource"
-        }
-      },
-      "GetApiV3AutotaggingSchema200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/AutoTaggingSpecificationSchema"
-        }
-      },
-      "GetApiV3SystemBackup200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/BackupResource"
-        }
-      },
-      "DeleteApiV3SystemBackupById200Response": {},
-      "GetApiV3BlocklistMovie200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/BlocklistResource"
-        }
-      },
-      "DeleteApiV3BlocklistBulk200Response": {},
-      "GetApiV3Calendar200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/MovieResource"
-        }
-      },
-      "GetApiV3Collection200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/CollectionResource"
-        }
-      },
-      "PutApiV3Collection200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/CollectionResource"
-        }
-      },
-      "GetApiV3Command200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/CommandResource"
-        }
-      },
-      "GetApiV3Credit200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/CreditResource"
-        }
-      },
-      "GetApiV3Customfilter200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/CustomFilterResource"
-        }
-      },
-      "GetApiV3Customformat200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/CustomFormatResource"
-        }
-      },
-      "PutApiV3CustomformatBulk200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/CustomFormatResource"
-        }
-      },
-      "DeleteApiV3CustomformatBulk200Response": {},
-      "GetApiV3CustomformatSchema200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/CustomFormatSpecificationSchema"
-        }
-      },
-      "GetApiV3Delayprofile200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/DelayProfileResource"
-        }
-      },
-      "PutApiV3DelayprofileReorderById200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/DelayProfileResource"
-        }
-      },
-      "GetApiV3Diskspace200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/DiskSpaceResource"
-        }
-      },
-      "GetApiV3Downloadclient200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/DownloadClientResource"
-        }
-      },
-      "DeleteApiV3DownloadclientById200Response": {},
-      "PutApiV3DownloadclientBulk200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/DownloadClientResource"
-        }
-      },
-      "DeleteApiV3DownloadclientBulk200Response": {},
-      "GetApiV3DownloadclientSchema200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/DownloadClientResource"
-        }
-      },
-      "PostApiV3DownloadclientTestall200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ProviderTestAllResult"
-        }
-      },
-      "PostApiV3DownloadclientTestall400Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ProviderTestAllResult"
-        }
-      },
-      "GetApiV3Extrafile200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ExtraFileResource"
-        }
-      },
-      "GetApiV3FilesystemMediafiles200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/FileSystemMediaFileResource"
-        }
-      },
-      "GetApiV3Health200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/HealthResource"
-        }
-      },
-      "GetApiV3HistorySince200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/HistoryResource"
-        }
-      },
-      "GetApiV3HistoryMovie200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/HistoryResource"
-        }
-      },
-      "PostApiV3HistoryFailedById200Response": {},
-      "GetApiV3Importlist200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ImportListResource"
-        }
-      },
-      "DeleteApiV3ImportlistById200Response": {},
-      "PutApiV3ImportlistBulk200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ImportListResource"
-        }
-      },
-      "DeleteApiV3ImportlistBulk200Response": {},
-      "GetApiV3ImportlistSchema200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ImportListResource"
-        }
-      },
-      "PostApiV3ImportlistTestall200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ProviderTestAllResult"
-        }
-      },
-      "PostApiV3ImportlistTestall400Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ProviderTestAllResult"
-        }
-      },
-      "GetApiV3Exclusions200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ImportListExclusionResource"
-        }
-      },
-      "PostApiV3ExclusionsBulkRequest": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ImportListExclusionResource"
-        }
-      },
-      "PostApiV3ExclusionsBulk200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ImportListExclusionResource"
-        }
-      },
-      "DeleteApiV3ExclusionsBulk200Response": {},
-      "GetApiV3ImportlistMovie200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ImportListMoviesResource"
-        }
-      },
-      "PostApiV3ImportlistMovieRequest": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/MovieResource"
-        }
-      },
-      "PostApiV3ImportlistMovie200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/MovieResource"
-        }
-      },
-      "GetApiV3Indexer200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/IndexerResource"
-        }
-      },
-      "DeleteApiV3IndexerById200Response": {},
-      "PutApiV3IndexerBulk200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/IndexerResource"
-        }
-      },
-      "DeleteApiV3IndexerBulk200Response": {},
-      "GetApiV3IndexerSchema200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/IndexerResource"
-        }
-      },
-      "PostApiV3IndexerTestall200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ProviderTestAllResult"
-        }
-      },
-      "PostApiV3IndexerTestall400Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ProviderTestAllResult"
-        }
-      },
-      "GetApiV3Indexerflag200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/IndexerFlagResource"
-        }
-      },
-      "GetApiV3Language200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/LanguageResource"
-        }
-      },
-      "GetApiV3LogFile200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/LogFileResource"
-        }
-      },
-      "GetApiV3LogFileByFilename200PlainResponse": {
-        "type": "string"
-      },
-      "GetApiV3Manualimport200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ManualImportResource"
-        }
-      },
-      "PostApiV3ManualimportRequest": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ManualImportReprocessResource"
-        }
-      },
-      "PostApiV3Manualimport200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ManualImportReprocessResource"
-        }
-      },
-      "GetApiV3Metadata200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/MetadataResource"
-        }
-      },
-      "DeleteApiV3MetadataById200Response": {},
-      "GetApiV3MetadataSchema200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/MetadataResource"
-        }
-      },
-      "PostApiV3MetadataTestall200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ProviderTestAllResult"
-        }
-      },
-      "PostApiV3MetadataTestall400Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ProviderTestAllResult"
-        }
-      },
-      "GetApiV3Movie200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/MovieResource"
-        }
-      },
-      "PutApiV3MovieEditor200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/MovieResource"
-        }
-      },
-      "DeleteApiV3MovieEditor200Response": {},
-      "GetApiV3Moviefile200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/MovieFileResource"
-        }
-      },
-      "PutApiV3MoviefileEditor200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/MovieFileResource"
-        }
-      },
-      "DeleteApiV3MoviefileBulk200Response": {},
-      "PutApiV3MoviefileBulkRequest": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/MovieFileResource"
-        }
-      },
-      "PutApiV3MoviefileBulk200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/MovieFileResource"
-        }
-      },
-      "PostApiV3MovieImportRequest": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/MovieResource"
-        }
-      },
-      "PostApiV3MovieImport200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/MovieResource"
-        }
-      },
-      "GetApiV3MovieLookup200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/MovieResource"
-        }
-      },
-      "GetApiV3Notification200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/NotificationResource"
-        }
-      },
-      "DeleteApiV3NotificationById200Response": {},
-      "GetApiV3NotificationSchema200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/NotificationResource"
-        }
-      },
-      "PostApiV3NotificationTestall200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ProviderTestAllResult"
-        }
-      },
-      "PostApiV3NotificationTestall400Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ProviderTestAllResult"
-        }
-      },
-      "GetApiV3Qualitydefinition200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/QualityDefinitionResource"
-        }
-      },
-      "PutApiV3QualitydefinitionUpdateRequest": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/QualityDefinitionResource"
-        }
-      },
-      "PutApiV3QualitydefinitionUpdate200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/QualityDefinitionResource"
-        }
-      },
-      "GetApiV3Qualityprofile200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/QualityProfileResource"
-        }
-      },
-      "DeleteApiV3QueueBulk200Response": {},
-      "PostApiV3QueueGrabById200Response": {},
-      "PostApiV3QueueGrabBulk200Response": {},
-      "GetApiV3QueueDetails200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/QueueResource"
-        }
-      },
-      "GetApiV3Release200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ReleaseResource"
-        }
-      },
-      "GetApiV3Releaseprofile200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ReleaseProfileResource"
-        }
-      },
-      "PostApiV3ReleasePush200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ReleaseResource"
-        }
-      },
-      "GetApiV3Remotepathmapping200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/RemotePathMappingResource"
-        }
-      },
-      "GetApiV3Rename200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/RenameMovieResource"
-        }
-      },
-      "GetApiV3Rootfolder200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/RootFolderResource"
-        }
-      },
-      "GetApiV3SystemRoutes200PlainResponse": {
-        "type": "string"
-      },
-      "GetApiV3SystemRoutesDuplicate200Response": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        }
-      },
-      "GetApiV3Tag200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/TagResource"
-        }
-      },
-      "GetApiV3TagDetail200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/TagDetailsResource"
-        }
-      },
-      "GetApiV3SystemTask200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/TaskResource"
-        }
-      },
-      "GetApiV3Update200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/UpdateResource"
-        }
-      },
-      "GetApiV3LogFileUpdate200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/LogFileResource"
-        }
-      },
-      "GetApiV3LogFileUpdateByFilename200PlainResponse": {
-        "type": "string"
-      },
-      "ExamplePayload": {
-        "type": "object",
-        "description": "Placeholder schema for path example refs"
       },
       "GetApiV3Alttitle200ResponseSchema": {
         "type": "array",
@@ -15595,6 +15046,81 @@
         "type": "object",
         "additionalProperties": {},
         "nullable": true
+      },
+      "PostApiV3DownloadclientTestall400ResponseSchemaError": {
+        "type": "object",
+        "properties": {
+          "payload": {
+            "x-client-untyped-value": true
+          }
+        },
+        "x-client-raw-error-media-type": "application/json",
+        "x-client-raw-error-schema": {
+          "$ref": "#/components/schemas/PostApiV3DownloadclientTestall400ResponseSchema"
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/PostApiV3DownloadclientTestall400ResponseSchema"
+        }
+      },
+      "PostApiV3ImportlistTestall400ResponseSchemaError": {
+        "type": "object",
+        "properties": {
+          "payload": {
+            "x-client-untyped-value": true
+          }
+        },
+        "x-client-raw-error-media-type": "application/json",
+        "x-client-raw-error-schema": {
+          "$ref": "#/components/schemas/PostApiV3ImportlistTestall400ResponseSchema"
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/PostApiV3ImportlistTestall400ResponseSchema"
+        }
+      },
+      "PostApiV3IndexerTestall400ResponseSchemaError": {
+        "type": "object",
+        "properties": {
+          "payload": {
+            "x-client-untyped-value": true
+          }
+        },
+        "x-client-raw-error-media-type": "application/json",
+        "x-client-raw-error-schema": {
+          "$ref": "#/components/schemas/PostApiV3IndexerTestall400ResponseSchema"
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/PostApiV3IndexerTestall400ResponseSchema"
+        }
+      },
+      "PostApiV3MetadataTestall400ResponseSchemaError": {
+        "type": "object",
+        "properties": {
+          "payload": {
+            "x-client-untyped-value": true
+          }
+        },
+        "x-client-raw-error-media-type": "application/json",
+        "x-client-raw-error-schema": {
+          "$ref": "#/components/schemas/PostApiV3MetadataTestall400ResponseSchema"
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/PostApiV3MetadataTestall400ResponseSchema"
+        }
+      },
+      "PostApiV3NotificationTestall400ResponseSchemaError": {
+        "type": "object",
+        "properties": {
+          "payload": {
+            "x-client-untyped-value": true
+          }
+        },
+        "x-client-raw-error-media-type": "application/json",
+        "x-client-raw-error-schema": {
+          "$ref": "#/components/schemas/PostApiV3NotificationTestall400ResponseSchema"
+        },
+        "x-client-original-error-schema": {
+          "$ref": "#/components/schemas/PostApiV3NotificationTestall400ResponseSchema"
+        }
       }
     },
     "securitySchemes": {
@@ -15834,5 +15360,556 @@
     {
       "name": "UpdateLogFile"
     }
-  ]
+  ],
+  "x-client-unused-schemas": {
+    "CustomFilterResourceFiltersItem": {
+      "type": "object",
+      "additionalProperties": {}
+    },
+    "HistoryResourceData": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "nullable": true
+      },
+      "nullable": true
+    },
+    "ValidationFailureFormattedMessagePlaceholderValues": {
+      "type": "object",
+      "additionalProperties": {},
+      "nullable": true
+    },
+    "GetApiV3Alttitle200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/AlternativeTitleResource"
+      }
+    },
+    "GetApiV3Autotagging200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/AutoTaggingResource"
+      }
+    },
+    "GetApiV3AutotaggingSchema200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/AutoTaggingSpecificationSchema"
+      }
+    },
+    "GetApiV3SystemBackup200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/BackupResource"
+      }
+    },
+    "DeleteApiV3SystemBackupById200Response": {},
+    "GetApiV3BlocklistMovie200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/BlocklistResource"
+      }
+    },
+    "DeleteApiV3BlocklistBulk200Response": {},
+    "GetApiV3Calendar200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/MovieResource"
+      }
+    },
+    "GetApiV3Collection200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/CollectionResource"
+      }
+    },
+    "PutApiV3Collection200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/CollectionResource"
+      }
+    },
+    "GetApiV3Command200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/CommandResource"
+      }
+    },
+    "GetApiV3Credit200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/CreditResource"
+      }
+    },
+    "GetApiV3Customfilter200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/CustomFilterResource"
+      }
+    },
+    "GetApiV3Customformat200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/CustomFormatResource"
+      }
+    },
+    "PutApiV3CustomformatBulk200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/CustomFormatResource"
+      }
+    },
+    "DeleteApiV3CustomformatBulk200Response": {},
+    "GetApiV3CustomformatSchema200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/CustomFormatSpecificationSchema"
+      }
+    },
+    "GetApiV3Delayprofile200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/DelayProfileResource"
+      }
+    },
+    "PutApiV3DelayprofileReorderById200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/DelayProfileResource"
+      }
+    },
+    "GetApiV3Diskspace200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/DiskSpaceResource"
+      }
+    },
+    "GetApiV3Downloadclient200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/DownloadClientResource"
+      }
+    },
+    "DeleteApiV3DownloadclientById200Response": {},
+    "PutApiV3DownloadclientBulk200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/DownloadClientResource"
+      }
+    },
+    "DeleteApiV3DownloadclientBulk200Response": {},
+    "GetApiV3DownloadclientSchema200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/DownloadClientResource"
+      }
+    },
+    "PostApiV3DownloadclientTestall200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ProviderTestAllResult"
+      }
+    },
+    "PostApiV3DownloadclientTestall400Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ProviderTestAllResult"
+      }
+    },
+    "GetApiV3Extrafile200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ExtraFileResource"
+      }
+    },
+    "GetApiV3FilesystemMediafiles200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/FileSystemMediaFileResource"
+      }
+    },
+    "GetApiV3Health200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/HealthResource"
+      }
+    },
+    "GetApiV3HistorySince200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/HistoryResource"
+      }
+    },
+    "GetApiV3HistoryMovie200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/HistoryResource"
+      }
+    },
+    "PostApiV3HistoryFailedById200Response": {},
+    "GetApiV3Importlist200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ImportListResource"
+      }
+    },
+    "DeleteApiV3ImportlistById200Response": {},
+    "PutApiV3ImportlistBulk200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ImportListResource"
+      }
+    },
+    "DeleteApiV3ImportlistBulk200Response": {},
+    "GetApiV3ImportlistSchema200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ImportListResource"
+      }
+    },
+    "PostApiV3ImportlistTestall200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ProviderTestAllResult"
+      }
+    },
+    "PostApiV3ImportlistTestall400Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ProviderTestAllResult"
+      }
+    },
+    "GetApiV3Exclusions200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ImportListExclusionResource"
+      }
+    },
+    "PostApiV3ExclusionsBulkRequest": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ImportListExclusionResource"
+      }
+    },
+    "PostApiV3ExclusionsBulk200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ImportListExclusionResource"
+      }
+    },
+    "DeleteApiV3ExclusionsBulk200Response": {},
+    "GetApiV3ImportlistMovie200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ImportListMoviesResource"
+      }
+    },
+    "PostApiV3ImportlistMovieRequest": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/MovieResource"
+      }
+    },
+    "PostApiV3ImportlistMovie200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/MovieResource"
+      }
+    },
+    "GetApiV3Indexer200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/IndexerResource"
+      }
+    },
+    "DeleteApiV3IndexerById200Response": {},
+    "PutApiV3IndexerBulk200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/IndexerResource"
+      }
+    },
+    "DeleteApiV3IndexerBulk200Response": {},
+    "GetApiV3IndexerSchema200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/IndexerResource"
+      }
+    },
+    "PostApiV3IndexerTestall200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ProviderTestAllResult"
+      }
+    },
+    "PostApiV3IndexerTestall400Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ProviderTestAllResult"
+      }
+    },
+    "GetApiV3Indexerflag200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/IndexerFlagResource"
+      }
+    },
+    "GetApiV3Language200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/LanguageResource"
+      }
+    },
+    "GetApiV3LogFile200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/LogFileResource"
+      }
+    },
+    "GetApiV3LogFileByFilename200PlainResponse": {
+      "type": "string"
+    },
+    "GetApiV3Manualimport200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ManualImportResource"
+      }
+    },
+    "PostApiV3ManualimportRequest": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ManualImportReprocessResource"
+      }
+    },
+    "PostApiV3Manualimport200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ManualImportReprocessResource"
+      }
+    },
+    "GetApiV3Metadata200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/MetadataResource"
+      }
+    },
+    "DeleteApiV3MetadataById200Response": {},
+    "GetApiV3MetadataSchema200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/MetadataResource"
+      }
+    },
+    "PostApiV3MetadataTestall200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ProviderTestAllResult"
+      }
+    },
+    "PostApiV3MetadataTestall400Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ProviderTestAllResult"
+      }
+    },
+    "GetApiV3Movie200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/MovieResource"
+      }
+    },
+    "PutApiV3MovieEditor200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/MovieResource"
+      }
+    },
+    "DeleteApiV3MovieEditor200Response": {},
+    "GetApiV3Moviefile200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/MovieFileResource"
+      }
+    },
+    "PutApiV3MoviefileEditor200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/MovieFileResource"
+      }
+    },
+    "DeleteApiV3MoviefileBulk200Response": {},
+    "PutApiV3MoviefileBulkRequest": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/MovieFileResource"
+      }
+    },
+    "PutApiV3MoviefileBulk200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/MovieFileResource"
+      }
+    },
+    "PostApiV3MovieImportRequest": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/MovieResource"
+      }
+    },
+    "PostApiV3MovieImport200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/MovieResource"
+      }
+    },
+    "GetApiV3MovieLookup200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/MovieResource"
+      }
+    },
+    "GetApiV3Notification200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/NotificationResource"
+      }
+    },
+    "DeleteApiV3NotificationById200Response": {},
+    "GetApiV3NotificationSchema200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/NotificationResource"
+      }
+    },
+    "PostApiV3NotificationTestall200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ProviderTestAllResult"
+      }
+    },
+    "PostApiV3NotificationTestall400Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ProviderTestAllResult"
+      }
+    },
+    "GetApiV3Qualitydefinition200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/QualityDefinitionResource"
+      }
+    },
+    "PutApiV3QualitydefinitionUpdateRequest": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/QualityDefinitionResource"
+      }
+    },
+    "PutApiV3QualitydefinitionUpdate200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/QualityDefinitionResource"
+      }
+    },
+    "GetApiV3Qualityprofile200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/QualityProfileResource"
+      }
+    },
+    "DeleteApiV3QueueBulk200Response": {},
+    "PostApiV3QueueGrabById200Response": {},
+    "PostApiV3QueueGrabBulk200Response": {},
+    "GetApiV3QueueDetails200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/QueueResource"
+      }
+    },
+    "GetApiV3Release200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ReleaseResource"
+      }
+    },
+    "GetApiV3Releaseprofile200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ReleaseProfileResource"
+      }
+    },
+    "PostApiV3ReleasePush200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ReleaseResource"
+      }
+    },
+    "GetApiV3Remotepathmapping200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/RemotePathMappingResource"
+      }
+    },
+    "GetApiV3Rename200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/RenameMovieResource"
+      }
+    },
+    "GetApiV3Rootfolder200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/RootFolderResource"
+      }
+    },
+    "GetApiV3SystemRoutes200PlainResponse": {
+      "type": "string"
+    },
+    "GetApiV3SystemRoutesDuplicate200Response": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    "GetApiV3Tag200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/TagResource"
+      }
+    },
+    "GetApiV3TagDetail200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/TagDetailsResource"
+      }
+    },
+    "GetApiV3SystemTask200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/TaskResource"
+      }
+    },
+    "GetApiV3Update200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/UpdateResource"
+      }
+    },
+    "GetApiV3LogFileUpdate200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/LogFileResource"
+      }
+    },
+    "GetApiV3LogFileUpdateByFilename200PlainResponse": {
+      "type": "string"
+    },
+    "ExamplePayload": {
+      "type": "object",
+      "description": "Placeholder schema for path example refs"
+    }
+  }
 }

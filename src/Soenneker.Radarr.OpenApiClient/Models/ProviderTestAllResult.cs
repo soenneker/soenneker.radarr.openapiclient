@@ -2,7 +2,6 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using Microsoft.Kiota.Abstractions;
 using System.Collections.Generic;
 using System.IO;
 using System;
@@ -10,7 +9,7 @@ namespace Soenneker.Radarr.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class ProviderTestAllResult : ApiException, IParsable
+    public partial class ProviderTestAllResult : IParsable
     #pragma warning restore CS1591
     , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
         // Track explicitly assigned nulls separately from absent properties.
@@ -29,8 +28,6 @@ namespace Soenneker.Radarr.OpenApiClient.Models
         private int? _explicitNullValueId = default!;
         /// <summary>The isValid property</summary>
         public bool? IsValid { get; private set; }
-        /// <summary>The primary error message.</summary>
-        public override string Message { get => base.Message; }
         /// <summary>The validationFailures property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
